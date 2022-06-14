@@ -2,26 +2,26 @@ import React, {useState} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import styles from './style';
 
-const RadioButton = ({data, title, onPress}) => {
+const RadioButton = ({data, title, onPress, style, selectedStyle, unselectedStyle, titleStyle }) => {
   const [options, setOptions] = useState(null);
-  
+
   const selectHandler = (value, title) => {
-      onPress(value);
-      setOptions(value);
-  }
+    onPress(value);
+    setOptions(value);
+  };
   return (
-    <View style={styles.mainView}>
+    <View style={[styles.mainView,{...style}]}>
       {data.map(item => {
         return (
           <View style={styles.mainView}>
-          <TouchableOpacity
-            onPress={() => selectHandler(item.value)}
-            style={
-              item.value === options ? styles.selected : styles.unselected
-            }>
-            <Text style={styles.option}>{item.value}</Text>
-          </TouchableOpacity>
-          <Text>{item.title}</Text>
+            <TouchableOpacity
+              onPress={() => selectHandler(item.value)}
+              style={
+                item.value === options ? [styles.selected, {...selectedStyle}] : [styles.unselected,{...unselectedStyle}]
+              }>
+              <Text style={[styles.option,{...titleStyle}]}>{item.value}</Text>
+            </TouchableOpacity>
+            <Text>{item.title}</Text>
           </View>
         );
       })}
