@@ -10,7 +10,7 @@ import {
 const App = () => {
  
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView >
      <Text>design system</Text>
     </SafeAreaView>
   );
