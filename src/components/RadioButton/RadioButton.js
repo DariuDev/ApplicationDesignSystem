@@ -19,7 +19,7 @@ const RadioButton = ({data, title, onPress}) => {
             style={
               item.value === options ? styles.selected : styles.unselected
             }>
-            <Text>{item.value}</Text>
+            <Text style={styles.option}>{item.value}</Text>
           </TouchableOpacity>
           <Text>{item.title}</Text>
           </View>
