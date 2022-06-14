@@ -1,7 +1,7 @@
 import { Pressable, Text, View } from "react-native";
 import React from "react";
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { styles } from "./styles";
+import  styles  from "./styles";
 
 const CheckBox = ({ title, isChecked, onPress, size=24, colorCheck='red', textColor='green', iconRight = true }) => {
     const iconName = isChecked ?

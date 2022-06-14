@@ -1,6 +1,6 @@
 import {  StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
+export default StyleSheet.create({
     // ...
     btn: {
       elevation: 8,
@@ -19,4 +19,3 @@ const styles = StyleSheet.create({
     }
   });
 
-export {styles};

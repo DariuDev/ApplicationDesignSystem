@@ -1,6 +1,6 @@
 import {  StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
+export default StyleSheet.create({
     container: {
         // justifyContent: "flex-start",
         flexDirection: "row",
@@ -17,4 +17,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export {styles};
+
