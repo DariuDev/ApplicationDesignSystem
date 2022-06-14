@@ -22,31 +22,26 @@ export default App;
 
 
 // import { StyleSheet, View } from "react-native";
-// import React,{ useState } from "react";
+// import React from "react";
 // import {CheckBox} from "./src/components";
 
 
 // export default function App() {
-// 	const [music, setMusic] = useState(false);
-// 	const [dancing, setDancing] = useState(false);
-// 	const [reading, setReading] = useState(false);
+
 
 // 	return (
 // 		<View style={styles.container}>
 // 			<CheckBox
-// 				onPress={() => setMusic(!music)}
 // 				title="Music"
-// 				isChecked={music}
+// 				isChecked={true}
 // 			/>
 // 			<CheckBox
-// 				onPress={() => setDancing(!dancing)}
 // 				title="Dancing"
-// 				isChecked={dancing}
+// 				isChecked={false}
 // 			/>
 // 			<CheckBox
-// 				onPress={() => setReading(!reading)}
 // 				title="Reading"
-// 				isChecked={reading}
+// 				isChecked={true}
 // 			/>
 // 		</View>
 // 	);

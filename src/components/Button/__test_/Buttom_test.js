@@ -3,6 +3,6 @@ import renderer from 'react-test-renderer';
 import Button from '../Button';
 
 test('renders correctly', () => {
-  const tree = renderer.create(<Button />).toJSON();
+  const tree = renderer.create(<Button title="btn"/>).toJSON();
   expect(tree).toMatchSnapshot();
 });
