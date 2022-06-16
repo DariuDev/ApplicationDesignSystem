@@ -6,7 +6,7 @@ import { Text, Pressable, View } from 'react-native';
 const Button = ({ onPress=()=>{}, title, styleText = {}, styleBtton = {} }) => {
     return (
         // <View>
-            <Pressable onPress={onPress} style={[ styles.btn,{...styleBtton}]}>
+            <Pressable onPress={onPress} style={[ styles.btn,{...styleBtton}]} testID="custtomButton">
                 <Text style={[ styles.txt,{...styleText}]}>{title}</Text>
             </Pressable>
         // </View>

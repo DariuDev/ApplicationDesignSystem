@@ -11,7 +11,7 @@ const CheckBox = ({ title, isChecked=false,  size=24, colorCheck='red', textColo
 
     return (
         <View style={[styles.container,iconRight?{ justifyContent: "flex-end"}:{ justifyContent: "flex-start",}]}>
-            <Pressable onPress={handelPress} >
+            <Pressable onPress={handelPress} testID="custtomCheckBox">
                 <View style={{flexDirection:'row',justifyContent:'space-between',  alignItems: "center",}}>
                     {!iconRight && <MaterialIcons  name={iconName} size={size} color={colorCheck} />}
                     <Text style={[styles.title, { color: textColor }]}>{title}</Text>
