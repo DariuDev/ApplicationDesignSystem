@@ -1,26 +1,21 @@
-import { action } from '@storybook/addon-actions';
-import { text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react-native';
 import React from 'react';
-import { Text } from 'react-native';
-import Button from '.';
 import CenterView from '../CenterView';
+import {Button} from '../../../src/components';
+import style from './styles';
 
-storiesOf('Button', module)
-  .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
-  .add('button', (setOptions) => (
+storiesOf('Btn ', module)
+//   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
+  .add('Button 1', () => (
    
-    <Button onPress={action('clicked-text')}>
-      <Text>{text('Button text', 'Hello Button')}</Text>
-    </Button>
-  ))
-  .add('with some emoji', () => (
-    <Button onPress={action('clicked-emoji')}>
-      <Text>😀 😎 👍 💯</Text>
-    </Button>
-  ));
-  const data = [
-    { value: 'Apple' },
-    { value: 'Samsung' },
-    { value: 'Blackberry' },
-  ];
+   <Button title={'Button 1'} styleBtton={style.btn1} />
+
+  )).add('Button 2', () => (
+   
+    <Button title={'Button 2'}  styleBtton={style.btn2}/>
+ 
+   )).add('Button 3', () => (
+   
+    <Button title={'Button 3'} styleBtton={style.btn3} />
+ 
+   ))
