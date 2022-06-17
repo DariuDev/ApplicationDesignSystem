@@ -15,12 +15,7 @@ describe('CheckBox', () => {
         const activeCheckBoxAsJson = activeCheckBox.toJSON();
         expect(activeCheckBoxAsJson).toMatchSnapshot();
     });
-    // it('performs onValueChange', () => {
-    //     const { getByTestId } = render(<CheckBox title='music' />);
-    //     const checkBox = getByTestId('custtomCheckBox');
-    //     fireEvent(checkBox,'handelPress');
-    //     expect(checkBox.handelPress).toBeCalled();
-    // });
+  
 
 
     it('shows the tickIcon when the checkBox checked', () => {
@@ -29,22 +24,13 @@ describe('CheckBox', () => {
             <CheckBox isChecked={checked} title='music' />
         );
         const checkBoxById = getByTestId('custtomCheckBox');
-        expect(checkBoxById).toBeDefined();
+        // expect(checkBoxById).toBeDefined();
         fireEvent.press(checkBoxById);
         expect(checkBoxById).toBeTruthy();
        
 
     });
-    // it('changes value Is true', () => {
-    //     let checked = true;
-    //     const { getByTestId } = render(
-    //         <CheckBox isChecked={checked} title='music' />
-    //     );
-    //     const checkBox = getByTestId('custtomCheckBox');
-    //     expect(checked).toBeTruthy();
-    //     fireEvent.press(checkBox, false);
 
-    // });
 });
 
 

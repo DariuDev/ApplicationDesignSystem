@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CheckBox renders correctly 1`] = `
+exports[`CheckBox shows the tickIcon when the checkBox checked 1`] = `
 <View
   style={
     Array [
@@ -30,7 +30,7 @@ exports[`CheckBox renders correctly 1`] = `
     onResponderTerminate={[Function]}
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
-    testID="custtomCheckBox"
+    testID="PressCheckBox"
   >
     <View
       style={
