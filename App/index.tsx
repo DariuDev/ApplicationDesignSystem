@@ -17,6 +17,7 @@ const App = () => {
         value={user}
         onChangeText={setUser}
         placeholder={'type here'}
+        style={{margin: 10}}
       />
       <RadioButton
         testID="radio-button"
