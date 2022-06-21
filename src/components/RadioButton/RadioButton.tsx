@@ -14,9 +14,9 @@ const RadioButton = (props: IRadioButton) => {
     titleStyle,
     testID,
   } = props;
-  const [options, setOptions] = useState<[]>([]);
+  const [options, setOptions] = useState<number>(0);
 
-  const selectHandler = (value: [] , title?: string) => {
+  const selectHandler = (value: number , title?: string) => {
     onPress(value);
     setOptions(value);
   };
