@@ -1,12 +1,18 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
 import TextInput from '..';
 
-const Example = () => { 
+const Example = () => {
   const [value, setValue] = useState('');
-  return(
-    <TextInput placeholder={'type here'} testID={'test'} value={value} onChangeText={setValue} />
-)}
+  return (
+    <TextInput
+      placeholder={'type here'}
+      testID={'test'}
+      value={value}
+      onChangeText={setValue}
+    />
+  );
+};
 
 describe('components =>  TextInput', () => {
   it('test textInput', async () => {
@@ -22,4 +28,4 @@ describe('components =>  TextInput', () => {
     fireEvent.changeText(input, 'soqra');
     expect(input.props.value).toBe('soqra');
   });
-  });
+});
