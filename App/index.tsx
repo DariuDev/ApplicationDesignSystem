@@ -20,7 +20,7 @@ const App = () => {
         style={{margin: 10}}
       />
       <RadioButton
-        testID="radio-button"
+        style={{flexDirection: 'row'}}
         data={data}
         onPress={(index) => {
            console.log(data[index - 1].title);

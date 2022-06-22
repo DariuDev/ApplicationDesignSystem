@@ -12,22 +12,20 @@ const RadioButton = (props: IRadioButton) => {
     selectedStyle,
     unselectedStyle,
     titleStyle,
-    testID,
   } = props;
   const [options, setOptions] = useState<number>(0);
 
-  const selectHandler = (value: number , title?: string) => {
+  const selectHandler = (value: number, title?: string) => {
     onPress(value);
     setOptions(value);
   };
   return (
     <View style={[styles.mainView, {...style}]}>
-      {data.map((item: any )=> {
-        return (
-          <View style={styles.mainView}>
+      {data.map((item: any, index) => (
+          <View style={[styles.mainView, {...style}]} key={index}>
             <TouchableOpacity
               onPress={() => selectHandler(item.value)}
-              testID={testID}
+              testID={`radioButton-${index}`}
               style={
                 item.value === options
                   ? [styles.mediumSelected, {...selectedStyle}]
@@ -36,10 +34,9 @@ const RadioButton = (props: IRadioButton) => {
               <Text style={[styles.option, {...titleStyle}]}>{item.value}</Text>
             </TouchableOpacity>
             <Text>{item.title}</Text>
-          </View>
-        );
-      })}
-    </View>
+          </View>   
+      ))}
+      </View>
   );
 };
 export default RadioButton;
