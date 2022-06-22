@@ -1,15 +1,14 @@
 import React from 'react';
-import { Text, Pressable, View } from 'react-native';
+import { Text, Pressable } from 'react-native';
  import  styles  from './styles';
+import {ButtonType} from '../../types';
 
 
-const Button = ({ onPress=()=>{}, title, styleText = {}, styleBtton = {} }) => {
+const Button:React.FC<ButtonType> = ({ onPress, title, styleText , styleBtton }) => {
     return (
-        // <View>
             <Pressable onPress={onPress} style={[ styles.btn,{...styleBtton}]} testID="custtomButton">
                 <Text style={[ styles.txt,{...styleText}]}>{title}</Text>
             </Pressable>
-        // </View>
 
     )
 }

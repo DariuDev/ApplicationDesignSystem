@@ -1,0 +1,28 @@
+import { Pressable, Text, View } from "react-native";
+import React, { useState } from "react";
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import styles from "./styles";
+import { CheckBoxType } from '../../types';
+
+const CheckBox: React.FC<CheckBoxType> = ({ isCircle=false,title, isChecked = false, size = 24, colorCheck = 'pink', textColor = '#000', iconRight = true }) => {
+    const [active, setActive] = useState<boolean>(isChecked);
+    const handelPress = () => { setActive(prev => !prev) }
+    const iconName = active ?(isCircle ?"check-circle":"check-box"):(isCircle?"radio-button-unchecked":"check-box-outline-blank") ;
+
+    return (
+
+        <Pressable style={[styles.container, iconRight ? { justifyContent: "flex-end" } : { justifyContent: "flex-start", }]}
+            onPress={handelPress} testID="custtomCheckBox">
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: "center", }}>
+                {!iconRight && <MaterialIcons name={iconName} size={size} color={colorCheck} />}
+                {title && <Text style={[styles.title, { color: textColor }]}>{title}</Text>}
+                {iconRight && <MaterialIcons name={iconName} size={size} color={colorCheck} />}
+            </View>
+
+        </Pressable>
+
+
+    );
+};
+
+export default CheckBox;
