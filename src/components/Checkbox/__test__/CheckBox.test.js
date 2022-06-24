@@ -2,32 +2,27 @@ import React from 'react';
 import CheckBox from '../CheckBox';
 import { fireEvent, render, wait } from '@testing-library/react-native';
 
-
 describe('CheckBox', () => {
     jest.mock(
         'react-native-vector-icons/MaterialIcons',
         () => 'MaterialIcons',
     );
-    
-    const activeCheckBox = render(<CheckBox title='music'  />);
-    
-    it('renders correctly', () => {
-        const activeCheckBoxAsJson = activeCheckBox.toJSON();
-        expect(activeCheckBoxAsJson).toMatchSnapshot();
+    it('shows checkBox', async () => {
+        const screen = render(<CheckBox title='emel' size={10} />);
+        expect(screen.getByTestId('checkBox-test')).toBeEnabled();
+        expect(screen.queryByTestId('checkBox-test')).toContainElement(screen.queryByTestId('checkBox-text-test'));
+        expect(screen.getByTestId('checkBox-text-test')).toHaveTextContent('emel');
+        // expect(screen.getByTestId('checkBox-icon-test')).toHaveProp('size');
     });
-  
 
-
-    it('shows the tickIcon when the checkBox checked', () => {
+    it('shows the tickIcon when the checkBox checked',  () => {
         const checked = false;
-        const { getByTestId } = render(
+        const screen = render(
             <CheckBox isChecked={checked} title='music' />
         );
-        const checkBoxById = getByTestId('custtomCheckBox');
-        // expect(checkBoxById).toBeDefined();
-        fireEvent.press(checkBoxById);
-        expect(checkBoxById).toBeTruthy();
-       
+         fireEvent.press(screen.getByTestId('checkBox-test'));
+        expect(screen.getByTestId('checkBox-test')).toBeTruthy();
+
 
     });
 

@@ -12,11 +12,11 @@ const CheckBox: React.FC<CheckBoxType> = ({ isCircle=false,title, isChecked = fa
     return (
 
         <Pressable style={[styles.container, iconRight ? { justifyContent: "flex-end" } : { justifyContent: "flex-start", }]}
-            onPress={handelPress} testID="custtomCheckBox">
+            onPress={handelPress} testID="checkBox-test">
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: "center", }}>
-                {!iconRight && <MaterialIcons name={iconName} size={size} color={colorCheck} />}
-                {title && <Text style={[styles.title, { color: textColor }]}>{title}</Text>}
-                {iconRight && <MaterialIcons name={iconName} size={size} color={colorCheck} />}
+                {!iconRight && <MaterialIcons name={iconName} size={size} color={colorCheck} testID="checkBox-icon-test" />}
+                {title && <Text style={[styles.title, { color: textColor }]} testID="checkBox-text-test">{title}</Text>}
+                {iconRight && <MaterialIcons name={iconName} size={size} color={colorCheck} testID="checkBox-icon-test" />}
             </View>
 
         </Pressable>
