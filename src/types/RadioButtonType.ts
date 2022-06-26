@@ -1,7 +1,7 @@
 export default interface IRadioButton {
-  data: object[];
+  data?: object[];
   title?: string;
-  onPress: (i: number) => void;
+  onPress?: (i: number) => void;
   style?: object;
   selectedStyle?: object;
   unselectedStyle?: object;
