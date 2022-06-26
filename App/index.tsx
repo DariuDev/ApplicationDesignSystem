@@ -1,5 +1,5 @@
 //  export default from '../storybook';
-import { Input, RadioButton, Button, CheckBox } from '../src/components';
+import { Input, RadioButton, Button, CheckBox, Card } from '../src/components';
 import React, { useState } from 'react';
 import { View } from 'react-native';
 import styles from '../src/components/RadioButton/style';
@@ -16,15 +16,17 @@ const App = () => {
     return a + 3;
   }
   return (
-    <View>
-      <Input
+    <View style={{alignItems: 'center'}}>
+      <Card borderRadius={10} width={300} height={250} borderWidth={1} >
+        <View>
+        <Input
         testID="text-input"
         value={user}
         onChangeText={setUser}
         placeholder={'type here'}
         style={{ margin: 10 }}
       />
-      <RadioButton
+       <RadioButton
         style={{flexDirection: 'row'}}
         data={data}
         onPress={(index) => {
@@ -39,7 +41,8 @@ const App = () => {
         isChecked={true}
         colorCheck={'blue'}
       />
-
+        </View>
+      </Card>
     </View>
   );
 };
