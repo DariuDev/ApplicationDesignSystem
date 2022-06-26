@@ -1,7 +1,7 @@
-import { colors } from "./Colors";
+import { COLORS } from "./colors/Colors";
 import { SIZE } from "./size/Size";
 const theme = {
-    colors,
+    COLORS,
     SIZE
 
 };
