@@ -1,7 +1,7 @@
 //  export default from '../storybook';
-import { Input, RadioButton, Button, CheckBox } from '../src/components';
+import { Input, RadioButton, Button, CheckBox,ModalC } from '../src/components';
 import React, { useState } from 'react';
-import { View } from 'react-native';
+import { View,Text } from 'react-native';
 import styles from '../src/components/RadioButton/style';
 
 const App = () => {
@@ -33,12 +33,15 @@ const App = () => {
         selectedStyle={styles.smallSelected}
         unselectedStyle={styles.bigUnselected}
       />
-      <Button title='ClickMe' onPress={()=>func(3)} />
+      {/* <Button title='ClickMe' onPress={()=>func(3)} />
       <CheckBox
        title='hhhh'
         isChecked={true}
         colorCheck={'blue'}
-      />
+      /> */}
+      <ModalC  open={true} onClose={()=>console.log('tt')} >
+        <Text>hi</Text>
+      </ModalC>
 
     </View>
   );
