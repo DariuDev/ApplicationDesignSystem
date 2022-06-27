@@ -1,5 +1,5 @@
 //  export default from '../storybook';
-import { Input, RadioButton, Button, CheckBox, Card, ModalC } from '../src/components';
+import { Input, RadioButton, Button, CheckBox, Card, ModalC, Badge } from '../src/components';
 import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 import styles from '../src/components/RadioButton/style';
@@ -44,6 +44,11 @@ const App = () => {
           <ModalC open={true} onClose={() => console.log('tt')} >
             <Text>hi</Text>
           </ModalC>
+
+
+          <Badge size={40} onPress={()=> console.log('tt')}>
+            <Text>5</Text>
+          </Badge>
         </View>
       </Card>
     </View>

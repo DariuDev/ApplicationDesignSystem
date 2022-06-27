@@ -4,4 +4,5 @@ export {default as CheckBoxType} from './CheckBoxType';
 export {default as ButtonType} from './ButtonType';
 export {default as ModalType} from './ModalType';
 export {default as ICard} from './CardType';
+export {default as BadgeType} from './BadgeType';
 
