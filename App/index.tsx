@@ -7,10 +7,10 @@ import {
   Card,
   ModalC,
   Badge,
-  CustomText,
+  Text,
 } from '../src/components';
 import React, {useState} from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import styles from '../src/components/RadioButton/style';
 
 const App = () => {
@@ -60,7 +60,12 @@ const App = () => {
             onTouchMove={() => console.log('mmm')}>
             <Text>5</Text>
           </Badge>
-            <CustomText backgroundColor={'black'} color={'white'} onPress={() => console.log('pressed')}>Hello World!</CustomText>
+          <Text
+            backgroundColor={'black'}
+            color={'white'}
+            onPress={() => console.log('pressed')}>
+            Hello World!
+          </Text>
         </View>
       </Card>
     </View>

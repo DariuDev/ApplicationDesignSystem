@@ -1,2 +1,2 @@
-import CustomText from "./Text";
-export default CustomText;
+import Text from "./Text";
+export default Text;
