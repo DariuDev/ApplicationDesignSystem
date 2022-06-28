@@ -1,11 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-
-interface IText {
-  onPress?: () => void;
-  children?: string;
-  testID?: string;
-}
+import {IText} from '../../types'
 
 const CustomText = <T extends Record<any, unknown>>({
   children,
