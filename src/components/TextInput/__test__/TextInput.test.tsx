@@ -15,8 +15,7 @@ const Example = () => {
 };
 
 describe('components =>  TextInput', () => {
-  it('test textInput', async () => {
-    expect.assertions(4);
+  it('test textInput', () => {
     const screen = render(<Example />);
     const input = screen.getByTestId('test');
     expect(input).toHaveProp('placeholder', 'type here');
