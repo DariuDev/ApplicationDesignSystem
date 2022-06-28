@@ -1,9 +1,11 @@
 import React from 'react';
-import { Pressable } from 'react-native';
+import { Pressable,PressableProps } from 'react-native';
 import { BadgeType } from './../../types';
 import styles from './styles';
 
-const Badge: React.FC<BadgeType> = ({
+type BadgeTypeProops=BadgeType & PressableProps;
+
+const Badge: React.FC<BadgeTypeProops> = ({
     onPress = () => {},
     styleBadge,
     testId,
@@ -12,12 +14,14 @@ const Badge: React.FC<BadgeType> = ({
     size = 20,
     top = 100,
     left = 100,
+    ...otherprops
 
 }) => {
+console.log(otherprops);
 
     if (!visibale) return null;
     return (
-        <Pressable testID={testId} onPress={onPress}
+        <Pressable   testID={testId} onPress={onPress} 
             style={[styles.badgeCard, {
                 borderRadius: size / 2,
                 top: top,
@@ -25,7 +29,7 @@ const Badge: React.FC<BadgeType> = ({
                 width: size,
                 height: size,
                 ...styleBadge
-            }]}>
+            }]}  {...otherprops}>
 
             {children && children}
         </Pressable>

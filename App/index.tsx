@@ -35,7 +35,7 @@ const App = () => {
             selectedStyle={styles.smallSelected}
             unselectedStyle={styles.bigUnselected}
           />
-          <Button title='ClickMe' onPress={() => func(3)} />
+          <Button title='ClickMe' onPress={() => func(3)} onTouchMove={()=> console.log('emel')}/>
           <CheckBox
             title='hhhh'
             isChecked={true}
@@ -46,7 +46,7 @@ const App = () => {
           </ModalC>
 
 
-          <Badge size={40} onPress={()=> console.log('tt')}>
+          <Badge  size={40} onPress={()=> console.log('tt')} onTouchMove={()=> console.log('mmm')}>
             <Text>5</Text>
           </Badge>
         </View>

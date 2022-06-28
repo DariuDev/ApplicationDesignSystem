@@ -1,4 +1,4 @@
-import React from "react";
+
 export default interface ModalType {
     onClose?: () => void;
     open: boolean;
