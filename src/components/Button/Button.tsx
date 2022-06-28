@@ -1,12 +1,12 @@
 import React from 'react';
-import { Text, Pressable } from 'react-native';
+import { Text, Pressable,PressableProps } from 'react-native';
  import  styles  from './styles';
 import {ButtonType} from '../../types';
 
-
-const Button:React.FC<ButtonType> = ({ onPress, title, styleText , styleButton , testId = "button-wrap-test"}) => {
+type ButtonTypeProops=ButtonType & PressableProps;
+const Button:React.FC<ButtonTypeProops> = ({ onPress, title, styleText , styleButton , testId = "button-wrap-test",...otherprops}) => {
     return (
-            <Pressable onPress={onPress} style={[ styles.btn,{...styleButton}]} testID={testId}>
+            <Pressable  onPress={onPress} style={[ styles.btn,{...styleButton}]} testID={testId} {...otherprops}>
                 <Text style={[ styles.txt,{...styleText}]} testID='button-text-test'>{title}</Text>
             </Pressable>
 

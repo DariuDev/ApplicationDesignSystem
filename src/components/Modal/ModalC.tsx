@@ -1,11 +1,14 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { ModalType } from '../../types/index';
-import { View, Modal, TouchableOpacity } from 'react-native';
+import { View, Modal, TouchableOpacity, ModalProps } from 'react-native';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './styles';
 
-const ModalC: React.FC<ModalType> = ({ open, children, onClose, testId, top, styleModal,
-  colorClose, sizeClose, styleClose }) => {
+type ModalTypeProops = ModalType & ModalProps;
+
+const ModalC: React.FC<ModalTypeProops> = ({ open, children, onClose, testId, top, styleModal,
+  colorClose, sizeClose, styleClose, ...otherprops
+}) => {
   const [isOpen, setIsOpen] = useState(open);
 
   const size = sizeClose ? sizeClose : 24;
@@ -35,6 +38,7 @@ const ModalC: React.FC<ModalType> = ({ open, children, onClose, testId, top, sty
       onRequestClose={
         handleCloseModal
       }
+      {...otherprops}
     >
       <TouchableOpacity
         activeOpacity={1}
