@@ -8,10 +8,10 @@ import {
   ModalC,
   Badge,
   Text,
-} from '../src/components';
+} from '../src/atoms';
 import React, {useState} from 'react';
 import {View} from 'react-native';
-import styles from '../src/components/RadioButton/style';
+import styles from '../src/atoms/RadioButton/style';
 
 const App = () => {
   const [user, setUser] = useState('');
