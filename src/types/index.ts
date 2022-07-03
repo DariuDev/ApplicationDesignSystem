@@ -6,4 +6,4 @@ export {default as ModalType} from './ModalType';
 export {default as ICard} from './CardType';
 export {default as BadgeType} from './BadgeType';
 export {default as IText} from './TextTypes';
-
+export {default as TextInputPlaceHolderType} from './TextInputPlaceHolderType';
