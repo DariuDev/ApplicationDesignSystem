@@ -1,6 +1,6 @@
  interface ICard {
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
   borderRadius?: number;
   borderWidth?: number;
   children?: JSX.Element

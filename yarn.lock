@@ -1062,6 +1062,14 @@
   "resolved" "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
   "version" "0.2.3"
 
+"@callstack/react-theme-provider@^3.0.7":
+  "integrity" "sha512-Ab6rbD2w4u9W3yf7LQQ8evx9m8fZNsoWxt+MFm3AyZnyKQNCJf4K7ip9tHHZgSs+HTdoj38lEqPehvFOVQKvAg=="
+  "resolved" "https://registry.npmjs.org/@callstack/react-theme-provider/-/react-theme-provider-3.0.7.tgz"
+  "version" "3.0.7"
+  dependencies:
+    "deepmerge" "^3.2.0"
+    "hoist-non-react-statics" "^3.3.0"
+
 "@emotion/cache@^10.0.27", "@emotion/cache@^10.0.9":
   "integrity" "sha512-fU2VtSVlHiF27empSbxi1O2JFdNWZO+2NFHfwO0pxgTep6Xa3uGb+3pVKfLww2l/IBGLNEZl5Xf/++A4wAYDYQ=="
   "resolved" "https://registry.npmjs.org/@emotion/cache/-/cache-10.0.29.tgz"
@@ -2965,6 +2973,9 @@
   "resolved" "https://registry.npmjs.org/appdirsjs/-/appdirsjs-1.2.6.tgz"
   "version" "1.2.6"
 
+"application-design-system@file:.yalc/application-design-system":
+  "resolved" "file:.yalc/application-design-system"
+
 "aproba@^1.0.3", "aproba@^1.1.1":
   "integrity" "sha512-Y9J6ZjXtoYh8RnXVCMOU/ttDmk1aBjunq9vO0ta5x85WDQiQfUF9sIPBITdbiiIVcBo03Hi3jMxigBtsddlXRw=="
   "resolved" "https://registry.npmjs.org/aproba/-/aproba-1.2.0.tgz"
@@ -4346,7 +4357,7 @@
     "map-visit" "^1.0.0"
     "object-visit" "^1.0.0"
 
-"color-convert@^1.9.0":
+"color-convert@^1.9.0", "color-convert@^1.9.3":
   "integrity" "sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg=="
   "resolved" "https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz"
   "version" "1.9.3"
@@ -4360,15 +4371,31 @@
   dependencies:
     "color-name" "~1.1.4"
 
+"color-name@^1.0.0", "color-name@1.1.3":
+  "integrity" "sha512-72fSenhMw2HZMTVHeCA9KCmpEIbzWiQsjN+BHcBbS9vr1mtt+vJjPdksIBNUmKAW8TFUDPJK5SUU3QhE9NEXDw=="
+  "resolved" "https://registry.npmjs.org/color-name/-/color-name-1.1.3.tgz"
+  "version" "1.1.3"
+
 "color-name@~1.1.4":
   "integrity" "sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA=="
   "resolved" "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz"
   "version" "1.1.4"
 
-"color-name@1.1.3":
-  "integrity" "sha512-72fSenhMw2HZMTVHeCA9KCmpEIbzWiQsjN+BHcBbS9vr1mtt+vJjPdksIBNUmKAW8TFUDPJK5SUU3QhE9NEXDw=="
-  "resolved" "https://registry.npmjs.org/color-name/-/color-name-1.1.3.tgz"
-  "version" "1.1.3"
+"color-string@^1.6.0":
+  "integrity" "sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg=="
+  "resolved" "https://registry.npmjs.org/color-string/-/color-string-1.9.1.tgz"
+  "version" "1.9.1"
+  dependencies:
+    "color-name" "^1.0.0"
+    "simple-swizzle" "^0.2.2"
+
+"color@^3.1.2":
+  "integrity" "sha512-aBl7dZI9ENN6fUGC7mWpMTPNHmWUSNan9tuWN6ahh5ZLNk9baLJOnSMlrQkHcrfFgz2/RigjUVAjdx36VcemKA=="
+  "resolved" "https://registry.npmjs.org/color/-/color-3.2.1.tgz"
+  "version" "3.2.1"
+  dependencies:
+    "color-convert" "^1.9.3"
+    "color-string" "^1.6.0"
 
 "colorette@^1.0.7":
   "integrity" "sha512-Y2oEozpomLn7Q3HFP7dpww7AtMJplbM9lGZP6RDfHqmbeRjiwRg4n6VM6j4KLmRke85uWEI7JqF17f3pqdRA0g=="
@@ -4701,7 +4728,7 @@
     "schema-utils" "^2.7.0"
     "semver" "^6.3.0"
 
-"css-select@^4.1.3":
+"css-select@^4.1.3", "css-select@^4.2.1":
   "integrity" "sha512-wPpOYtnsVontu2mODhA19JrqWxNsfdatRKd64kmpRbQgh1KtItko5sTnEpPdpSaJszTOhEMlF/RPz28qj4HqhQ=="
   "resolved" "https://registry.npmjs.org/css-select/-/css-select-4.3.0.tgz"
   "version" "4.3.0"
@@ -4720,6 +4747,14 @@
     "camelize" "^1.0.0"
     "css-color-keywords" "^1.0.0"
     "postcss-value-parser" "^3.3.0"
+
+"css-tree@^1.0.0-alpha.39":
+  "integrity" "sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q=="
+  "resolved" "https://registry.npmjs.org/css-tree/-/css-tree-1.1.3.tgz"
+  "version" "1.1.3"
+  dependencies:
+    "mdn-data" "2.0.14"
+    "source-map" "^0.6.1"
 
 "css-what@^6.0.1":
   "integrity" "sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw=="
@@ -6841,6 +6876,11 @@
   "resolved" "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz"
   "version" "0.2.1"
 
+"is-arrayish@^0.3.1":
+  "integrity" "sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ=="
+  "resolved" "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.3.2.tgz"
+  "version" "0.3.2"
+
 "is-bigint@^1.0.1":
   "integrity" "sha512-zB9CruMamjym81i2JZ3UMn54PKGsQzsJeo6xvN3HJJ4CAsQNB6iRutp2To77OfCNuoxspsIhzaPoO1zyCEhFOg=="
   "resolved" "https://registry.npmjs.org/is-bigint/-/is-bigint-1.0.4.tgz"
@@ -7952,6 +7992,11 @@
   "resolved" "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.2.4.tgz"
   "version" "1.2.4"
 
+"link@^1.5.0":
+  "integrity" "sha512-+xsWpo98a99oAsrVGQlkFqQE+t/Qs6G+QJP1hzUdjWk6nuYG//E2u3YH8pYd3VG8CNpUoKXgVgk2HeQvPRsrFA=="
+  "resolved" "https://registry.npmjs.org/link/-/link-1.5.0.tgz"
+  "version" "1.5.0"
+
 "loader-runner@^2.4.0":
   "integrity" "sha512-Jsmr89RcXGIwivFY21FcRrisYZfvLMTWx5kOLc+JTxtpBOG6xML0vzbc6SEQG2FO9/4Fc3wW4LVcB5DmGflaRw=="
   "resolved" "https://registry.npmjs.org/loader-runner/-/loader-runner-2.4.0.tgz"
@@ -8174,6 +8219,11 @@
     "hash-base" "^3.0.0"
     "inherits" "^2.0.1"
     "safe-buffer" "^5.1.2"
+
+"mdn-data@2.0.14":
+  "integrity" "sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow=="
+  "resolved" "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.14.tgz"
+  "version" "2.0.14"
 
 "media-typer@0.3.0":
   "integrity" "sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ=="
@@ -10031,6 +10081,11 @@
   "resolved" "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.6.tgz"
   "version" "0.0.6"
 
+"react-native-iphone-x-helper@^1.3.1":
+  "integrity" "sha512-HOf0jzRnq2/aFUcdCJ9w9JGzN3gdEg0zFE4FyYlp4jtidqU03D5X7ZegGKfT1EWteR0gPBGp9ye5T5FvSWi9Yg=="
+  "resolved" "https://registry.npmjs.org/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.1.tgz"
+  "version" "1.3.1"
+
 "react-native-modal-datetime-picker@^7.4.2":
   "integrity" "sha512-Ovq0p20Tbw6uWGV0VIDcCQ5qTaHxC9gEcYmB2a4fD1ksCSwCil9RJBEhC7VirvplvAGCKOKs3bblaKFmhiOBkg=="
   "resolved" "https://registry.npmjs.org/react-native-modal-datetime-picker/-/react-native-modal-datetime-picker-7.6.1.tgz"
@@ -10054,6 +10109,23 @@
     "prop-types" "^15.6.2"
     "react-native-animatable" "1.3.3"
 
+"react-native-paper@^4.12.2":
+  "integrity" "sha512-DDqds8E6IMbOFW7PwUgB0pP6qhFcwn/s0N+SOpqB1XYtGm0r9WMrmA8q026Mn7OCkWeMTjgnrILGJxJ7b2CRHw=="
+  "resolved" "https://registry.npmjs.org/react-native-paper/-/react-native-paper-4.12.2.tgz"
+  "version" "4.12.2"
+  dependencies:
+    "@callstack/react-theme-provider" "^3.0.7"
+    "color" "^3.1.2"
+    "react-native-iphone-x-helper" "^1.3.1"
+
+"react-native-svg@^12.3.0":
+  "integrity" "sha512-ESG1g1j7/WLD7X3XRFTQHVv0r6DpbHNNcdusngAODIxG88wpTWUZkhcM3A2HJTb+BbXTFDamHv7FwtRKWQ/ALg=="
+  "resolved" "https://registry.npmjs.org/react-native-svg/-/react-native-svg-12.3.0.tgz"
+  "version" "12.3.0"
+  dependencies:
+    "css-select" "^4.2.1"
+    "css-tree" "^1.0.0-alpha.39"
+
 "react-native-swipe-gestures@^1.0.4":
   "integrity" "sha512-Ns7Bn9H/Tyw278+5SQx9oAblDZ7JixyzeOczcBK8dipQk2pD7Djkcfnf1nB/8RErAmMLL9iXgW0QHqiII8AhKw=="
   "resolved" "https://registry.npmjs.org/react-native-swipe-gestures/-/react-native-swipe-gestures-1.0.5.tgz"
@@ -10072,7 +10144,7 @@
     "semver" "^5.4.1"
     "source-map" "^0.5.6"
 
-"react-native-vector-icons@^9.1.0":
+"react-native-vector-icons@*", "react-native-vector-icons@^9.1.0":
   "integrity" "sha512-2AHZ/h9d/+rC0odz+OwbGNlc1Lik/pHhSixn4HfC8RtQ8CxfSBZ6gg7bTLcZhdSvZN+ZEGi30Fj+ZnOSQy+smg=="
   "resolved" "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-9.1.0.tgz"
   "version" "9.1.0"
@@ -10080,7 +10152,7 @@
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
 
-"react-native@*", "react-native@>=0.14.0 <1", "react-native@>=0.45.0", "react-native@>=0.57.0", "react-native@>=0.59", "react-native@0.68.2":
+"react-native@*", "react-native@^0.68.2", "react-native@>=0.14.0 <1", "react-native@>=0.42.0", "react-native@>=0.45.0", "react-native@>=0.50.0", "react-native@>=0.57.0", "react-native@>=0.59":
   "integrity" "sha512-qNMz+mdIirCEmlrhapAtAG+SWVx6MAiSfCbFNhfHqiqu1xw1OKXdzIrjaBEPihRC2pcORCoCHduHGQe/Pz9Yuw=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.68.2.tgz"
   "version" "0.68.2"
@@ -10907,6 +10979,13 @@
     "bplist-creator" "0.1.0"
     "bplist-parser" "0.3.1"
     "plist" "^3.0.5"
+
+"simple-swizzle@^0.2.2":
+  "integrity" "sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg=="
+  "resolved" "https://registry.npmjs.org/simple-swizzle/-/simple-swizzle-0.2.2.tgz"
+  "version" "0.2.2"
+  dependencies:
+    "is-arrayish" "^0.3.1"
 
 "simplebar-react@^1.0.0-alpha.6":
   "integrity" "sha512-1EOWJzFC7eqHUp1igD1/tb8GBv5aPQA5ZMvpeDnVkpNJ3jAuvmrL2kir3HuijlxhG7njvw9ssxjjBa89E5DrJg=="
