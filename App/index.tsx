@@ -12,6 +12,8 @@ import {
 import React, {useState} from 'react';
 import {View} from 'react-native';
 import styles from '../src/atoms/RadioButton/style';
+import Header from '../src/components/Header/Header';
+import Search from '../src/components/Search/Search';
 
 const App = () => {
   const [user, setUser] = useState('');
@@ -26,14 +28,15 @@ const App = () => {
   };
   return (
     <View style={{alignItems: 'center'}}>
+      <Header />
       <Card borderRadius={10} width={300} height={250} borderWidth={1}>
         <View>
           <Input
+            iconName="Search"
             testID="text-input"
             value={user}
             onChangeText={setUser}
             placeholder={'type here'}
-            style={{margin: 10}}
           />
           <RadioButton
             style={{flexDirection: 'row'}}
@@ -68,6 +71,7 @@ const App = () => {
           </Text>
         </View>
       </Card>
+
     </View>
   );
 };
