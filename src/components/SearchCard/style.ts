@@ -17,4 +17,7 @@ export const styles = StyleSheet.create({
   img: {
     marginHorizontal: 10,
   },
+  iconsearch:{
+    borderRadius: 100
+  }
 });
