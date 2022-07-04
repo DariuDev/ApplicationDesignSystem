@@ -1,3 +1,3 @@
-import Search from "./SearchCard";
+import SearchCard from "./SearchCard";
 
-export default Search;
+export default SearchCard;
