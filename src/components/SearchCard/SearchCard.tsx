@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Pressable} from 'react-native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialIcons from 'react-native-vector-icons/AntDesign';
 import {SvgXml} from 'react-native-svg';
 import {Text} from '../../atoms';
 import {styles} from './style';

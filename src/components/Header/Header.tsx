@@ -9,7 +9,7 @@ const Header = <T extends Record<any, unknown>>({onPress, ...otherProps} : IHead
     <View
       style={[styles.header, {...otherProps}]}>
       <StatusBar backgroundColor={'#061d72'} />
-      <SearchCard onPress={onPress} iconName={'search'} placeholder={'جستجو در'} />
+      <SearchCard onPress={onPress} iconName={'search1'} placeholder={'جستجو در'} />
     </View>
   );
 };
