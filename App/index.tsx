@@ -8,10 +8,10 @@ import {
   ModalC,
   Badge,
   Text,
-  TextInputPlaceHolder
+  TextInputPlaceHolder,
 } from '../src/atoms';
-import React, { useState } from 'react';
-import { View } from 'react-native';
+import React, {useState} from 'react';
+import {View} from 'react-native';
 import styles from '../src/atoms/RadioButton/style';
 import Header from '../src/components/Header/Header';
 import {Slider} from './../src/components';
@@ -21,8 +21,8 @@ const App = () => {
   const [user, setUser] = useState('');
 
   const data = [
-    { value: '1', title: 'data 1' },
-    { value: '2', title: 'data 2' },
+    {value: '1', title: 'data 1'},
+    {value: '2', title: 'data 2'},
   ];
   const dataSlider = [
     {
@@ -87,9 +87,18 @@ const App = () => {
     return a + 3;
   };
   return (
-    <View>
-      <Header />
-      <Card borderRadius={10} width={300} height={250} borderWidth={1}>
+    <View style={{alignItems: 'center'}}>
+      <Header
+        onPress={() => console.log('pressed')}
+        height={60}
+        backgroundColor="#061d72"
+      />
+      <Card
+        margin={10}
+        borderRadius={10}
+        width={'90%'}
+        height={250}
+        borderWidth={1}>
         <View>
           <Input
             iconName="Search"
@@ -97,10 +106,9 @@ const App = () => {
             value={user}
             onChangeText={setUser}
             placeholder={'type here'}
-
           />
           <RadioButton
-            style={{ flexDirection: 'row' }}
+            style={{flexDirection: 'row'}}
             data={data}
             onPress={index => {
               console.log(data[index - 1].title);
@@ -136,7 +144,6 @@ const App = () => {
             iconName='check-circle'
             textAlign='left'
           />
-
           <Slider values={dataSlider} top={50} title={'نتایج آخرین آنالیز شما'}
             renderItem={({ item }) => (
               <CardSliderHomePage
@@ -145,7 +152,6 @@ const App = () => {
           />
         </View>
       </Card>
-
     </View>
   );
 };
