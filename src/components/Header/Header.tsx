@@ -1,12 +1,16 @@
 import React from 'react';
-import { Appbar } from 'react-native-paper';
-import Search from '../Search';
+import {View, StatusBar} from 'react-native';
+import SearchCard from '../SearchCard';
+import {styles} from './style';
+import {IHeader} from './type';
 
-const Header = () => {
-    return (
-        <Appbar.Header style={{width: '100%', backgroundColor: '#061d72'}}>
-            <Appbar.Content title={<Search />}/>
-        </Appbar.Header>
-    )
-}
+const Header = <T extends Record<any, unknown>>({onPress, ...otherProps} : IHeader & T) => {
+  return (
+    <View
+      style={[styles.header, {...otherProps}]}>
+      <StatusBar backgroundColor={'#061d72'} />
+      <SearchCard onPress={onPress} iconName={'search'} placeholder={'جستجو در'} />
+    </View>
+  );
+};
 export default Header;
