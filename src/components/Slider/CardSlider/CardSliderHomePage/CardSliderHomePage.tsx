@@ -1,35 +1,36 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, StyleProp } from 'react-native';
+import { Button } from '../../../../atoms';
 import styles from './style';
-interface PropType{
-    item:{
-        title:string;
-        number:number;
-        image:string;
-    };
- }
-const CardSliderResultLastAnalys:React.FC<PropType> = ({ item}) => {
+// interface PropType{
+//     item:{
+
+//     title: string;
+//     description: string;
+//     };
+//  }
+interface PropType {
+
+    title: string;
+    description: string;
+    // number:number;
+    // image:string;
+
+}
+const CardSliderResultLastAnalys: React.FC<PropType> = ({ description, title }) => {
     return (
 
-        <View style={styles.cardItemLastAnalys}>
-          
-                    <>
-                        <View style={styles.viewTopRowLastAnalys}>
-                            {/* <View style={styles.cardImageLastAnalys}>
-                                <Image
-                                    // source={image}
-                                    source={{ uri:item.image }}
-                                    style={styles.imageLastAnalys}
-                                />
-                            </View> */}
-                            <View style={styles.viewCircleLastAnalys}>
-                                <Text style={styles.txtnumberLastAnalys} >{Math.floor(item.number)}</Text>
-                            </View>
-                        </View>
-                        <View style={styles.cardTitleLastAnalys}>
-                            <Text style={styles.titleLastAnalys}>{item.title}</Text>
-                        </View>
-                    </>
+        <View style={styles.container}>
+            <View style={{ flexDirection: 'row' }}>
+                <Image style={{width:50,height:50,resizeMode:'contain'}} source={require('../../../../assets/imageSlider.png')}/>
+                <View>
+                     <Text style={styles.description}>{description}</Text>
+                <Text style={styles.title}>{title}</Text>
+                <Button title={'کلیک کن'} backgroundColor='red' />
+                </View>
+               
+            </View>
+
         </View>
 
     )

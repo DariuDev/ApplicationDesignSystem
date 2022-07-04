@@ -2,19 +2,19 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-cardItemLastAnalys: {
-    width: '40%',
-    height: '18%',
+    container: {
+    width: 330,
+    height: 250,
     // paddingHorizontal: wp('1%'),
-    paddingTop: '2.5%',
-    paddingBottom: '1%',
+    // paddingTop: 6,
+    // paddingBottom: 45,
     alignItems: "center",
     alignSelf: 'center',
     justifyContent: 'center',
-    marginLeft: '1%',
-    backgroundColor: "white",
-    borderRadius: 10,
-    shadowColor: "#000",
+    // marginLeft: 4,
+    backgroundColor: '#36c1de',
+    borderRadius: 5,
+    shadowColor: "#9ba0aa",
     shadowOffset: {
         width: 0,
         height: 3,
@@ -23,16 +23,22 @@ cardItemLastAnalys: {
     shadowRadius: 5,
     elevation: 5,
 },
-titleLastAnalys: {
-    color: '#fff',
+description: {
+    color: '#000',
+    fontSize: 18,
+ 
+},
+title: {
+    color: '#000',
     fontSize: 24,
-    fontFamily: 'BYekan'
+    fontWeight:'bold'
+ 
 },
 imageLastAnalys: {
     width: '19%',
     height: '14%',
     alignSelf: 'center',
-    marginTop: '1.5%',
+    marginTop:6,
     resizeMode: 'contain'
 },
 viewTopRowLastAnalys: {
@@ -44,7 +50,7 @@ viewTopRowLastAnalys: {
 viewCircleLastAnalys: {
     width:50,
     height:50,
-    borderRadius: 50 + 50/ 2,
+    borderRadius: (50 + 50)/ 2,
     backgroundColor: "#8DC8D7",
     justifyContent: "center",
     alignItems: "center",
@@ -63,22 +69,22 @@ cardImageLastAnalys: {
     width: '15%',
     backgroundColor: '#5668E8',
     borderRadius: 7,
-    paddingLeft:'5%',
-    paddingBottom: '3%'
+    paddingLeft:8,
+    paddingBottom: 9
 },
 cardTitleLastAnalys: {
-    marginTop: '2.5%',
-    width: '35%',
+    marginTop: 30,
+    width: 88,
     justifyContent: 'center',
     alignSelf: 'center',
     alignItems: 'center',
     backgroundColor: '#5668E8',
     borderRadius: 7,
-    height: '3.7%'
+    height: 20
 },
 txtnumberLastAnalys: {
     color: '#fff',
-    padding: '0.5',
+    padding: 20,
     fontSize: 24,
     fontFamily: 'BYekan',
 },

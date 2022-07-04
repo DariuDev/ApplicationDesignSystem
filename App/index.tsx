@@ -27,58 +27,29 @@ const App = () => {
   const dataSlider = [
     {
         _id: '1',
-        title: 'تیرگی چشم',
-        number: 50,
-        image: 'https://cdn.skinpedia.ir/v2/3.png',
-
+        description:'تابستون امسال با بهترین های',
+         title: 'عینک آفتابی'
     },
     {
         _id: '2',
-        title: 'پف چشم ',
-        number: 60,
-        image: 'https://cdn.skinpedia.ir/v2/6.png',
-
+        description:'تابستون امسال با بهترین های',
+        title: 'عینک آفتابی'
     },
     {
         _id: '3',
-        title: 'رطوبت پوست',
-        number: 90,
-        image: 'https://cdn.skinpedia.ir/v2/8.png',
-
+        description:'تابستون امسال با بهترین های',
+        title: 'عینک آفتابی'
+     
     },
     {
         _id: '4',
-        title: 'چربی پوست',
-        number: 55,
-        image: 'https://cdn2.skinpedia.ir/appimg/5.png',
-
+        description:'تابستون امسال با بهترین های',
+         title: 'عینک آفتابی'
     },
     {
         _id: '5',
-        title: 'التهاب پوست',
-        number: 89,
-        image: 'https://cdn.skinpedia.ir/v2/1.png',
-
-    },
-    {
-        _id: '6',
-        title: 'لکه',
-        number: 80,
-        image: 'https://cdn.skinpedia.ir/v2/2.png',
-
-    },
-    {
-        _id: '7',
-        title: 'بافت',
-        number: 89,
-        image: 'https://cdn.skinpedia.ir/v2/7.png',
-
-    },
-    {
-        _id: '8',
-        title: 'چین و چروک پوست',
-        number: 99,
-         image: 'https://cdn.skinpedia.ir/v2/4.png',
+        description:'تابستون امسال با بهترین های',
+        title: 'عینک آفتابی'
     },
 ];
 
@@ -137,15 +108,16 @@ const App = () => {
             textAlign='left'
           />
 
-          <Slider values={dataSlider} top={50} title={'نتایج آخرین آنالیز شما'}
+         
+        </View>
+      </Card>
+      {/* <Slider values={dataSlider} top={50} title={'نتایج آخرین آنالیز شما'}
             renderItem={({ item }) => (
               <CardSliderHomePage
                 item={item} />
             )}
-          />
-        </View>
-      </Card>
-
+          /> */}
+           <CardSliderHomePage description={'تابستون امسال با بهترین های'} title={ 'عینک آفتابی'} />
     </View>
   );
 };

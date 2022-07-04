@@ -40,20 +40,20 @@ import styles from './style';
 
   
     return (
-        <>
+       <View >
             {/* <View style={styles.viewRightLeftSlider}> */}
-                <TouchableOpacity onPress={goPrevSlide} style={[styles.cardCircleSlider,{left:5, top: top}]}>
+                {/* <TouchableOpacity onPress={goPrevSlide} style={[styles.cardCircleSlider,{left:5, top: top}]}>
                     <Iconslider name="left" color="#5668E8" size={24} />
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={goNextSlide} style={[styles.cardCircleSlider,{left:5, top: top}]}>
                     <Iconslider name="right" color="#5668E8" size={24} />
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             {/* </View> */}
 
 
 
-            <Text style={styles.titleSlider} >{title}</Text>
+            {/* <Text style={styles.titleSlider} >{title}</Text> */}
             <FlatList
                 data={values}
                 horizontal={true}
@@ -66,7 +66,7 @@ import styles from './style';
                 contentContainerStyle={{paddingHorizontal:10}}
             />
 
-        </>
+        </View>
 
     )
 }
