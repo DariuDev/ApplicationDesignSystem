@@ -14,6 +14,8 @@ import React, {useState} from 'react';
 import {View} from 'react-native';
 import styles from '../src/atoms/RadioButton/style';
 import Header from '../src/components/Header/Header';
+import {Slider} from './../src/components';
+import CardSliderHomePage from './../src/components/Slider/CardSlider/CardSliderHomePage/index';
 
 const App = () => {
   const [user, setUser] = useState('');
@@ -22,6 +24,63 @@ const App = () => {
     {value: '1', title: 'data 1'},
     {value: '2', title: 'data 2'},
   ];
+  const dataSlider = [
+    {
+        _id: '1',
+        title: 'تیرگی چشم',
+        number: 50,
+        image: 'https://cdn.skinpedia.ir/v2/3.png',
+
+    },
+    {
+        _id: '2',
+        title: 'پف چشم ',
+        number: 60,
+        image: 'https://cdn.skinpedia.ir/v2/6.png',
+
+    },
+    {
+        _id: '3',
+        title: 'رطوبت پوست',
+        number: 90,
+        image: 'https://cdn.skinpedia.ir/v2/8.png',
+
+    },
+    {
+        _id: '4',
+        title: 'چربی پوست',
+        number: 55,
+        image: 'https://cdn2.skinpedia.ir/appimg/5.png',
+
+    },
+    {
+        _id: '5',
+        title: 'التهاب پوست',
+        number: 89,
+        image: 'https://cdn.skinpedia.ir/v2/1.png',
+
+    },
+    {
+        _id: '6',
+        title: 'لکه',
+        number: 80,
+        image: 'https://cdn.skinpedia.ir/v2/2.png',
+
+    },
+    {
+        _id: '7',
+        title: 'بافت',
+        number: 89,
+        image: 'https://cdn.skinpedia.ir/v2/7.png',
+
+    },
+    {
+        _id: '8',
+        title: 'چین و چروک پوست',
+        number: 99,
+         image: 'https://cdn.skinpedia.ir/v2/4.png',
+    },
+];
 
   const func = (a: number) => {
     console.log(a + 3);
@@ -82,8 +141,14 @@ const App = () => {
 
           <TextInputPlaceHolder
             placeholder="hi :))"
-            iconName="check-circle"
-            textAlign="left"
+            iconName='check-circle'
+            textAlign='left'
+          />
+          <Slider values={dataSlider} top={50} title={'نتایج آخرین آنالیز شما'}
+            renderItem={({ item }) => (
+              <CardSliderHomePage
+                item={item} />
+            )}
           />
         </View>
       </Card>
