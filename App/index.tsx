@@ -29,7 +29,8 @@ const App = () => {
     return a + 3;
   };
   return (
-
+    <View>
+      <Header />
       <Card borderRadius={10} width={300} height={250} borderWidth={1}>
         <View>
           <Input
