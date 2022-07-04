@@ -8,18 +8,20 @@ import {
   ModalC,
   Badge,
   Text,
+  TextInputPlaceHolder
 } from '../src/atoms';
-import React, {useState} from 'react';
-import {View} from 'react-native';
+import React, { useState } from 'react';
+import { View } from 'react-native';
 import styles from '../src/atoms/RadioButton/style';
 import Header from '../src/components/Header/Header';
 import Search from '../src/components/Search/Search';
 
 const App = () => {
   const [user, setUser] = useState('');
+
   const data = [
-    {value: '1', title: 'data 1'},
-    {value: '2', title: 'data 2'},
+    { value: '1', title: 'data 1' },
+    { value: '2', title: 'data 2' },
   ];
 
   const func = (a: number) => {
@@ -27,8 +29,7 @@ const App = () => {
     return a + 3;
   };
   return (
-    <View style={{alignItems: 'center'}}>
-      <Header />
+
       <Card borderRadius={10} width={300} height={250} borderWidth={1}>
         <View>
           <Input
@@ -37,9 +38,10 @@ const App = () => {
             value={user}
             onChangeText={setUser}
             placeholder={'type here'}
+
           />
           <RadioButton
-            style={{flexDirection: 'row'}}
+            style={{ flexDirection: 'row' }}
             data={data}
             onPress={index => {
               console.log(data[index - 1].title);
@@ -69,6 +71,12 @@ const App = () => {
             onPress={() => console.log('pressed')}>
             Hello World!
           </Text>
+
+          <TextInputPlaceHolder
+            placeholder="hi :))"
+            iconName='check-circle'
+           textAlign='left'
+          />
         </View>
       </Card>
 

@@ -1,9 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "application-design-system": {
-      "signature": "75fcc9c220c2818296c25fb9351994c4",
-      "file": true
-    }
-  }
-}

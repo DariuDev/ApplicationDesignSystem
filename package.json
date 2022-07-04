@@ -12,8 +12,6 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "application-design-system": "file:.yalc/application-design-system",
-    "link": "^1.5.0",
     "react": "17.0.2",
     "react-native": "^0.68.2",
     "react-native-paper": "^4.12.2",
