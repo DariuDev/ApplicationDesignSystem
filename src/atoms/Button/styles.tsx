@@ -8,14 +8,11 @@ export default StyleSheet.create({
       borderRadius: 10,
       paddingVertical: 10,
       paddingHorizontal: 12,
-      marginHorizontal:10,
     },
     txt: {
       fontSize: 18,
       color: "#fff",
-      fontWeight: "bold",
       alignSelf: "center",
-    //   textTransform: "uppercase"
     }
   });
 

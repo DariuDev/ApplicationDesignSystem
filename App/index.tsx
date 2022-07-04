@@ -10,55 +10,34 @@ import {
   Text,
   TextInputPlaceHolder,
 } from '../src/atoms';
-import React, {useState} from 'react';
-import {View} from 'react-native';
+import React, { useState } from 'react';
+import { View } from 'react-native';
 import styles from '../src/atoms/RadioButton/style';
 import Header from '../src/components/Header/Header';
-import {Slider} from './../src/components';
-import CardSliderHomePage from './../src/components/Slider/CardSlider/CardSliderHomePage/index';
+import { Slider } from './../src/components';
+import {CardSliderHomePage} from './../src/components/Slider/CardSlider';
 
 const App = () => {
   const [user, setUser] = useState('');
 
   const data = [
-    {value: '1', title: 'data 1'},
-    {value: '2', title: 'data 2'},
+    { value: '1', title: 'data 1' },
+    { value: '2', title: 'data 2' },
   ];
   const dataSlider = [
-    {
-        _id: '1',
-        description:'تابستون امسال با بهترین های',
-         title: 'عینک آفتابی'
-    },
-    {
-        _id: '2',
-        description:'تابستون امسال با بهترین های',
-        title: 'عینک آفتابی'
-    },
-    {
-        _id: '3',
-        description:'تابستون امسال با بهترین های',
-        title: 'عینک آفتابی'
-     
-    },
-    {
-        _id: '4',
-        description:'تابستون امسال با بهترین های',
-         title: 'عینک آفتابی'
-    },
-    {
-        _id: '5',
-        description:'تابستون امسال با بهترین های',
-        title: 'عینک آفتابی'
-    },
-];
+    {_id: '1',description: 'تابستون امسال با بهترین های',title: 'عینک آفتابی'},
+    {_id: '2',description: 'تابستون امسال با بهترین های',title: 'عینک آفتابی'},
+    {_id: '3',description: 'تابستون امسال با بهترین های',title: 'عینک آفتابی'},
+    {_id: '4',description: 'تابستون امسال با بهترین های',title: 'عینک آفتابی'},
+    {_id: '5',description: 'تابستون امسال با بهترین های',title: 'عینک آفتابی'},
+  ];
 
   const func = (a: number) => {
     console.log(a + 3);
     return a + 3;
   };
   return (
-    <View style={{alignItems: 'center'}}>
+    <View style={{ alignItems: 'center' }}>
       <Header
         onPress={() => console.log('pressed')}
         height={60}
@@ -79,7 +58,7 @@ const App = () => {
             placeholder={'type here'}
           />
           <RadioButton
-            style={{flexDirection: 'row'}}
+            style={{ flexDirection: 'row' }}
             data={data}
             onPress={index => {
               console.log(data[index - 1].title);
@@ -115,16 +94,16 @@ const App = () => {
             iconName='check-circle'
             textAlign='left'
           />
-
-
-         
         </View>
       </Card>
 
-       
-           <CardSliderHomePage description={'تابستون امسال با بهترین های'} title={ 'عینک آفتابی'} />
 
-     
+      <Slider values={dataSlider}
+        renderItem={({ item }) => (
+            <CardSliderHomePage
+              item={item} />
+        )}
+      />
 
     </View>
   );

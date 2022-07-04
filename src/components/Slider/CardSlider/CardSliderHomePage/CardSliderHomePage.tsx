@@ -1,37 +1,21 @@
 import React from 'react';
-import { Text, View, Image, StyleProp } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { Button } from '../../../../atoms';
 import styles from './style';
-// interface PropType{
-//     item:{
+import { CardHomePageType } from './type';
 
-//     title: string;
-//     description: string;
-//     };
-//  }
-interface PropType {
-
-    title: string;
-    description: string;
-    // number:number;
-    // image:string;
-
-}
-const CardSliderResultLastAnalys: React.FC<PropType> = ({ description, title }) => {
+const CardSliderResultLastAnalys: React.FC<CardHomePageType> = ({ item }) => {
     return (
-
         <View style={styles.container}>
-            <View style={{ flexDirection: 'row' }}>
-                <Image style={{width:50,height:50,resizeMode:'contain'}} source={require('../../../../assets/imageSlider.png')}/>
-                <View>
-                     <Text style={styles.description}>{description}</Text>
-                <Text style={styles.title}>{title}</Text>
-                <Button title={'کلیک کن'} backgroundColor='red' />
-                </View>
-               
+            <View style={styles.description} >
+                <Text style={styles.txtTop}>{item.description}</Text>
+                <Text style={styles.txtBottom}>{item.title}</Text>
+                <Button title={'کلیک کن'} styleButton={styles.button} styleText={styles.txtButton} />
             </View>
-
+            <Image style={styles.image} source={require('../../../../assets/imageSlider.png')} />
         </View>
+
+
 
     )
 }

@@ -1,8 +1,8 @@
 import {StyleProp } from 'react-native';
-export default interface ButtonType<StyleProp>{
+export default interface ButtonType{
     onPress?:(event: Object) => void;
     title:string;
-    styleText?:StyleProp ;
+    styleText?:object ;
     styleButton?: object;
     testId?:string;
 

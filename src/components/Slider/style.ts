@@ -1,6 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+    slider:{
+        marginBottom: 10,
+        height: 250,
+        justifyContent: 'center',
+        backgroundColor: '#fff'
+    },
     viewRightLeftSlider: {
         alignItems: 'center',
         flexDirection: 'row',
@@ -39,4 +45,5 @@ export default StyleSheet.create({
         marginRight: 5,
         color: '#200084',
     },
+
 });
