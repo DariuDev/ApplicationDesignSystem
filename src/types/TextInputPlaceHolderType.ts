@@ -11,4 +11,5 @@ import { TextStyle } from 'react-native';
     iconName?: string;
     sizeIcon?:number;
     colorIcon?: string;
+    Children?: React.ReactNode;
 }

@@ -11,11 +11,13 @@ import {
   TextInputPlaceHolder,
 } from '../src/atoms';
 import React, { useState } from 'react';
-import { View } from 'react-native';
+import { View} from 'react-native';
 import styles from '../src/atoms/RadioButton/style';
 import Header from '../src/components/Header/Header';
 import { Slider } from './../src/components';
 import {CardSliderHomePage} from './../src/components/Slider/CardSlider';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
 
 const App = () => {
   const [user, setUser] = useState('');
@@ -91,9 +93,11 @@ const App = () => {
 
           <TextInputPlaceHolder
             placeholder="hi :))"
-            iconName='check-circle'
+            styleOut={{backgroundColor:'yellow',width:50,height: 50,}}
             textAlign='left'
-          />
+          >
+            <MaterialIcons name={'check-circle'} size={24} color={'red'} />
+          </TextInputPlaceHolder>
         </View>
       </Card>
 
