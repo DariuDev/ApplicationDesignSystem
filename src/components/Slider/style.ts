@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     slider:{
-        marginBottom: 10,
+    //    paddingHorizontal: 10,
         height: 250,
         justifyContent: 'center',
         backgroundColor: '#fff'

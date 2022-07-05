@@ -1,6 +1,6 @@
 import {  ListRenderItem } from 'react-native';
 export interface PropSliderType {
-    values: Array<object>;
+    data: Array<object>;
     // top:number;
     renderItem: ListRenderItem<any> | null | undefined;
     styleSlider?:object;

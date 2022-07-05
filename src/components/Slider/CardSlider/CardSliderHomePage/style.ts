@@ -7,7 +7,7 @@ export default StyleSheet.create({
         alignItems: "center",
         alignSelf: 'center',
         justifyContent: 'flex-end',
-        marginHorizontal: 5,
+        marginHorizontal: 9,
         backgroundColor: '#36c1de',
         borderRadius: 8,
         shadowColor: "#9ba0aa",

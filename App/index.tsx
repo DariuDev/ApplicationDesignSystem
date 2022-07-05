@@ -1,4 +1,4 @@
-// import {
+ import {
 //   Input,
 //   RadioButton,
 //   Button,
@@ -6,9 +6,9 @@
 //   Card,
 //   ModalC,
 //   Badge,
-//   Text,
+  Text,
 //   TextInputPlaceHolder,
-// } from '../src/atoms';
+ } from '../src/atoms';
 import React, { useState } from 'react';
 import { View, ScrollView } from 'react-native';
 import styles from '../src/atoms/RadioButton/style';
@@ -49,15 +49,16 @@ const App = () => {
       <ScrollView >
        
 
-        <Slider values={dataSlider}
+        <Slider data={dataSlider}
           renderItem={({ item }) => (
             <CardSliderHomePage
               item={item} />
           )}
         />
         <OfferPager />
-
-        {/* <Slider values={dataSlider} isTopChildren={true}
+     
+        {/* <Slider 
+         data={dataSlider} isTopChildren={true}
           styleSlider={{ backgroundColor: '#f92a5f' }}
           renderItem={({ item }) => (
             <CardSliderDiscount
@@ -66,7 +67,6 @@ const App = () => {
         >
           <View style={style.sliderDiscount}>
             <Text
-
               color={'white'}
               onPress={() => console.log('pressed')}>
               تخفیف های انفجاری
@@ -75,11 +75,6 @@ const App = () => {
           </View>
         </Slider> */}
       </ScrollView>
-
-
-
-
-
     </View>
   );
 };
