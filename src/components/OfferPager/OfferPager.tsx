@@ -1,8 +1,9 @@
 import React from 'react';
 import {View} from 'react-native';
-import {combinedShapeBackground} from '../../assets';
+import {combinedShapeBackground, Gradient} from '../../assets';
+import MaterialIcons from 'react-native-vector-icons/SimpleLineIcons';
 import {SvgXml} from 'react-native-svg';
-import {Card, FlatList} from '../../atoms';
+import {Card, FlatList, Text} from '../../atoms';
 import {styles} from './style';
 
 export const OfferPager = () => {
@@ -55,25 +56,41 @@ export const OfferPager = () => {
   ];
   return (
     <View>
-      <SvgXml xml={combinedShapeBackground} />
-      <FlatList
-        data={dataSlider}
-        horizontal={true}
-        style={styles.list}
-        showsHorizontalScrollIndicator={false}
-        keyExtractor={p => p._id}
-        renderItem={() => (
-          <Card
-            onPress={() => console.log('pressed')}
-            marginHorizontal={5}
-            flex={1}
-            borderRadius={15}
-            width={80}
-            height={'100%'}
-            backgroundColor={'red'}
-          />
-        )}
+      <View>
+        <SvgXml style={{zIndex: 3}} xml={combinedShapeBackground} />
+        <FlatList
+          data={dataSlider}
+          horizontal={true}
+          style={styles.list}
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={i => i._id}
+          renderItem={() => (
+            <Card
+              onPress={() => console.log('pressed')}
+              marginHorizontal={5}
+              flex={1}
+              borderRadius={15}
+              width={80}
+              //height={'100%'}
+              backgroundColor={'white'}
+            />
+          )}
+        />
+      </View>
+      <Gradient
+        style={styles.gradient}
+        colors={['#f8616e', '#f92a5f']}
       />
+      <View
+        style={styles.offerTitle}>
+        <Text fontWeight={'bold'} fontSize={30} color={'#fff'}>
+          انفجاری
+        </Text>
+        <Text fontWeight={'bold'} fontSize={20} color={'#fff'}>
+          تخفیف های
+        </Text>
+        <MaterialIcons name={'fire'} size={44} color={'#fff'} />
+      </View>
     </View>
   );
 };
