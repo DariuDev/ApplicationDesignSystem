@@ -17,6 +17,7 @@ import { Slider } from './../src/components';
 import { CardSliderHomePage, CardSliderDiscount } from './../src/components/Slider/CardSlider';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
+import { OfferPager } from '../src/components/OfferPager/OfferPager';
 
 
 const App = () => {
@@ -39,14 +40,14 @@ const App = () => {
     return a + 3;
   };
   return (
-    <View style={{ alignItems: 'center', flex: 1 }}>
+    <View style={{ alignItems: 'center', flex: 1, backgroundColor: 'blue' }}>
       <Header
         onPress={() => console.log('pressed')}
         height={60}
         backgroundColor="#061d72"
       />
       <ScrollView >
-        <Card
+        {/* <Card
           margin={10}
           borderRadius={10}
           width={'90%'}
@@ -102,7 +103,7 @@ const App = () => {
               <MaterialIcons name={'arrow-back-ios'} size={14} color={'#fff'} />
             </TextInputPlaceHolder>
           </View>
-        </Card>
+        </Card> */}
 
         <Slider values={dataSlider}
           renderItem={({ item }) => (
@@ -110,8 +111,9 @@ const App = () => {
               item={item} />
           )}
         />
+        <OfferPager />
 
-        <Slider values={dataSlider} isTopChildren={true}
+        {/* <Slider values={dataSlider} isTopChildren={true}
           styleSlider={{ backgroundColor: '#f92a5f' }}
           renderItem={({ item }) => (
             <CardSliderDiscount
@@ -127,7 +129,7 @@ const App = () => {
             </Text>
             <MaterialIcons name={'local-fire-department'} size={24} color={'#fff'} />
           </View>
-        </Slider>
+        </Slider> */}
       </ScrollView>
 
 
