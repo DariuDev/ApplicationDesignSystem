@@ -1,14 +1,14 @@
-import {
-  Input,
-  RadioButton,
-  Button,
-  CheckBox,
-  Card,
-  ModalC,
-  Badge,
-  Text,
-  TextInputPlaceHolder,
-} from '../src/atoms';
+// import {
+//   Input,
+//   RadioButton,
+//   Button,
+//   CheckBox,
+//   Card,
+//   ModalC,
+//   Badge,
+//   Text,
+//   TextInputPlaceHolder,
+// } from '../src/atoms';
 import React, { useState } from 'react';
 import { View, ScrollView } from 'react-native';
 import styles from '../src/atoms/RadioButton/style';
@@ -17,6 +17,7 @@ import { Slider } from './../src/components';
 import { CardSliderHomePage, CardSliderDiscount } from './../src/components/Slider/CardSlider';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
+import { OfferPager } from '../src/components/OfferPager/OfferPager';
 
 
 const App = () => {
@@ -39,14 +40,52 @@ const App = () => {
     return a + 3;
   };
   return (
-    <View style={{ alignItems: 'center', flex: 1 }}>
+    <View style={{ alignItems: 'center', flex: 1, backgroundColor: 'blue' }}>
       <Header
         onPress={() => console.log('pressed')}
         height={80}
         backgroundColor="#061d72"
       />
       <ScrollView >
-        <Card
+       
+
+        <Slider values={dataSlider}
+          renderItem={({ item }) => (
+            <CardSliderHomePage
+              item={item} />
+          )}
+        />
+        <OfferPager />
+
+        {/* <Slider values={dataSlider} isTopChildren={true}
+          styleSlider={{ backgroundColor: '#f92a5f' }}
+          renderItem={({ item }) => (
+            <CardSliderDiscount
+              item={item} />
+          )}
+        >
+          <View style={style.sliderDiscount}>
+            <Text
+
+              color={'white'}
+              onPress={() => console.log('pressed')}>
+              تخفیف های انفجاری
+            </Text>
+            <MaterialIcons name={'local-fire-department'} size={24} color={'#fff'} />
+          </View>
+        </Slider> */}
+      </ScrollView>
+
+
+
+
+
+    </View>
+  );
+};
+export default App;
+
+ {/* <Card
           margin={10}
           borderRadius={10}
           width={'90%'}
@@ -102,39 +141,4 @@ const App = () => {
               <MaterialIcons name={'arrow-back-ios'} size={14} color={'#fff'} />
             </TextInputPlaceHolder>
           </View>
-        </Card>
-
-        <Slider values={dataSlider}
-          renderItem={({ item }) => (
-            <CardSliderHomePage
-              item={item} />
-          )}
-        />
-
-        <Slider values={dataSlider} isTopChildren={true}
-          styleSlider={{ backgroundColor: '#f92a5f' }}
-          renderItem={({ item }) => (
-            <CardSliderDiscount
-              item={item} />
-          )}
-        >
-          <View style={style.sliderDiscount}>
-            <Text
-
-              color={'white'}
-              onPress={() => console.log('pressed')}>
-              تخفیف های انفجاری
-            </Text>
-            <MaterialIcons name={'local-fire-department'} size={24} color={'#fff'} />
-          </View>
-        </Slider>
-      </ScrollView>
-
-
-
-
-
-    </View>
-  );
-};
-export default App;
+        </Card> */}
