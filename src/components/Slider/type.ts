@@ -4,5 +4,6 @@ export interface PropSliderType {
     // top:number;
     renderItem: ListRenderItem<any> | null | undefined;
     styleSlider?:object;
-    // title?: string;
+    children?:React.ReactNode;
+    isRightChildren?:boolean;
 }

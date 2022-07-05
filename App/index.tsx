@@ -98,7 +98,7 @@ const App = () => {
             styleOut={{backgroundColor:'yellow',width:50,height: 50,}}
             textAlign='left'
           >
-            <MaterialIcons name={'check-circle'} size={24} color={'red'} />
+             <MaterialIcons name={'arrow-back-ios'} size={14} color={'#fff'} />
           </TextInputPlaceHolder>
         </View>
       </Card>
