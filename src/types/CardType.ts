@@ -1,4 +1,5 @@
  interface ICard {
+  onPress?: () => void;
   width?: number | string;
   height?: number | string;
   borderRadius?: number;

@@ -1,5 +1,5 @@
-import { OffSliderGradient } from "./offSliderGradient";
+import { Gradient } from "./Gradient";
 import { malltinaSvg } from "./malltina";
 import { combinedShapeBackground } from "./combinedShapeBackground";
 
-export {OffSliderGradient, malltinaSvg, combinedShapeBackground}
+export {Gradient, malltinaSvg, combinedShapeBackground}
