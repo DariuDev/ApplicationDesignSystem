@@ -1,14 +1,14 @@
- import {
-//   Input,
-//   RadioButton,
-//   Button,
-//   CheckBox,
-//   Card,
-//   ModalC,
-//   Badge,
+import {
+  //   Input,
+  //   RadioButton,
+  //   Button,
+  //   CheckBox,
+  //   Card,
+  //   ModalC,
+  //   Badge,
   Text,
-//   TextInputPlaceHolder,
- } from '../src/atoms';
+  //   TextInputPlaceHolder,
+} from '../src/atoms';
 import React, { useState } from 'react';
 import { View, ScrollView } from 'react-native';
 import styles from '../src/atoms/RadioButton/style';
@@ -40,23 +40,24 @@ const App = () => {
     return a + 3;
   };
   return (
-    <View style={{ alignItems: 'center', flex: 1, backgroundColor: 'blue' }}>
+    <View style={{ alignItems: 'center', flex: 1 }}>
       <Header
         onPress={() => console.log('pressed')}
         height={80}
         backgroundColor="#061d72"
       />
-      <ScrollView >
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Slider data={dataSlider}
+          contentContainerStyle={{  marginTop: 12}}
           renderItem={({ item }) => (
             <CardSliderHomePage
               item={item} />
           )}
         />
         <OfferPager />
-     
-        <Slider 
-         data={dataSlider} isTopChildren={true}
+
+        <Slider
+          data={dataSlider} isTopChildren={true}
           styleSlider={{ backgroundColor: '#f92a5f' }}
           renderItem={({ item }) => (
             <CardSliderDiscount
@@ -78,7 +79,7 @@ const App = () => {
 };
 export default App;
 
- {/* <Card
+{/* <Card
           margin={10}
           borderRadius={10}
           width={'90%'}

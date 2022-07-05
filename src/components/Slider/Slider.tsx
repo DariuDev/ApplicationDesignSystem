@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { View, Text, TouchableOpacity, FlatList, FlatListProps } from 'react-native';
-import Iconslider from 'react-native-vector-icons/AntDesign';
 import styles from './style';
 import { PropSliderType } from './type';
 
@@ -46,7 +45,6 @@ const Slider: React.FC<PropSlider> = ({ isTopChildren , data, renderItem, styleS
                 ref={FlatListRef}
                 keyExtractor={p => p._id}
                 renderItem={renderItem}
-                contentContainerStyle={{ paddingHorizontal: 10 }}
                 {...otherProps}
             />
             {isTopChildren!==null && isTopChildren && children}

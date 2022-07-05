@@ -30,9 +30,9 @@ const BottomSheet: React.FC = () => {
         bottom: actionSheetIntropolate
     }
 
-    const gestureHandler = (e:NativeSyntheticEvent<NativeScrollEvent>) => {
+    const gestureHandler = (e:any) => {
         if (e.nativeEvent.contentOffset.y > 0) bringUpActionSheet();
-        // else if(e.nativeEvent.contentOffset.y<0) hideTheActionSheet();
+         else if(e.nativeEvent.contentOffset.y<0) hideTheActionSheet();
 
 
     }

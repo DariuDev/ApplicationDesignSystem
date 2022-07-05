@@ -2,23 +2,24 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     container: {
         width: 350,
-        height: 250,
+        height: 260,
         flexDirection: 'row',
         alignItems: "center",
         alignSelf: 'center',
-        justifyContent: 'flex-end',
-        marginHorizontal: 9,
+        justifyContent: 'center',
         backgroundColor: '#36c1de',
+        marginHorizontal: 7,
         borderRadius: 8,
         shadowColor: "#9ba0aa",
         shadowOffset: {
             width: 0,
-            height: 3,
+            height: 0,
         },
         shadowOpacity: 0.8,
-        shadowRadius: 5,
-        elevation: 5,
+        shadowRadius: 8,
+        elevation: 3,
     },
+
     txtTop: {
         color: '#000',
         fontSize: 18,
@@ -29,9 +30,9 @@ export default StyleSheet.create({
         fontWeight: 'bold'
     },
     image: {
-        width: 120,
-        height: 150,
-        resizeMode: 'contain',
+        width: 137,
+        height: 190,
+        resizeMode: 'contain'
     },
     button: {
         backgroundColor: "red",
@@ -45,7 +46,7 @@ export default StyleSheet.create({
         fontWeight: "500",
     },
     description: {
-        marginRight: 20
+        paddingRight: 10
     }
 
 });
