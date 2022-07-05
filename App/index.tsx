@@ -1,14 +1,14 @@
-import {
-  Input,
-  RadioButton,
-  Button,
-  CheckBox,
-  Card,
-  ModalC,
-  Badge,
-  Text,
-  TextInputPlaceHolder,
-} from '../src/atoms';
+// import {
+//   Input,
+//   RadioButton,
+//   Button,
+//   CheckBox,
+//   Card,
+//   ModalC,
+//   Badge,
+//   Text,
+//   TextInputPlaceHolder,
+// } from '../src/atoms';
 import React, { useState } from 'react';
 import { View, ScrollView } from 'react-native';
 import styles from '../src/atoms/RadioButton/style';
@@ -47,7 +47,45 @@ const App = () => {
         backgroundColor="#061d72"
       />
       <ScrollView >
-        {/* <Card
+       
+
+        <Slider values={dataSlider}
+          renderItem={({ item }) => (
+            <CardSliderHomePage
+              item={item} />
+          )}
+        />
+        <OfferPager />
+
+        {/* <Slider values={dataSlider} isTopChildren={true}
+          styleSlider={{ backgroundColor: '#f92a5f' }}
+          renderItem={({ item }) => (
+            <CardSliderDiscount
+              item={item} />
+          )}
+        >
+          <View style={style.sliderDiscount}>
+            <Text
+
+              color={'white'}
+              onPress={() => console.log('pressed')}>
+              تخفیف های انفجاری
+            </Text>
+            <MaterialIcons name={'local-fire-department'} size={24} color={'#fff'} />
+          </View>
+        </Slider> */}
+      </ScrollView>
+
+
+
+
+
+    </View>
+  );
+};
+export default App;
+
+ {/* <Card
           margin={10}
           borderRadius={10}
           width={'90%'}
@@ -104,39 +142,3 @@ const App = () => {
             </TextInputPlaceHolder>
           </View>
         </Card> */}
-
-        <Slider values={dataSlider}
-          renderItem={({ item }) => (
-            <CardSliderHomePage
-              item={item} />
-          )}
-        />
-        <OfferPager />
-
-        {/* <Slider values={dataSlider} isTopChildren={true}
-          styleSlider={{ backgroundColor: '#f92a5f' }}
-          renderItem={({ item }) => (
-            <CardSliderDiscount
-              item={item} />
-          )}
-        >
-          <View style={style.sliderDiscount}>
-            <Text
-
-              color={'white'}
-              onPress={() => console.log('pressed')}>
-              تخفیف های انفجاری
-            </Text>
-            <MaterialIcons name={'local-fire-department'} size={24} color={'#fff'} />
-          </View>
-        </Slider> */}
-      </ScrollView>
-
-
-
-
-
-    </View>
-  );
-};
-export default App;
