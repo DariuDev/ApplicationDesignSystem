@@ -42,7 +42,7 @@ const App = () => {
     <View style={{ alignItems: 'center', flex: 1 }}>
       <Header
         onPress={() => console.log('pressed')}
-        height={60}
+        height={80}
         backgroundColor="#061d72"
       />
       <ScrollView >
