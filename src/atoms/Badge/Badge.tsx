@@ -31,7 +31,7 @@ console.log(otherprops);
                 ...styleBadge
             }]}  {...otherprops}>
 
-            {children && children}
+            {children }
         </Pressable>
 
     )
