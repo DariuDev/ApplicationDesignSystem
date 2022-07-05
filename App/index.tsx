@@ -1,29 +1,25 @@
 //  export default from '../storybook';
-import {
-  Input,
-  RadioButton,
-  Button,
-  CheckBox,
-  Card,
-  ModalC,
-  Badge,
-  Text,
-  TextInputPlaceHolder,
-} from '../src/atoms';
+// import {
+//   Input,
+//   RadioButton,
+//   Button,
+//   CheckBox,
+//   Card,
+//   ModalC,
+//   Badge,
+//   Text,
+//   TextInputPlaceHolder,
+// } from '../src/atoms';
+// import styles from '../src/atoms/RadioButton/style';
 import React, { useState } from 'react';
 import { View } from 'react-native';
-import styles from '../src/atoms/RadioButton/style';
 import Header from '../src/components/Header/Header';
+import { OfferPager } from '../src/components/OfferPager/OfferPager';
 import { Slider } from './../src/components';
 import {CardSliderHomePage} from './../src/components/Slider/CardSlider';
 
 const App = () => {
-  const [user, setUser] = useState('');
-
-  const data = [
-    { value: '1', title: 'data 1' },
-    { value: '2', title: 'data 2' },
-  ];
+ 
   const dataSlider = [
     {_id: '1',description: 'تابستون امسال با بهترین های',title: 'عینک آفتابی'},
     {_id: '2',description: 'تابستون امسال با بهترین های',title: 'عینک آفتابی'},
@@ -32,18 +28,37 @@ const App = () => {
     {_id: '5',description: 'تابستون امسال با بهترین های',title: 'عینک آفتابی'},
   ];
 
-  const func = (a: number) => {
-    console.log(a + 3);
-    return a + 3;
-  };
   return (
-    <View style={{ alignItems: 'center' }}>
+    <View style={{flex: 1, alignItems: 'center', backgroundColor: 'red' }}>
       <Header
         onPress={() => console.log('pressed')}
         height={60}
         backgroundColor="#061d72"
       />
-      <Card
+      <Slider values={dataSlider}
+        renderItem={({ item }) => (
+            <CardSliderHomePage
+              item={item} />
+        )}
+      />
+      <OfferPager />
+    </View>
+  );
+};
+export default App;
+
+// const [user, setUser] = useState('');
+
+// const data = [
+//   { value: '1', title: 'data 1' },
+//   { value: '2', title: 'data 2' },
+// ];
+  // const func = (a: number) => {
+  //   console.log(a + 3);
+  //   return a + 3;
+  // };
+
+ {/* <Card
         margin={10}
         borderRadius={10}
         width={'90%'}
@@ -95,17 +110,4 @@ const App = () => {
             textAlign='left'
           />
         </View>
-      </Card>
-
-
-      <Slider values={dataSlider}
-        renderItem={({ item }) => (
-            <CardSliderHomePage
-              item={item} />
-        )}
-      />
-
-    </View>
-  );
-};
-export default App;
+      </Card> */}
