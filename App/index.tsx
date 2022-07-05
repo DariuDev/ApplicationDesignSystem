@@ -72,7 +72,9 @@ const App = () => {
             title="ClickMe"
             onPress={() => func(3)}
             onTouchMove={() => console.log('emel')}
-          />
+          >
+             <MaterialIcons name={'arrow-back-ios'} size={14} color={'#fff'} />
+            </Button>
           <CheckBox title="hhhh" isChecked={true} colorCheck={'blue'} />
           <ModalC open={true} onClose={() => console.log('tt')}>
             <Text>hi</Text>

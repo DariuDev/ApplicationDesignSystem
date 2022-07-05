@@ -5,5 +5,6 @@ export default interface ButtonType{
     styleText?:object ;
     styleButton?: object;
     testId?:string;
-
+    children?: React.ReactNode;
+    isRightChildren?:boolean;
  }

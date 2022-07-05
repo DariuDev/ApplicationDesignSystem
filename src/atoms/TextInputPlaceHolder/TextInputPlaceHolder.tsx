@@ -1,4 +1,4 @@
-import React, { Children, useState } from 'react';
+import React, {  useState } from 'react';
 import { TextInput, View, TextInputProps } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { TextInputPlaceHolderType } from '../../types';
