@@ -5,7 +5,7 @@ import styles from './style';
 import { CardHomePageType } from './type';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const CardSliderResultLastAnalys: React.FC<CardHomePageType> = ({ item }) => {
+const CardSliderHomePage: React.FC<CardHomePageType> = ({ item }) => {
     return (
         <View style={styles.container}>
             <View style={styles.description} >
@@ -22,4 +22,4 @@ const CardSliderResultLastAnalys: React.FC<CardHomePageType> = ({ item }) => {
 
     )
 }
-export default CardSliderResultLastAnalys;
+export default CardSliderHomePage;

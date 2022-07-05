@@ -5,5 +5,5 @@ export interface PropSliderType {
     renderItem: ListRenderItem<any> | null | undefined;
     styleSlider?:object;
     children?:React.ReactNode;
-    isRightChildren?:boolean;
+    isTopChildren?:boolean;
 }

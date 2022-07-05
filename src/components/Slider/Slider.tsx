@@ -5,7 +5,7 @@ import styles from './style';
 import {PropSliderType} from './type';
 
 
-const Slider: React.FC<PropSliderType> = ({isRightChildren=false, values, renderItem,styleSlider ,children}) => {
+const Slider: React.FC<PropSliderType> = ({isTopChildren=false, values, renderItem,styleSlider ,children}) => {
 
     const [current, setCurrent] = useState<number>(0);
     const FlatListRef = useRef<FlatList>(null);
@@ -36,7 +36,7 @@ const Slider: React.FC<PropSliderType> = ({isRightChildren=false, values, render
                     <Iconslider name="right" color="#5668E8" size={24} />
                 </TouchableOpacity> */}
             {/* </View> */}
-            {!isRightChildren &&  children}
+            {!isTopChildren &&  children}
             <FlatList
                 data={values}
                 horizontal={true}
@@ -47,7 +47,7 @@ const Slider: React.FC<PropSliderType> = ({isRightChildren=false, values, render
                 renderItem={renderItem}
                 contentContainerStyle={{ paddingHorizontal: 5 }}
             />
-               {isRightChildren &&  children}
+               {isTopChildren &&  children}
         </View>
     )
 }
