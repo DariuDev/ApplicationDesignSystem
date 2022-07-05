@@ -1,10 +1,10 @@
-import React,{FC} from 'react';
-import {TouchableOpacity} from 'react-native';
+import React from 'react';
+import {Pressable} from 'react-native';
 import {ICard} from '../../types'
 
  const Card = <T extends Record<any, unknown>>({width, height, borderRadius, borderWidth, children, ...otherProps}: ICard & T ) => (
-  <TouchableOpacity style={{width, height, borderRadius, borderWidth, ...otherProps}} >
+  <Pressable style={{width, height, borderRadius, borderWidth, ...otherProps}} >
     {children}
-  </TouchableOpacity>
+  </Pressable>
 );
 export default Card;

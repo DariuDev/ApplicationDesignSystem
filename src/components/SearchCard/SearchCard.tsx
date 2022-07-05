@@ -5,7 +5,7 @@ import {SvgXml} from 'react-native-svg';
 import {Text} from '../../atoms';
 import {styles} from './style';
 import {ISearchCard} from './type';
-import {xml} from '../../assets/malltina';
+import {malltinaSvg} from '../../assets';
 
 const SearchCard = ({iconName, placeholder, onPress}: ISearchCard) => {
   return (
@@ -19,7 +19,7 @@ const SearchCard = ({iconName, placeholder, onPress}: ISearchCard) => {
         <MaterialIcons name={iconName} size={30} color={'gray'} />
       </Pressable>
       <View style={styles.placeholder}>
-        <SvgXml style={styles.img} xml={xml} />
+        <SvgXml style={styles.img} xml={malltinaSvg} />
         <Text fontWeight={'bold'}>{placeholder}</Text>
       </View>
     </View>
