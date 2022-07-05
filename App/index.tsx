@@ -15,9 +15,10 @@ import { View, ScrollView } from 'react-native';
 import styles from '../src/atoms/RadioButton/style';
 import Header from '../src/components/Header/Header';
 import { Slider } from './../src/components';
-import { CardSliderHomePage,CardSliderDiscount } from './../src/components/Slider/CardSlider';
+import { CardSliderHomePage, CardSliderDiscount } from './../src/components/Slider/CardSlider';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
+
 
 const App = () => {
   const [user, setUser] = useState('');
@@ -39,7 +40,7 @@ const App = () => {
     return a + 3;
   };
   return (
-    <View style={{ alignItems: 'center',flex:1 }}>
+    <View style={{ alignItems: 'center', flex: 1 }}>
       <Header
         onPress={() => console.log('pressed')}
         height={60}
@@ -112,15 +113,15 @@ const App = () => {
         />
 
         <Slider values={dataSlider} isTopChildren={true}
-         styleSlider={{backgroundColor:'#f92a5f'}}
+          styleSlider={{ backgroundColor: '#f92a5f' }}
           renderItem={({ item }) => (
             <CardSliderDiscount
               item={item} />
           )}
         >
           <View style={style.sliderDiscount}>
-          <Text
-         
+            <Text
+
               color={'white'}
               onPress={() => console.log('pressed')}>
               تخفیف های انفجاری
@@ -129,7 +130,7 @@ const App = () => {
           </View>
         </Slider>
       </ScrollView>
-     
+
 
 
 
