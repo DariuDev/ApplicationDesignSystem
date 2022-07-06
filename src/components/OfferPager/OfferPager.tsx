@@ -3,10 +3,10 @@ import {View} from 'react-native';
 import {combinedShapeBackground, Gradient} from '../../assets';
 import MaterialIcons from 'react-native-vector-icons/SimpleLineIcons';
 import {SvgXml} from 'react-native-svg';
-import {Card, FlatList, Text} from '../../atoms';
+import {Card, FlatList, ScrollView, Text} from '../../atoms';
 import {styles} from './style';
 import TitleOfferCard from './OfferCard/TitleOfferCard';
-import { useState } from 'react';
+import {useState} from 'react';
 
 export const OfferPager = () => {
   const [title, setTitle] = useState();
@@ -66,7 +66,7 @@ export const OfferPager = () => {
           // mainPrice=""
           // price=""
           // timer=""
-          title= {title}
+          title={title}
           // off=""
         />
         <FlatList
@@ -89,6 +89,11 @@ export const OfferPager = () => {
             </Card>
           )}
         />
+        {/* <ScrollView>
+          {dataSlider.map((item, index) => {
+            return <Card item={item} key={index}/>;
+          })}
+        </ScrollView> */}
       </View>
 
       <Gradient style={styles.gradient} colors={['#f8616e', '#f92a5f']} />

@@ -8,3 +8,4 @@ export {default as Text} from './Text'
 export {default as Badge} from './Badge';
 export {default as TextInputPlaceHolder} from './TextInputPlaceHolder';
 export {default as FlatList} from './FlatList';
+export {default as ScrollView} from './ScrollView';
