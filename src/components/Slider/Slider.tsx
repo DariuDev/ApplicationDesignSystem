@@ -14,7 +14,6 @@ const Slider: React.FC<PropSlider> = ({ isTopChildren , data, renderItem, styleS
         FlatListRef.current?.scrollToIndex({ index: current, animated: true });
     }, [current]);
 
-
     // const goNextSlide = () => {
     //     setCurrent(current < lenght - 2 ? current + 1 : 0);
     //     FlatListRef.current?.scrollToIndex({ index: current, animated: true })
@@ -37,7 +36,6 @@ const Slider: React.FC<PropSlider> = ({ isTopChildren , data, renderItem, styleS
             {/* </View> */}
             {isTopChildren!==null && !isTopChildren && children}
             <FlatList
-                
                 data={data}
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}

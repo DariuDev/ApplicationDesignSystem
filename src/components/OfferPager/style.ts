@@ -3,9 +3,9 @@ import {StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
   list: {
     flex: 1,
+    marginEnd: 25,
     position: 'absolute',
     bottom: 0,
-    width: '100%',
     height: '20%',
     zIndex: 3,
   },
@@ -13,7 +13,6 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: 170,
     marginTop: -100,
-    //   position: 'absolute',
     bottom: 0,
     zIndex: 2,
   },
