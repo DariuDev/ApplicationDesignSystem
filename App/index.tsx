@@ -56,7 +56,7 @@ const App = () => {
         />
         <OfferPager />
 
-        <Slider
+        {/* <Slider
           data={dataSlider} isTopChildren={true}
           styleSlider={{ backgroundColor: '#f92a5f' }}
           renderItem={({ item }) => (
@@ -72,7 +72,7 @@ const App = () => {
             </Text>
             <MaterialIcons name={'local-fire-department'} size={24} color={'#fff'} />
           </View>
-        </Slider>
+        </Slider> */}
       </ScrollView>
     </View>
   );
