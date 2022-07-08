@@ -18,8 +18,11 @@ import { CardSliderHomePage, CardSliderDiscount } from './../src/components/Slid
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
 import { OfferPager } from '../src/components/OfferPager/OfferPager';
+import { QueryClient, QueryClientProvider, } from 'react-query'
 
 
+
+const queryClient = new QueryClient()
 const App = () => {
   const [user, setUser] = useState('');
 
@@ -40,23 +43,24 @@ const App = () => {
     return a + 3;
   };
   return (
-    <View style={{ alignItems: 'center', flex: 1 }}>
-      <Header
-        onPress={() => console.log('pressed')}
-        height={85}
-        backgroundColor="#061d72"
-      />
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <Slider data={dataSlider}
-          contentContainerStyle={{  marginTop: 12}}
-          renderItem={({ item }) => (
-            <CardSliderHomePage
-              item={item} />
-          )}
+    <QueryClientProvider client={queryClient}>
+      <View style={{ alignItems: 'center', flex: 1 }}>
+        <Header
+          onPress={() => console.log('pressed')}
+          height={85}
+          backgroundColor="#061d72"
         />
-        <OfferPager />
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <Slider data={dataSlider}
+            contentContainerStyle={{ marginTop: 12 }}
+            renderItem={({ item }) => (
+              <CardSliderHomePage
+                item={item} />
+            )}
+          />
+          <OfferPager />
 
-        {/* <Slider
+          {/* <Slider
           data={dataSlider} isTopChildren={true}
           styleSlider={{ backgroundColor: '#f92a5f' }}
           renderItem={({ item }) => (
@@ -73,8 +77,9 @@ const App = () => {
             <MaterialIcons name={'local-fire-department'} size={24} color={'#fff'} />
           </View>
         </Slider> */}
-      </ScrollView>
-    </View>
+        </ScrollView>
+      </View>
+    </QueryClientProvider>
   );
 };
 export default App;
