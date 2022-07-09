@@ -6,8 +6,9 @@ import {
   //   Card,
   //   ModalC,
   //   Badge,
-  Text,
+  // Text,
   //   TextInputPlaceHolder,
+  ScrollView as FakeScrollView
 } from '../src/atoms';
 import React, { useState } from 'react';
 import { View, ScrollView } from 'react-native';
@@ -51,16 +52,26 @@ const App = () => {
           backgroundColor="#061d72"
         />
         <ScrollView showsVerticalScrollIndicator={false}>
-          <Slider data={dataSlider}
+        <FakeScrollView  horizontal={true}  
+         showsHorizontalScrollIndicator={false}
+         style={{ marginEnd: 20,marginTop:10}}>
+          {dataSlider.map((p)=>{
+            return( <CardSliderHomePage
+              item={p} />)
+          })}
+        </FakeScrollView>
+
+          <OfferPager />
+
+          {/* 
+           <Slider data={dataSlider}
             contentContainerStyle={{ marginTop: 12 }}
             renderItem={({ item }) => (
               <CardSliderHomePage
                 item={item} />
             )}
           />
-          <OfferPager />
-
-          {/* <Slider
+          <Slider
           data={dataSlider} isTopChildren={true}
           styleSlider={{ backgroundColor: '#f92a5f' }}
           renderItem={({ item }) => (
