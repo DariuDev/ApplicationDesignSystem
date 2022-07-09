@@ -4,11 +4,11 @@ import { View, Modal, TouchableOpacity, ModalProps } from 'react-native';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './styles';
 
-type ModalTypeProops = ModalType & ModalProps;
+// type ModalTypeProops = ModalType & ModalProps;
 
-const ModalC: React.FC<ModalTypeProops> = ({ open, children, onClose, testId, top, styleModal,
+const ModalC= ({ open, children, onClose, testId, top, styleModal,
   colorClose, sizeClose, styleClose, ...otherprops
-}) => {
+}:ModalType & ModalProps) => {
   const [isOpen, setIsOpen] = useState(open);
 
   const size = sizeClose ? sizeClose : 24;

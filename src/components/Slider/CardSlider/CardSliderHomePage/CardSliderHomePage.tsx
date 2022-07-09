@@ -7,8 +7,8 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const CardSliderHomePage: React.FC<CardHomePageType> = ({ item }) => {
     return (
-        
-            <View style={styles.container}>
+
+        <View style={styles.container} key={item._id}>
             <View style={styles.description} >
                 <Text style={styles.txtTop}>{item.description}</Text>
                 <Text style={styles.txtBottom}>{item.title}</Text>
@@ -19,10 +19,10 @@ const CardSliderHomePage: React.FC<CardHomePageType> = ({ item }) => {
             {/* <View  style={styles.image}> */}
             <Image style={styles.image} source={require('../../../../assets/imageSlider.png')} />
             {/* </View> */}
-            </View>
-          
+        </View>
 
-        
+
+
 
 
 

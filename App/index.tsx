@@ -6,8 +6,9 @@ import {
   //   Card,
   //   ModalC,
   //   Badge,
-  Text,
+  // Text,
   //   TextInputPlaceHolder,
+  ScrollView as FakeScrollView
 } from '../src/atoms';
 import React, { useState } from 'react';
 import { View, ScrollView } from 'react-native';
@@ -18,8 +19,11 @@ import { CardSliderHomePage, CardSliderDiscount } from './../src/components/Slid
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
 import { OfferPager } from '../src/components/OfferPager/OfferPager';
+import { QueryClient, QueryClientProvider, } from 'react-query'
 
 
+
+const queryClient = new QueryClient()
 const App = () => {
   const [user, setUser] = useState('');
 
@@ -40,23 +44,34 @@ const App = () => {
     return a + 3;
   };
   return (
-    <View style={{ alignItems: 'center', flex: 1 }}>
-      <Header
-        onPress={() => console.log('pressed')}
-        height={85}
-        backgroundColor="#061d72"
-      />
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <Slider data={dataSlider}
-          contentContainerStyle={{  marginTop: 12}}
-          renderItem={({ item }) => (
-            <CardSliderHomePage
-              item={item} />
-          )}
+    <QueryClientProvider client={queryClient}>
+      <View style={{ alignItems: 'center', flex: 1 }}>
+        <Header
+          onPress={() => console.log('pressed')}
+          height={85}
+          backgroundColor="#061d72"
         />
-        <OfferPager />
+        <ScrollView showsVerticalScrollIndicator={false}>
+        <FakeScrollView  horizontal={true}  
+         showsHorizontalScrollIndicator={false}
+         style={{ marginEnd: 20,marginTop:10}}>
+          {dataSlider.map((p)=>{
+            return( <CardSliderHomePage
+              item={p} />)
+          })}
+        </FakeScrollView>
 
-        <Slider
+          <OfferPager />
+
+          {/* 
+           <Slider data={dataSlider}
+            contentContainerStyle={{ marginTop: 12 }}
+            renderItem={({ item }) => (
+              <CardSliderHomePage
+                item={item} />
+            )}
+          />
+          <Slider
           data={dataSlider} isTopChildren={true}
           styleSlider={{ backgroundColor: '#f92a5f' }}
           renderItem={({ item }) => (
@@ -72,9 +87,10 @@ const App = () => {
             </Text>
             <MaterialIcons name={'local-fire-department'} size={24} color={'#fff'} />
           </View>
-        </Slider>
-      </ScrollView>
-    </View>
+        </Slider> */}
+        </ScrollView>
+      </View>
+    </QueryClientProvider>
   );
 };
 export default App;
