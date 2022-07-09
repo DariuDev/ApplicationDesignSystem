@@ -32,11 +32,11 @@ const App = () => {
     { value: '2', title: 'data 2' },
   ];
   const dataSlider = [
-    { _id: '1', description: 'تابستون امسال با بهترین های', title: 'عینک آفتابی' },
+    { _id: '1', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
     { _id: '2', description: 'تابستون امسال با بهترین های', title: 'عینک آفتابی' },
-    { _id: '3', description: 'تابستون امسال با بهترین های', title: 'عینک آفتابی' },
+    { _id: '3', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
     { _id: '4', description: 'تابستون امسال با بهترین های', title: 'عینک آفتابی' },
-    { _id: '5', description: 'تابستون امسال با بهترین های', title: 'عینک آفتابی' },
+    { _id: '5', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
   ];
 
   const func = (a: number) => {
@@ -61,7 +61,7 @@ const App = () => {
           })}
         </FakeScrollView>
 
-          <OfferPager />
+          <OfferPager data={dataSlider}/>
 
           {/* 
            <Slider data={dataSlider}

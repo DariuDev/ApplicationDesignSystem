@@ -3,12 +3,13 @@
   import {combinedShapeBackground, Gradient} from '../../assets';
   import MaterialIcons from 'react-native-vector-icons/SimpleLineIcons';
   import {SvgXml} from 'react-native-svg';
-  import {Card, FlatList, ScrollView, Text} from '../../atoms';
+  import {Card, ScrollView, Text} from '../../atoms';
   import {styles} from './style';
   import TitleOfferCard from './OfferCard/TitleOfferCard';
   import {useState} from 'react';
+  import {IOfferCard} from './type'
 
-  export const OfferPager = () => {
+  export const OfferPager = ({data} : IOfferCard) => {
     const [title, setTitle] = useState<string>();
     const dataSlider = [
       {
@@ -69,28 +70,8 @@
             title={title}
             // off=""
           />
-          {/* <FlatList
-            data={dataSlider}
-            horizontal={true}
-            style={styles.list}
-            showsHorizontalScrollIndicator={false}
-            keyExtractor={i => i._id}
-            renderItem={({item}) => (
-          //     <Card
-          //       onPress={() =>setTitle(item.title)}
-          //       marginHorizontal={5}
-          //       flex={1}
-          //       borderRadius={15}
-          //       width={80}
-          //       alignItems={'center'}
-          //       justifyContent={'center'}
-          //       backgroundColor={'white'}>
-          //       <Text>{item.title}</Text>
-          //     </Card>
-          //   )}
-          // /> */}
           <ScrollView showsHorizontalScrollIndicator={false} horizontal={true} style={styles.list}>
-            {dataSlider.map((item) => {
+            {data.map((item : any) => {
               return <Card
                     onPress={() =>setTitle(item.title)}
                     marginHorizontal={5}
@@ -119,3 +100,23 @@
       </View>
     );
   };
+  {/* <FlatList
+            data={dataSlider}
+            horizontal={true}
+            style={styles.list}
+            showsHorizontalScrollIndicator={false}
+            keyExtractor={i => i._id}
+            renderItem={({item}) => (
+          //     <Card
+          //       onPress={() =>setTitle(item.title)}
+          //       marginHorizontal={5}
+          //       flex={1}
+          //       borderRadius={15}
+          //       width={80}
+          //       alignItems={'center'}
+          //       justifyContent={'center'}
+          //       backgroundColor={'white'}>
+          //       <Text>{item.title}</Text>
+          //     </Card>
+          //   )}
+          // /> */}
