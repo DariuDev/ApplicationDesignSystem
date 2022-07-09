@@ -11,53 +11,7 @@
 
   export const OfferPager = ({data} : IOfferCard) => {
     const [title, setTitle] = useState<string>();
-    const dataSlider = [
-      {
-        _id: '1',
-        description: 'تابستون امسال با بهترین های',
-        title: 'عینک آفتابی',
-      },
-      {
-        _id: '2',
-        description: 'تابستون امسال با بهترین های',
-        title: 'عینک dasd',
-      },
-      {
-        _id: '3',
-        description: 'تابستون امسال با بهترین های',
-        title: 'عینک dwad',
-      },
-      {
-        _id: '4',
-        description: 'تابستون امسال با بهترین های',
-        title: 'عینک fdfd',
-      },
-      {
-        _id: '5',
-        description: 'تابستون امسال با بهترین های',
-        title: 'عینک آفتابی',
-      },
-      {
-        _id: '14',
-        description: 'تابستون امسال با بهترین های',
-        title: 'عینک آفتابی',
-      },
-      {
-        _id: '6',
-        description: 'تابستون امسال با بهترین های',
-        title: 'عینک آفتابی',
-      },
-      {
-        _id: '7',
-        description: 'تابستون امسال با بهترین های',
-        title: 'عینک آفتابی',
-      },
-      {
-        _id: '8',
-        description: 'تابستون امسال با بهترین های',
-        title: 'عینک آفتابی',
-      },
-    ];
+    
     return (
       <View>
         <View>
