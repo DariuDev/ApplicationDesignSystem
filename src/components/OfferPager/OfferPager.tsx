@@ -89,7 +89,7 @@
           //     </Card>
           //   )}
           // /> */}
-          <ScrollView horizontal={true} style={styles.list}>
+          <ScrollView showsHorizontalScrollIndicator={false} horizontal={true} style={styles.list}>
             {dataSlider.map((item) => {
               return <Card
                     onPress={() =>setTitle(item.title)}
