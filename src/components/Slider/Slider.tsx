@@ -38,6 +38,8 @@ const Slider: React.FC<PropSlider> = ({ isTopChildren , data, renderItem, styleS
             <FlatList
                 data={data}
                 horizontal={true}
+                style={{ 
+                    marginEnd: 20}}
                 showsHorizontalScrollIndicator={false}
                 // pagingEnabled={true}
                 ref={FlatListRef}

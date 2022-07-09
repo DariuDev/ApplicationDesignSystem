@@ -3,8 +3,11 @@ import { Text, Pressable,PressableProps } from 'react-native';
  import  styles  from './styles';
 import {ButtonType} from '../../types';
 
-type ButtonTypeProops=ButtonType & PressableProps;
-const Button:React.FC<ButtonTypeProops> = ({  isRightChildren=false ,children,onPress, title, styleText , styleButton , testId = "button-wrap-test",...otherprops}) => {
+// type ButtonTypeProops=ButtonType & PressableProps;
+const Button= (
+    {  isRightChildren=false ,children,onPress,
+         title, styleText , styleButton ,
+          testId = "button-wrap-test",...otherprops}:ButtonType & PressableProps) => {
     return (
             <Pressable  onPress={onPress} style={[ styles.btn,{...styleButton}]} testID={testId} {...otherprops}>
                 {!isRightChildren &&  children}

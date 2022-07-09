@@ -3,9 +3,9 @@ import { Pressable,PressableProps } from 'react-native';
 import { BadgeType } from './../../types';
 import styles from './styles';
 
-type BadgeTypeProops=BadgeType & PressableProps;
+// type BadgeTypeProops=BadgeType & PressableProps;
 
-const Badge: React.FC<BadgeTypeProops> = ({
+const Badge = ({
     onPress = () => {},
     styleBadge,
     testId,
@@ -16,7 +16,7 @@ const Badge: React.FC<BadgeTypeProops> = ({
     left = 100,
     ...otherprops
 
-}) => {
+}:BadgeType & PressableProps) => {
 console.log(otherprops);
 
     if (!visibale) return null;
