@@ -1,14 +1,16 @@
 import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     container: {
-        width: 150,
-        height: 150,
+        width: 120,
+        height: 120,
         alignItems: "center",
         alignSelf: 'center',
         justifyContent: 'center',
-        marginHorizontal: 5,
+        // marginHorizontal: 5,
+        // borderColor:'#000',
+        // borderWidth:1,
         backgroundColor: '#fff',
-        borderRadius: 8,
+        
         shadowColor: "#9ba0aa",
         shadowOffset: {
             width: 0,

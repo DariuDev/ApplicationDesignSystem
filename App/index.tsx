@@ -8,6 +8,7 @@ import {
   //   Badge,
   // Text,
   //   TextInputPlaceHolder,
+  Layout,
   ScrollView as FakeScrollView
 } from '../src/atoms';
 import React, { useState } from 'react';
@@ -15,12 +16,13 @@ import { View, ScrollView } from 'react-native';
 import styles from '../src/atoms/RadioButton/style';
 import Header from '../src/components/Header/Header';
 import { Slider } from './../src/components';
-import { CardSliderHomePage, CardSliderDiscount } from './../src/components/Slider/CardSlider';
+import { CardSliderHomePage, CardSliderCategories } from './../src/components/Slider/CardSlider';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
 import { OfferPager } from '../src/components/OfferPager/OfferPager';
 import { QueryClient, QueryClientProvider, } from 'react-query'
-
+import Card from './../src/atoms/Card/index';
+// import LayoutTableWithoutBorder from './../src/atoms/LayoutTableWithoutBorder/LayoutTableWithoutBorder';
 
 
 const queryClient = new QueryClient()
@@ -38,6 +40,17 @@ const App = () => {
     { _id: '4', description: 'تابستون امسال با بهترین های', title: 'عینک آفتابی' },
     { _id: '5', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
   ];
+  const datacategories = [
+    { _id: '11', title: 'آرایشی بهداشتی', img: 'hjggjhghjj' },
+    { _id: '12', title: 'پوشاک', img: 'hjggjhghjj' },
+    { _id: '13', title: 'کالای دیجیتال', img: 'hjggjhghjj' },
+    { _id: '14', title: 'لوازم خودرو', img: 'hjggjhghjj' },
+    { _id: '15', title: 'لوازم التحریر', img: 'hjggjhghjj' },
+    { _id: '16', title: 'ورزش وسفر', img: 'hjggjhghjj' },
+    { _id: '17', title: 'تندرستی', img: 'hjggjhghjj' },
+    { _id: '18', title: 'خانه و باغچه', img: 'hjggjhghjj' },
+    { _id: '19', title: 'اسباب بازی', img: 'hjggjhghjj' },
+  ];
 
   const func = (a: number) => {
     console.log(a + 3);
@@ -52,17 +65,28 @@ const App = () => {
           backgroundColor="#061d72"
         />
         <ScrollView showsVerticalScrollIndicator={false}>
-        <FakeScrollView  horizontal={true}  
-         showsHorizontalScrollIndicator={false}
-         style={{ marginEnd: 20,marginTop:10}}>
-          {dataSlider.map((p)=>{
-            return( <CardSliderHomePage
-              item={p} />)
-          })}
-        </FakeScrollView>
+          <FakeScrollView horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            style={{ marginEnd: 20, marginTop: 10 }}>
+            {dataSlider.map((p) => {
+              return (<CardSliderHomePage
+                item={p} />)
+            })}
+          </FakeScrollView>
 
-          <OfferPager data={dataSlider}/>
 
+          <OfferPager data={dataSlider} />
+
+{/* 
+          <Slider data={datacategories} horizontal={false} numColumns={3}
+            style={{ marginTop: 12,alignSelf:'center' ,marginEnd: 20,marginBottom:12}}
+            renderItem={({ item,index }) => (
+              <CardSliderCategories 
+                item={item} 
+                index={index}/>
+            )}
+          /> */}
+          <Layout column={3} data={datacategories}/>
           {/* 
            <Slider data={dataSlider}
             contentContainerStyle={{ marginTop: 12 }}

@@ -1,2 +1,2 @@
 export {default as CardSliderHomePage} from './CardSliderHomePage';
-export {default as CardSliderDiscount} from './CardSliderDiscount';
+export {default as CardSliderCategories} from './CardSliderCategories';

@@ -9,3 +9,4 @@ export {default as Badge} from './Badge';
 export {default as TextInputPlaceHolder} from './TextInputPlaceHolder';
 export {default as FlatList} from './FlatList';
 export {default as ScrollView} from './ScrollView';
+export {default as Layout} from './LayoutTableWithoutBorder';
