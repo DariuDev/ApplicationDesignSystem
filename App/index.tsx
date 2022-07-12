@@ -7,65 +7,53 @@ import {
   //   Card,
   //   ModalC,
   //   Badge,
-  // Text,
+  Text,
   //   TextInputPlaceHolder,
   ScrollView as FakeScrollView,
 } from '../src/atoms';
-import React, {useState} from 'react';
-import {View, ScrollView} from 'react-native';
-import {ExplosiveOffers, Header, ImmediateDelivery} from './../src/components';
+import React, { useState } from 'react';
+import { View, ScrollView, Pressable } from 'react-native';
+import { ExplosiveOffers, Header, ImmediateDelivery } from './../src/components';
 import styles from '../src/atoms/RadioButton/style';
-import {Slider} from './../src/components';
+import { Slider } from './../src/components';
 import {
   CardSliderHomePage,
   // CardSliderDiscount,
 } from './../src/components/Slider/CardSlider';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
-import {QueryClient, QueryClientProvider} from 'react-query';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import Categories from '../src/components/Categories/Categories';
 
 const queryClient = new QueryClient();
 const App = () => {
   const [user, setUser] = useState('');
 
   const data = [
-    {value: '1', title: 'data 1'},
-    {value: '2', title: 'data 2'},
+    { value: '1', title: 'data 1' },
+    { value: '2', title: 'data 2' },
   ];
-  
+
   const dataSlider = [
-    {_id: '1', description: 'تابستون امسال با بهترین های', title: 'عینک طبی'},
+    { _id: '1', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
     {
       _id: '2',
       description: 'تابستون امسال با بهترین های',
       title: 'عینک آفتابی',
     },
-    {_id: '3', description: 'تابستون امسال با بهترین های', title: 'عینک طبی'},
+    { _id: '3', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
     {
       _id: '4',
       description: 'تابستون امسال با بهترین های',
       title: 'عینک آفتابی',
     },
-    {_id: '5', description: 'تابستون امسال با بهترین های', title: 'عینک طبی'},
+    { _id: '5', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
   ];
-  const dataCategories=[ { _id: '14', title: 'لوازم خودرو', img: 'hjggjhghjj' },
-  { _id: '15', title: 'لوازم التحریر', img: 'hjggjhghjj' },
-  { _id: '16', title: 'ورزش وسفر', img: 'hjggjhghjj' },
-  { _id: '17', title: 'تندرستی', img: 'hjggjhghjj' },
-  { _id: '18', title: 'خانه و باغچه', img: 'hjggjhghjj' },
-  { _id: '19', title: 'اسباب بازی', img: 'hjggjhghjj' },
-  { _id: '17', title: 'تندرستی', img: 'hjggjhghjj' },
-  { _id: '18', title: 'خانه و باغچه', img: 'hjggjhghjj' },
-  { _id: '19', title: 'اسباب بازی', img: 'hjggjhghjj' },
-];
+ 
 
-  const func = (a: number) => {
-    console.log(a + 3);
-    return a + 3;
-  };
   return (
     <QueryClientProvider client={queryClient}>
-      <View style={{alignItems: 'center', flex: 1}}>
+      <View style={{ alignItems: 'center', flex: 1 }}>
         <Header
           onPress={() => console.log('pressed')}
           height={85}
@@ -75,7 +63,7 @@ const App = () => {
           <FakeScrollView
             horizontal={true}
             showsHorizontalScrollIndicator={false}
-            style={{marginEnd: 20, marginTop: 10}}>
+            style={{ marginEnd: 20, marginTop: 10 }}>
             {dataSlider.map(p => {
               return <CardSliderHomePage item={p} />;
             })}
@@ -83,7 +71,9 @@ const App = () => {
 
           <ExplosiveOffers data={dataSlider} />
 
-          <Layout column={3} data={dataCategories} colorBorder={'grey'} widthBorder={1}/>
+          <Categories/>
+  
+        
           <ImmediateDelivery
             data={dataSlider}
             showAll={() => console.log('show all')}

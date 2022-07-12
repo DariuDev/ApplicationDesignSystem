@@ -1,3 +1,7 @@
+interface TypeCategories{
+    item:object
+  }
+
 export interface  LayotType{
     column: number,
     data:Array<object>
@@ -8,10 +12,9 @@ export interface  LayotType{
     //         img: string,
     //     }
     // ]
-    // onPress?:()=>{};
-    children?: React.ReactNode;
-    styleItem?:object;
+    styleRow?:object;
     styleLayout?:object;
     colorBorder?:string;
     widthBorder?:number;
+    ItemNode:({item}:TypeCategories)=> JSX.Element;
 }
