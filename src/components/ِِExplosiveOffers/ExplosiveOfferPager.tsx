@@ -5,7 +5,7 @@
   import {SvgXml} from 'react-native-svg';
   import {Card, ScrollView, Text} from '../../atoms';
   import {styles} from './style';
-  import TitleOfferCard from './OfferCard/TitleOfferCard';
+  import TitleOfferCard from './ExplosiveOfferCard/ExplosiveOfferCard';
   import {useState} from 'react';
   import {IOfferCard} from './type'
 

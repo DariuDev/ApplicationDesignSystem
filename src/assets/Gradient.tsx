@@ -4,5 +4,5 @@ import LinearGradient from 'react-native-linear-gradient';
 export const Gradient: FC<any> = ({
   ...otherGradientProps
 }) => {
-  return <LinearGradient {...otherGradientProps} />;
+  return <LinearGradient {...otherGradientProps}></LinearGradient>;
 };

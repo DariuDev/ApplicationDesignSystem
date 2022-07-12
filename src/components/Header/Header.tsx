@@ -6,7 +6,7 @@ import { IHeader } from './type';
 import { getFlagEmoji } from './../../utils/getFlagEmoji';
 
 
-const Header = <T extends Record<any, unknown>>({ onPress, ...otherProps }: IHeader & T) => {
+const Header = <T extends Record<any, unknown>>({testID, onPress, ...otherProps }: IHeader & T) => {
   // const nat = 'TR';
   // const emoji =getFlagEmoji(nat) ;
   return (
@@ -21,9 +21,7 @@ const Header = <T extends Record<any, unknown>>({ onPress, ...otherProps }: IHea
         <Text style={styles.txtCountry}>
           {getFlagEmoji('TR')} خرید از ترکیه
         </Text>
-
       </View>
-
     </View>
   );
 };

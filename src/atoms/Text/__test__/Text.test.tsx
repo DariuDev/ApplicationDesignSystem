@@ -23,7 +23,6 @@ describe('components > Text', () => {
     const text = screen.getByTestId('custom-text');
     expect(text).toHaveProp('testID', 'custom-text');
     expect(text).toHaveProp('onPress', onPressMock);
-    //not recognized as a prop!!!!
     expect(text).toHaveStyle({backgroundColor: 'black'});
     expect(text).toHaveStyle({padding: 10});
 
