@@ -9,7 +9,7 @@
   import {useState} from 'react';
   import {IOfferCard} from './type'
 
-  export const OfferPager = ({data} : IOfferCard) => {
+  export const ExplosiveOffers = ({data} : IOfferCard) => {
     const [title, setTitle] = useState<string>();
     
     return (

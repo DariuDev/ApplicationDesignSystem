@@ -6,50 +6,45 @@ import {
   //   Card,
   //   ModalC,
   //   Badge,
-Text,
+  // Text,
   //   TextInputPlaceHolder,
-  Layout,
-  ScrollView as FakeScrollView
+  ScrollView as FakeScrollView,
 } from '../src/atoms';
-import React, { useState } from 'react';
-import { View, ScrollView } from 'react-native';
+import React, {useState} from 'react';
+import {View, ScrollView} from 'react-native';
+import {ExplosiveOffers, Header, ImmediateDelivery} from './../src/components';
 import styles from '../src/atoms/RadioButton/style';
-import Header from '../src/components/Header/Header';
-import { Slider } from './../src/components';
-import { CardSliderHomePage, CardSliderCategories } from './../src/components/Slider/CardSlider';
+import {Slider} from './../src/components';
+import {
+  CardSliderHomePage,
+  CardSliderDiscount,
+} from './../src/components/Slider/CardSlider';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
-import { OfferPager } from '../src/components/OfferPager/OfferPager';
-import { QueryClient, QueryClientProvider, } from 'react-query'
-import Card from './../src/atoms/Card/index';
-// import LayoutTableWithoutBorder from './../src/atoms/LayoutTableWithoutBorder/LayoutTableWithoutBorder';
+import {QueryClient, QueryClientProvider} from 'react-query';
 
-
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 const App = () => {
   const [user, setUser] = useState('');
 
   const data = [
-    { value: '1', title: 'data 1' },
-    { value: '2', title: 'data 2' },
+    {value: '1', title: 'data 1'},
+    {value: '2', title: 'data 2'},
   ];
   const dataSlider = [
-    { _id: '1', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
-    { _id: '2', description: 'تابستون امسال با بهترین های', title: 'عینک آفتابی' },
-    { _id: '3', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
-    { _id: '4', description: 'تابستون امسال با بهترین های', title: 'عینک آفتابی' },
-    { _id: '5', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
-  ];
-  const datacategories = [
-    { _id: '11', title: 'آرایشی بهداشتی', img: 'hjggjhghjj' },
-    { _id: '12', title: 'پوشاک', img: 'hjggjhghjj' },
-    { _id: '13', title: 'کالای دیجیتال', img: 'hjggjhghjj' },
-    { _id: '14', title: 'لوازم خودرو', img: 'hjggjhghjj' },
-    { _id: '15', title: 'لوازم التحریر', img: 'hjggjhghjj' },
-    { _id: '16', title: 'ورزش وسفر', img: 'hjggjhghjj' },
-    // { _id: '17', title: 'تندرستی', img: 'hjggjhghjj' },
-    // { _id: '18', title: 'خانه و باغچه', img: 'hjggjhghjj' },
-    // { _id: '19', title: 'اسباب بازی', img: 'hjggjhghjj' },
+    {_id: '1', description: 'تابستون امسال با بهترین های', title: 'عینک طبی'},
+    {
+      _id: '2',
+      description: 'تابستون امسال با بهترین های',
+      title: 'عینک آفتابی',
+    },
+    {_id: '3', description: 'تابستون امسال با بهترین های', title: 'عینک طبی'},
+    {
+      _id: '4',
+      description: 'تابستون امسال با بهترین های',
+      title: 'عینک آفتابی',
+    },
+    {_id: '5', description: 'تابستون امسال با بهترین های', title: 'عینک طبی'},
   ];
 
   const func = (a: number) => {
@@ -58,36 +53,28 @@ const App = () => {
   };
   return (
     <QueryClientProvider client={queryClient}>
-      <View style={{ alignItems: 'center', flex: 1 }}>
+      <View style={{alignItems: 'center', flex: 1}}>
         <Header
           onPress={() => console.log('pressed')}
           height={85}
           backgroundColor="#061d72"
         />
         <ScrollView showsVerticalScrollIndicator={false}>
-          <FakeScrollView horizontal={true}
+          <FakeScrollView
+            horizontal={true}
             showsHorizontalScrollIndicator={false}
-            style={{ marginEnd: 20, marginTop: 10 }}>
-            {dataSlider.map((p) => {
-              return (<CardSliderHomePage
-                item={p} />)
+            style={{marginEnd: 20, marginTop: 10}}>
+            {dataSlider.map(p => {
+              return <CardSliderHomePage item={p} />;
             })}
           </FakeScrollView>
 
-
-          <OfferPager data={dataSlider} />
-
-          {/* 
-          <Slider data={datacategories} horizontal={false} numColumns={3}
-            style={{ marginTop: 12,alignSelf:'center' ,marginEnd: 20,marginBottom:12}}
-            renderItem={({ item,index }) => (
-              <CardSliderCategories 
-                item={item} 
-                index={index}/>
-            )}
-          /> */}
-          <Layout column={2} data={datacategories}/>
-
+          <ExplosiveOffers data={dataSlider} />
+          <ImmediateDelivery
+            data={dataSlider}
+            showAll={() => console.log('show all')}
+            onPressTitle={() => console.log('onpress title')}
+          />
           {/* 
            <Slider data={dataSlider}
             contentContainerStyle={{ marginTop: 12 }}
@@ -120,7 +107,8 @@ const App = () => {
 };
 export default App;
 
-{/* <Card
+{
+  /* <Card
           margin={10}
           borderRadius={10}
           width={'90%'}
@@ -176,4 +164,5 @@ export default App;
               <MaterialIcons name={'arrow-back-ios'} size={14} color={'#fff'} />
             </TextInputPlaceHolder>
           </View>
-        </Card> */}
+        </Card> */
+}
