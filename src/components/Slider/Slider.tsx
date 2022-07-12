@@ -3,21 +3,12 @@ import { View, Text, TouchableOpacity, FlatList, FlatListProps } from 'react-nat
 import styles from './style';
 import { PropSliderType } from './type';
 
-type PropSlider = PropSliderType & FlatListProps<any>;
-const Slider: React.FC<PropSlider> = ({ isTopChildren , data, renderItem, styleSlider, children, ...otherProps }) => {
+
+const Slider = ({ isTopChildren , data, renderItem, styleSlider, children, ...otherProps }:PropSliderType & FlatListProps<any>) => {
 
   
     return (
-        <View style={ { ...styleSlider }}>
-            {/* <View style={styles.viewRightLeftSlider}> */}
-            {/* <TouchableOpacity onPress={goPrevSlide} style={[styles.cardCircleSlider,{left:5, top: top}]}>
-                    <Iconslider name="left" color="#5668E8" size={24} />
-                </TouchableOpacity>
-
-                <TouchableOpacity onPress={goNextSlide} style={[styles.cardCircleSlider,{left:5, top: top}]}>
-                    <Iconslider name="right" color="#5668E8" size={24} />
-                </TouchableOpacity> */}
-            {/* </View> */}
+        <View style={ { ...styleSlider }} testID="flat-list">
             {isTopChildren!==null && !isTopChildren && children}
             <FlatList
                 data={data}

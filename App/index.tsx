@@ -47,9 +47,9 @@ const App = () => {
     { _id: '14', title: 'لوازم خودرو', img: 'hjggjhghjj' },
     { _id: '15', title: 'لوازم التحریر', img: 'hjggjhghjj' },
     { _id: '16', title: 'ورزش وسفر', img: 'hjggjhghjj' },
-    // { _id: '17', title: 'تندرستی', img: 'hjggjhghjj' },
-    // { _id: '18', title: 'خانه و باغچه', img: 'hjggjhghjj' },
-    // { _id: '19', title: 'اسباب بازی', img: 'hjggjhghjj' },
+    { _id: '17', title: 'تندرستی', img: 'hjggjhghjj' },
+    { _id: '18', title: 'خانه و باغچه', img: 'hjggjhghjj' },
+    { _id: '19', title: 'اسباب بازی', img: 'hjggjhghjj' },
   ];
 
   const func = (a: number) => {
@@ -86,7 +86,7 @@ const App = () => {
                 index={index}/>
             )}
           /> */}
-          <Layout column={2} data={datacategories}/>
+          <Layout column={3} data={datacategories}/>
 
           {/* 
            <Slider data={dataSlider}

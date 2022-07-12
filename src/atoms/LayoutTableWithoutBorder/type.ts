@@ -1,6 +1,6 @@
 export interface  LayotType{
     column: number,
-    data:object[]
+    data:Array<object>
     //  [
     //     {
     //         _id: string,
@@ -10,4 +10,6 @@ export interface  LayotType{
     // ]
     // onPress?:()=>{};
     children?: React.ReactNode;
+    styleItem?:object;
+    styleLayout?:object;
 }
