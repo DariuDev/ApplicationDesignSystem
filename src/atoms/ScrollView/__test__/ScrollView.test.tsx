@@ -18,8 +18,10 @@ describe('atoms => ScrollView', () => {
         <Text>Dariush</Text>
       </ScrollView>
     );
-    const scrollView = screen.getByTestId('scrollview-id')
-    
+    const scrollView = screen.getByTestId('scrollview-id');
+   
+    expect(scrollView).toHaveTextContent( 'Dariush' );
+
     fireEvent.scroll(scrollView, eventData);
   });
 });
