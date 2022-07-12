@@ -12,4 +12,6 @@ export interface  LayotType{
     children?: React.ReactNode;
     styleItem?:object;
     styleLayout?:object;
+    colorBorder?:string;
+    widthBorder?:number;
 }

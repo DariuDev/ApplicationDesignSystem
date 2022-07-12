@@ -3,59 +3,62 @@ import { View, StyleSheet, Text, Pressable, Dimensions } from 'react-native';
 import { LayotType } from './type';
 const { width, height } = Dimensions.get('screen');
 
-const LayoutTableWithoutBorder = ({ column, data, children, styleItem, styleLayout }: LayotType) => {
+const LayoutTableWithoutBorder = (
+    { column, data, children, styleItem, styleLayout,
+        colorBorder, widthBorder }: LayotType) => {
     let lenghtData = data.length;
 
     const styleBorderItem = (index: number) => {
-        // let styleBorder;
         if (column === 3 && (lenghtData === 9)) {
             if (index === 5) {
-                return styleBorder = { borderTopColor: '#000', borderBottomColor: '#000', borderLeftColor: '#000', borderBottomWidth: 1, borderLeftWidth: 1, borderTopWidth: 1 }
+                return { borderTopColor: colorBorder, borderBottomColor: colorBorder,
+                     borderLeftColor: colorBorder, borderBottomWidth: widthBorder,
+                      borderLeftWidth: widthBorder, borderTopWidth: widthBorder }
             }
             if (index === 6) {
-                return styleBorder = { borderRightColor: '#000', borderRightWidth: 1 }
+                return { borderRightColor: colorBorder, borderRightWidth: widthBorder }
             }
-            if ((index === 8) || (index === 2)) {
-                return styleBorder = { borderLeftColor: '#000', borderLeftWidth: 1 }
+            if ((index === 8)) {
+                return { borderLeftColor: colorBorder, borderLeftWidth: widthBorder }
             }
             if (index === 1 || index === 4) {
-                return styleBorder = { borderBottomColor: '#000', borderBottomWidth: 1 }
+                return { borderBottomColor: colorBorder, borderBottomWidth:widthBorder }
             }
-
+            if (index === 2) {
+                return { borderBottomColor: colorBorder, borderBottomWidth: widthBorder,
+                     borderLeftColor: colorBorder, borderLeftWidth: widthBorder }
+            }
             if ((index !== 4) && (index !== 1) && (index !== 2) && (index !== 5) && (index !== 6) && (index !== 7) && (index !== 8)) {
-                return styleBorder = { borderBottomColor: '#000', borderRightColor: '#000', borderBottomWidth: 1, borderRightWidth: 1 }
+                return { borderBottomColor: colorBorder, borderRightColor: colorBorder,
+                     borderBottomWidth: widthBorder, borderRightWidth: widthBorder }
 
             }
-
-            // if (index === 2) {
-            //     return styleBorder = { borderBottomColor: '#000', borderLeftColor: '#000', borderBottomWidth: 1, borderLeftWidth: 1 }
-            // }
-
         }
         if ((column === 2) && (lenghtData === 4)) {
             if ((index === 0)) {
-                return styleBorder = { borderBottomColor: '#000', borderBottomWidth: 1 }
+                return { borderBottomColor: colorBorder, borderBottomWidth: widthBorder }
             }
             if ((index === 1)) {
-                return styleBorder = { borderLeftColor: '#000', borderBottomColor: '#000', borderLeftWidth: 1, borderBottomWidth: 1 }
+                return { borderLeftColor: colorBorder, borderBottomColor: colorBorder,
+                     borderLeftWidth: widthBorder, borderBottomWidth: widthBorder }
             }
             if ((index === 3)) {
-                return styleBorder = { borderLeftColor: '#000', borderLeftWidth: 1 }
+                return { borderLeftColor: colorBorder, borderLeftWidth: widthBorder }
             }
 
         }
         else if ((column === 2) && (lenghtData === 6)) {
             if ((index === 0) || (index === 2)) {
-                return styleBorder = { borderBottomColor: '#000', borderBottomWidth: 1 }
+                return { borderBottomColor: colorBorder, borderBottomWidth: widthBorder }
             }
             if ((index === 1) || (index === 3)) {
-                return styleBorder = { borderLeftColor: '#000', borderBottomColor: '#000', borderLeftWidth: 1, borderBottomWidth: 1 }
+                return { borderLeftColor:colorBorder, borderBottomColor: colorBorder,
+                 borderLeftWidth: widthBorder, borderBottomWidth: widthBorder }
             }
             if ((index === 5)) {
-                return styleBorder = { borderLeftColor: '#000', borderLeftWidth: 1 }
+                return { borderLeftColor: colorBorder, borderLeftWidth: widthBorder }
             }
         }
-
     }
 
     if (lenghtData % column === 0) {

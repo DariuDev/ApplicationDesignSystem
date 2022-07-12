@@ -1,4 +1,5 @@
 import {
+  Layout,
   //   Input,
   //   RadioButton,
   //   Button,
@@ -17,7 +18,7 @@ import styles from '../src/atoms/RadioButton/style';
 import {Slider} from './../src/components';
 import {
   CardSliderHomePage,
-  CardSliderDiscount,
+  // CardSliderDiscount,
 } from './../src/components/Slider/CardSlider';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
@@ -31,6 +32,7 @@ const App = () => {
     {value: '1', title: 'data 1'},
     {value: '2', title: 'data 2'},
   ];
+  
   const dataSlider = [
     {_id: '1', description: 'تابستون امسال با بهترین های', title: 'عینک طبی'},
     {
@@ -46,6 +48,16 @@ const App = () => {
     },
     {_id: '5', description: 'تابستون امسال با بهترین های', title: 'عینک طبی'},
   ];
+  const dataCategories=[ { _id: '14', title: 'لوازم خودرو', img: 'hjggjhghjj' },
+  { _id: '15', title: 'لوازم التحریر', img: 'hjggjhghjj' },
+  { _id: '16', title: 'ورزش وسفر', img: 'hjggjhghjj' },
+  { _id: '17', title: 'تندرستی', img: 'hjggjhghjj' },
+  { _id: '18', title: 'خانه و باغچه', img: 'hjggjhghjj' },
+  { _id: '19', title: 'اسباب بازی', img: 'hjggjhghjj' },
+  { _id: '17', title: 'تندرستی', img: 'hjggjhghjj' },
+  { _id: '18', title: 'خانه و باغچه', img: 'hjggjhghjj' },
+  { _id: '19', title: 'اسباب بازی', img: 'hjggjhghjj' },
+];
 
   const func = (a: number) => {
     console.log(a + 3);
@@ -70,6 +82,8 @@ const App = () => {
           </FakeScrollView>
 
           <ExplosiveOffers data={dataSlider} />
+
+          <Layout column={3} data={dataCategories} colorBorder={'grey'} widthBorder={1}/>
           <ImmediateDelivery
             data={dataSlider}
             showAll={() => console.log('show all')}
