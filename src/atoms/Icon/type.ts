@@ -17,5 +17,18 @@ export interface IIcon {
     size?: number;
     style?: object;
     onPress?: () => {};
-    testID?:string;
+    testID?: string;
+}
+export {
+    MaterialCommunityIcons,
+    MaterialIcons,
+    Ionicons,
+    Feather,
+    FontAwesome,
+    FontAwesome5,
+    AntDesign,
+    Entypo,
+    SimpleLineIcons,
+    Octicons,
+    Foundation,
 }

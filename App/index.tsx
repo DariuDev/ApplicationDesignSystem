@@ -1,3 +1,4 @@
+// export default from '../storybook';
 import {
   Layout,
   //   Input,
@@ -21,7 +22,8 @@ import {
   CardSliderHomePage,
   // CardSliderDiscount,
 } from './../src/components/Slider/CardSlider';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {MaterialIcons} from '../src/atoms/Icon/type'
+// import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Categories from '../src/components/Categories/Categories';
@@ -75,7 +77,7 @@ const App = () => {
 
           <Categories/>
   
-         {/* <Icon type={MaterialIcons} name={'local-fire-department'} size={40} color={'red'} /> */}
+         <Icon type={MaterialIcons} name={'local-fire-department'} size={40} color={'red'} />
     {/* <CheckBox title="box3" isChecked={false} iconRight={true} colorCheck='red' /> */}
           <ImmediateDelivery
             data={dataSlider}

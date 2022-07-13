@@ -2,6 +2,7 @@ import { storiesOf } from '@storybook/react-native';
 import React from 'react';
 import CenterView from '../CenterView';
 import { Icon } from '../../../src/atoms';
+import {MaterialIcons,AntDesign,Ionicons} from '../../../src/atoms/Icon/type';
 
 storiesOf('Icon ', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)

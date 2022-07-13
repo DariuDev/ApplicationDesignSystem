@@ -2,8 +2,8 @@ import {action} from '@storybook/addon-actions';
 import {storiesOf} from '@storybook/react-native';
 import React from 'react';
 import CenterView from '../CenterView';
-import {RadioButton} from '../../../src/components';
-import styles from '../../../src/components/RadioButton/style';
+import {RadioButton} from '../../../src/atoms';
+import styles from '../../../src/atoms/RadioButton/style';
 
 storiesOf('Radio Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)

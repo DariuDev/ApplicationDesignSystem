@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react-native';
 import React from 'react';
 import CenterView from '../CenterView';
-import { CheckBox } from '../../../src/components';
+import { CheckBox } from '../../../src/atoms';
 
 storiesOf('CheckBox ', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
