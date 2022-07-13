@@ -11,18 +11,19 @@ describe('components >> Icon ', () => {
         const screen = render(<Icon
             // testID='icon-test'
             onPress={onPress}
+            name={'arrow-back-ios'}
             style={{ ackgroundColor: 'red' }}
-            type={'AntDesign'}
+            type={ "MaterialIcons"}
         />
             );
 
-        expect(screen.getByTestId('Icon-test')).toHaveProp('testID', 'Icon-test');
-        // expect(screen.getByTestId('Icon-test')).toBeEnabled();
-        // expect(screen.getByTestId('Icon-test')).toHaveStyle({ ackgroundColor: 'red' });
-        //  expect(screen.getByTestId('icon-test')).toHaveProp('type', 'AntDesign');
+        expect(screen.getByTestId('icon-test')).toHaveProp('testID', 'icon-test');
+        expect(screen.getByTestId('icon-test')).toHaveStyle({ ackgroundColor: 'red' });
+        expect(screen.getByTestId('icon-test')).toHaveProp('name', 'arrow-back-ios');
+       
 
-        // expect(onPress).toHaveBeenCalledTimes(0);
-        // fireEvent.press(screen.getByTestId('Icon-test'));
-        // expect(onPress).toHaveBeenCalledTimes(1);
+        expect(onPress).toHaveBeenCalledTimes(0);
+        fireEvent.press(screen.getByTestId('icon-test'));
+        expect(onPress).toHaveBeenCalledTimes(1);
     });
 });
