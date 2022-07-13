@@ -77,8 +77,8 @@ const App = () => {
 
           <Categories/>
   
-         <Icon type={MaterialIcons} name={'local-fire-department'} size={40} color={'red'} />
-    {/* <CheckBox title="box3" isChecked={false} iconRight={true} colorCheck='red' /> */}
+         {/* <Icon type={MaterialIcons} name={'local-fire-department'} size={40} color={'red'} /> */}
+ 
           <ImmediateDelivery
             data={dataSlider}
             showAll={() => console.log('show all')}

@@ -4,7 +4,7 @@ import { LayotType } from './type';
 import { styles } from './style';
 const { width, height } = Dimensions.get('screen');
 
-const LayoutTableWithoutBorder = (
+const Layout = (
     { column, data, styleRow, styleLayout, ItemNode,
         colorBorder, widthBorder }: LayotType) => {
     let lenghtData = data.length;
@@ -98,5 +98,5 @@ const LayoutTableWithoutBorder = (
 
 }
 
-export default LayoutTableWithoutBorder;
+export default Layout;
 
