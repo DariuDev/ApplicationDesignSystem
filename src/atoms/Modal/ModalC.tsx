@@ -30,7 +30,7 @@ const ModalC = ({ open, children, onClose, testId, top, styleModal,
       onRequestClose={handleCloseModal} {...otherprops}>
       <TouchableOpacity activeOpacity={1} style={styles.overlayModal} onPress={handleCloseModal}>
         <View style={[styles.cardModal, { ...styleModal }, { marginTop: topModal }]}>
-          <MaterialIcon testID="close-icon-modal-test"
+          <MaterialIcon 
             style={[styles.iconClose, { ...styleClose }]}
             name="close"
             onPress={handleCloseModal}
