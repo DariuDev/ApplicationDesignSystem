@@ -9,6 +9,7 @@ import {
   //   Badge,
   Text,
   //   TextInputPlaceHolder,
+  Icon,
   ScrollView as FakeScrollView,
 } from '../src/atoms';
 import React, { useState } from 'react';
@@ -24,6 +25,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Categories from '../src/components/Categories/Categories';
+import CheckBox from './../src/atoms/Checkbox/index';
 
 const queryClient = new QueryClient();
 const App = () => {
@@ -73,7 +75,8 @@ const App = () => {
 
           <Categories/>
   
-        
+         {/* <Icon type={MaterialIcons} name={'local-fire-department'} size={40} color={'red'} /> */}
+    {/* <CheckBox title="box3" isChecked={false} iconRight={true} colorCheck='red' /> */}
           <ImmediateDelivery
             data={dataSlider}
             showAll={() => console.log('show all')}
