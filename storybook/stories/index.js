@@ -4,4 +4,6 @@ import './RadioButton/RadioButton.stories';
 import './TextInput/TextInput.stories';
 import './CheckBox/CheckBox.stories';
 import './Icon/Icon.stories';
+import './Badge/Badge.stories';
+
 
