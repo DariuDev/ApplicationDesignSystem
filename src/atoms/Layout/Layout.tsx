@@ -75,15 +75,16 @@ const Layout = (
     if (lenghtData % column === 0) {
         return (
 
-            <View style={[styles.layout, { ...styleLayout }]}>
+            <View style={[styles.layout, { ...styleLayout }]} testID='layout-test'>
                 {data.map((item, index) => {
-                    return <View
+                    return <View testID={`layout-row-test${item._id}`}
                         style={[styles.rowCloumn, {
                             width: width / (column / 10 + column),
                             ...styleBorderItem(index),
                             ...styleRow
                         }]}
-                        key={item._id}>
+                        key={item._id}
+                        >
                         <ItemNode item={item} />
                     </View>
 
