@@ -76,7 +76,7 @@ const Layout = (
         return (
 
             <View style={[styles.layout, { ...styleLayout }]} testID='layout-test'>
-                {data.map((item, index) => {
+                {data.map((item:any, index) => {
                     return <View testID={`layout-row-test${item._id}`}
                         style={[styles.rowCloumn, {
                             width: width / (column / 10 + column),

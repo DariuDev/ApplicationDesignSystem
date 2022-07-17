@@ -7,9 +7,8 @@ import { ICategories } from './type';
 
 const CategoriesCard = ({ item }: ICategories) => {
   return (
-    <Card onPress={() => console.log(item._id)}>
-      <View
-        style={styles.cardItem}>
+    <Card style={styles.cardItem} onPress={() => console.log(item._id)}>
+      <View >
         <View style={styles.viewImage} />
         <Text>{item.title}</Text>
       </View>

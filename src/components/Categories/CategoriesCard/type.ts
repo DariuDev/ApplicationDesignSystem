@@ -1,3 +1,7 @@
 export interface ICategories {
-    item: object
+    item: {
+        _id:string,
+        title:string,
+        img:string
+    }
 }

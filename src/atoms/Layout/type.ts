@@ -1,17 +1,14 @@
 interface TypeCategories{
-    item:object
+    item: {
+      _id:string,
+      title:string,
+      img:string
+    }
   }
 
 export interface  LayotType{
     column: number,
     data:Array<object>
-    //  [
-    //     {
-    //         _id: string,
-    //         title: string,
-    //         img: string,
-    //     }
-    // ]
     styleRow?:object;
     styleLayout?:object;
     colorBorder?:string;

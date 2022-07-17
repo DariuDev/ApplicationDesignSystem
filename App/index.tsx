@@ -19,7 +19,7 @@ import { ExplosiveOffers, IHeaderHomePageSlider, Header, ImmediateDelivery } fro
 import styles from '../src/atoms/RadioButton/style';
 import { Slider } from './../src/components';
 import {
-  CardSliderHomePage,
+  // CardSliderHomePage,
   // CardSliderDiscount,
 } from './../src/components/Slider/CardSlider';
 import { MaterialIcons } from '../src/atoms/Icon/type'
