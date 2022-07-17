@@ -4,17 +4,14 @@ import {ICard} from '../../types';
 
 const Card = <T extends Record<any, unknown>>({
   onPress,
-  width,
-  height,
-  borderRadius,
-  borderWidth,
   children,
   ...otherProps
 }: ICard & T) => (
   <Pressable
     testID="card-id"
     onPress={onPress}
-    style={{width, height, borderRadius, borderWidth, ...otherProps}}>
+   {...otherProps}
+   >
     {children}
   </Pressable>
 );
