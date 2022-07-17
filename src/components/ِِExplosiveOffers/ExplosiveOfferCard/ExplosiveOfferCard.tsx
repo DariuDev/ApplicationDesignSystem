@@ -12,7 +12,7 @@ const TitleOfferCard = ({
   title,
   off,
 }: ITitleOfferCard) => (
-  <Card flex={1} zIndex={3} height="100%" width="100%" position="absolute">
+  <Card style={styles.card}>
     <View style={{flex: 1}}>
       <View style={styles.titleImage}>{titleImage}</View>
       <View style={styles.mainPrice}>{mainPrice}</View>
