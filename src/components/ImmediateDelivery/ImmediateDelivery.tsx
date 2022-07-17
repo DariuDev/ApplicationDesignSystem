@@ -1,9 +1,8 @@
 import React from 'react';
 import {View} from 'react-native';
 import {styles} from './style';
-import {ScrollView} from '../../atoms';
+import {ScrollView, Text, Card} from '../../atoms';
 import {Gradient} from '../../assets';
-import {Card, Text} from '../../atoms';
 import MaterialIcon from 'react-native-vector-icons/Entypo';
 import {IDelivery} from './types';
 
@@ -11,35 +10,18 @@ const ImmediateDelivery = ({data, showAll, onPressTitle}: IDelivery) => {
   return (
     <Gradient colors={['#0443c0', '#00349b']} style={styles.background}>
       <ScrollView
-        numColumns={2}
         showsHorizontalScrollIndicator={false}
         horizontal
         style={styles.list}>
         {data.map((item: any) => {
           return (
-            <Card
-              onPress={onPressTitle}
-              marginTop={10}
-              marginHorizontal={5}
-              flex={1}
-              borderRadius={15}
-              height={250}
-              width={150}
-              alignItems={'center'}
-              justifyContent={'center'}
-              backgroundColor={'white'}>
+            <Card onPress={onPressTitle} style={styles.card}>
               <Text>{item.title}</Text>
             </Card>
           );
         })}
       </ScrollView>
-      <View
-        style={{
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection: 'row',
-          marginBottom: 10,
-        }}>
+      <View style={styles.deliveryTxt}>
         <Text color={'#fff'} fontSize={20}>
           ۲۴ تا ۴۸ ساعت
         </Text>
@@ -47,13 +29,7 @@ const ImmediateDelivery = ({data, showAll, onPressTitle}: IDelivery) => {
           تحویل فوری
         </Text>
       </View>
-      <View
-        style={{
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection: 'row',
-          marginBottom: 20,
-        }}>
+      <View style={styles.showAll}>
         <MaterialIcon size={20} name={'chevron-left'} color={'yellow'} />
         <Text onPress={showAll} fontWeight={'bold'} color={'#fff'}>
           نمایش همه
