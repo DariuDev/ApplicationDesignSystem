@@ -5,3 +5,4 @@ export {default as ImmediateDelivery} from './ImmediateDelivery';
 export {default as ExplosiveOffers} from './ِِExplosiveOffers';
 export {default as Header} from './Header';
 export {default as Categories} from './Categories';
+export {default as IHeaderHomePageSlider} from './HeaderHomePageSlider';

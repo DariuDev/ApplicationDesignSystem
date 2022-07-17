@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-export default StyleSheet.create({
+export const styles = StyleSheet.create({
     container: {
         width: 350,
         height: 260,
@@ -8,7 +8,7 @@ export default StyleSheet.create({
         alignSelf: 'center',
         justifyContent: 'center',
         backgroundColor: '#36c1de',
-        marginHorizontal: 7,
+        marginHorizontal:5,
         borderRadius: 8,
         shadowColor: "#9ba0aa",
         shadowOffset: {
