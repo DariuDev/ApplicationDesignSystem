@@ -90,4 +90,6 @@ package.json
 yalc.lock
 .yalc/application-design-system/babel.js
 package.json
-
+# Yalc
+/.yalc
+yalc.lock
