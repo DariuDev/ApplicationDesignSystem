@@ -3,6 +3,8 @@ import { ModalType } from '../../types/index';
 import { View, Modal, TouchableOpacity, ModalProps } from 'react-native';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './styles';
+import { Icon } from './../../atoms';
+import { MaterialCommunityIcons } from './../../atoms/Icon/type';
 
 const ModalC = ({ open, children, onClose, testId, top, styleModal,
   colorClose, sizeClose, styleClose, ...otherprops }: ModalType & ModalProps) => {
@@ -30,11 +32,13 @@ const ModalC = ({ open, children, onClose, testId, top, styleModal,
       onRequestClose={handleCloseModal} {...otherprops}>
       <TouchableOpacity activeOpacity={1} style={styles.overlayModal} onPress={handleCloseModal}>
         <View style={[styles.cardModal, { ...styleModal }, { marginTop: topModal }]}>
-          <MaterialIcon 
+          <Icon type={MaterialCommunityIcons} name={'close'} style={[styles.iconClose,{...styleClose}]} 
+            size={size} color={color} onPress={handleCloseModal} />
+          {/* <MaterialIcon 
             style={[styles.iconClose, { ...styleClose }]}
             name="close"
             onPress={handleCloseModal}
-            size={size} color={color} />
+            size={size} color={color} /> */}
           {children}
         </View>
       </TouchableOpacity>

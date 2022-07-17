@@ -16,7 +16,7 @@ export interface IIcon {
     color?: string;
     size?: number;
     style?: object;
-    onPress?: () => {};
+    onPress?: () => void;
     testID?: string;
 }
 export {

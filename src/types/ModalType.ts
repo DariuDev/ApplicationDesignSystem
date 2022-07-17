@@ -1,6 +1,6 @@
 
 export default interface ModalType {
-    onClose?: () => void;
+    onClose?:() => void;
     open: boolean;
     children: React.ReactNode;
     testId?: string;
