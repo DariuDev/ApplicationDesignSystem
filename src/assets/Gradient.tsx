@@ -1,8 +1,8 @@
-import React,{FC} from 'react';
-import LinearGradient from 'react-native-linear-gradient';
+import React from 'react';
+import LinearGradient, { LinearGradientProps } from 'react-native-linear-gradient';
 
-export const Gradient: FC<any> = ({
+export const Gradient =({
   ...otherGradientProps
-}) => {
+} :LinearGradientProps) => {
   return <LinearGradient {...otherGradientProps}></LinearGradient>;
 };
