@@ -15,7 +15,7 @@ import {
 } from '../src/atoms';
 import React, { useState } from 'react';
 import { View, ScrollView, Pressable } from 'react-native';
-import { ExplosiveOffers, IHeaderHomePageSlider, Header, ImmediateDelivery } from './../src/components';
+import { ExplosiveOffers, IHeaderHomePageSlider, Header, ImmediateDelivery,AccessoriesOrnaments } from './../src/components';
 import styles from '../src/atoms/RadioButton/style';
 import { Slider } from './../src/components';
 import {
@@ -53,11 +53,21 @@ const App = () => {
     },
     { _id: '5', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
   ];
-
+  const dataCategories = [
+    { _id: '114', title: 'لوازم خودرو',img:'hjkhkjhh' },
+    { _id: '115', title: 'لوازم التحریر',img:'hjkhkjhh' },
+    { _id: '116', title: 'ورزش وسفر',img:'hjkhkjhh' },
+    { _id: '117', title: 'تندرستی',img:'hjkhkjhh' },
+    { _id: '118', title: 'خانه و باغچه',img:'hjkhkjhh' },
+    { _id: '119', title: 'اسباب بازی',img:'hjkhkjhh'},
+    { _id: '117', title: 'تندرستی' ,img:'hjkhkjhh'},
+    { _id: '118', title: 'خانه و باغچه',img:'hjkhkjhh' },
+    { _id: '119', title: 'اسباب بازی' ,img:'hjkhkjhh'},
+];
 
   return (
     <QueryClientProvider client={queryClient}>
-      <View style={{ alignItems: 'center', flex: 1 }}>
+      <View style={{ alignItems: 'center', flex: 1,backgroundColor:'#fff' }}>
         <Header
           onPress={() => console.log('pressed')}
           height={85}
@@ -68,9 +78,14 @@ const App = () => {
           <IHeaderHomePageSlider data={dataSlider} onPressTitle={() => console.log(' title')} />
           {/* <ExplosiveOffers data={dataSlider} /> */}
 
-          <Categories />
+          <Categories data={dataCategories} />
 
-          {/* <Icon type={MaterialIcons} name={'local-fire-department'} size={40} color={'red'} /> */}
+        
+          <AccessoriesOrnaments
+            data={dataSlider}
+            showAll={() => console.log('show all')}
+            onPressItem={() => console.log('onpress item')}
+          />
 
           <ImmediateDelivery
             data={dataSlider}
