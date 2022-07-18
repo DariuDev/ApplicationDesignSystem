@@ -1,11 +1,11 @@
 
 import { Card, Text } from '../../../atoms';
 import React from 'react';
-import { View, Pressable } from 'react-native';
+import { View } from 'react-native';
 import { styles } from './style';
-import { ICategories } from './type';
+import { ICategoriesCard } from './CategoriesCard.type';
 
-const CategoriesCard = ({ item }: ICategories) => {
+const CategoriesCard = ({ item }: ICategoriesCard) => {
   return (
     <Card style={styles.cardItem} onPress={() => console.log(item._id)}>
       <View >

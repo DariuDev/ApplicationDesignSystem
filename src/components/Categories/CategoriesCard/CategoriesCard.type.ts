@@ -1,4 +1,4 @@
-export interface ICategories {
+export interface ICategoriesCard {
     item: {
         _id:string,
         title:string,
