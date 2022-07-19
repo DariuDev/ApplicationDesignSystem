@@ -1,5 +1,5 @@
 type TypeCategories={
-    item: object;
+    item: any;
     onPressItem?:()=>void
   }
 
