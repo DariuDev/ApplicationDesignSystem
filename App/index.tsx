@@ -64,27 +64,6 @@ const App = () => {
     { _id: '118', title: 'خانه و باغچه',img:'hjkhkjhh' },
     { _id: '119', title: 'اسباب بازی' ,img:'hjkhkjhh'},
 ];
-const data1 = [
-  {
-    image: '',
-    title: 'mens dust protection sport hoodie tops',
-    price: '4,200,000',
-    off: '15',
-    mainPrice: '22,000,000'
-  },{
-    image: '',
-    title: 'mens dust protection sport hoodie tops',
-    price: '4,200,000',
-   // off: '15',
-    mainPrice: '22,000,000'
-  },{
-    image: '',
-    title: 'mens dust protection sport hoodie tops',
-    price: '4,200,000',
-    off: '15',
-    mainPrice: '22,000,000'
-  },
-];
 const dataBestSelling = [
   { _id: '114', title: 'لوازم خودرو',img:'hjkhkjhh' },
   { _id: '115', title: 'لوازم التحریر',img:'hjkhkjhh' },

@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
    // backgroundColor: 'red',
     position: 'absolute',
     bottom: '15%',
-    justifyContent: 'space-between',
+    //justifyContent: 'space-between',
     alignItems: 'center',
     left: '10%',
     width: '70%',
