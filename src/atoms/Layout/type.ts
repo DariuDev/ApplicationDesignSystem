@@ -6,7 +6,7 @@ interface TypeCategories{
     }
   }
 
-export interface  LayotType{
+export interface  ILayot{
     column: number,
     data:Array<object>
     styleRow?:object;
@@ -14,4 +14,5 @@ export interface  LayotType{
     colorBorder?:string;
     widthBorder?:number;
     ItemNode:({item}:TypeCategories)=> JSX.Element;
+    onPressItem?:()=>void;
 }

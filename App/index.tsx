@@ -75,6 +75,35 @@ const dataBestSelling = [
   // { _id: '118', title: 'خانه و باغچه',img:'hjkhkjhh' },
   // { _id: '119', title: 'اسباب بازی' ,img:'hjkhkjhh'},
 ];
+const data1 = [
+  {
+    image: '',
+    title: 'mens dust protection sport hoodie tops',
+    price: '4,200,000',
+    off: '15',
+    mainPrice: '22,000,000',
+  },
+  {
+    image: '',
+    title: 'mens dust protection sport hoodie tops',
+    price: '4,200,000',
+    mainPrice: '22,000,000',
+  },
+  {
+    image: '',
+    title: 'mens dust protection sport hoodie tops',
+    price: '4,200,000',
+    off: '15',
+    mainPrice: '22,000,000',
+  },
+  {
+    image: '',
+    title: 'mens dust protection sport hoodie tops',
+    price: '4,200,000',
+    off: '15',
+    mainPrice: '22,000,000',
+  },
+];
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -103,7 +132,7 @@ const dataBestSelling = [
             showAll={() => console.log('show all')}
             onPressTitle={() => console.log('onpress title')}
           />
-          <BestSellingLaptop data={dataBestSelling}  showAll={() => console.log('show all')}/>
+          <BestSellingLaptop onPressItem={()=>console.log('onpress item')} data={data1}  showAll={() => console.log('show all')}/>
           {/* 
              <Slider data={dataSlider}
               contentContainerStyle={{ marginTop: 12 }}

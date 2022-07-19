@@ -1,20 +1,20 @@
-
-import { Card, Text } from '../../../atoms';
 import React from 'react';
 import { View } from 'react-native';
 import { styles } from './style';
 import { IBestSellingLaptopCard } from './BestSellingLaptopCard.type';
+import {  ProductCard } from '../../../atoms';
 
-const BestSellingLaptopCard = ({ item }: IBestSellingLaptopCard) => {
+const BestSellingLaptopCard = ({ item ,onPressItem}: IBestSellingLaptopCard) => {
   return (
-    <Card style={styles.cardItem}  
-    onPress={() => console.log(item._id)}
-    >
-      <View >
-        <View style={styles.viewImage} />
-        <Text>{item.title}</Text>
-      </View>
-    </Card>
+    <ProductCard
+      onPress={onPressItem}
+      productImage={item.productImage}
+      title={item.title}
+      price={item.price}
+      off={item.off}
+      mainPrice={item.mainPrice}
+      style={styles.card}
+    />
   )
 };
 

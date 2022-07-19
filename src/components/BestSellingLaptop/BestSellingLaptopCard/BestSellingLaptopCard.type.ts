@@ -1,8 +1,11 @@
 export interface IBestSellingLaptopCard {
     item: {
         _id:string,
-        title:string,
-        img:string
+        productImage?: string;
+        title?: string;
+        off?: string;
+        price?: string;
+        mainPrice?: string;
     };
-    // onPressItem:() => void;
+    onPressItem?: () => void;
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
-import { LayotType } from './type';
+import { ILayot } from './type';
 import { styles } from './style';
 const { width, height } = Dimensions.get('screen');
 
 const Layout = (
-    { column, data, styleRow, styleLayout, ItemNode,
-        colorBorder, widthBorder }: LayotType) => {
+    { column, data, styleRow, styleLayout, ItemNode,onPressItem,
+        colorBorder, widthBorder }: ILayot) => {
     let lenghtData = data.length;
 
     const styleBorderItem = (index: number) => {
@@ -85,7 +85,7 @@ const Layout = (
                         }]}
                         key={item._id}
                         >
-                        <ItemNode item={item} />
+                        <ItemNode item={item}  onPressItem={onPressItem}/>
                     </View>
 
                 }

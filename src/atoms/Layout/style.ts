@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
         marginVertical: 10,
     },
     rowCloumn: {
-        height: 120,
+        height: 220,
         alignItems: "stretch",
         justifyContent: 'center',
         backgroundColor: '#fff',

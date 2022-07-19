@@ -1,7 +1,5 @@
 import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
-  content: {},
-  list: {},
   card: {
     paddingHorizontal: 10,
     marginTop: 10,
