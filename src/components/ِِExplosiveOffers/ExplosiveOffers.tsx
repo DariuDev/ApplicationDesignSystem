@@ -3,9 +3,9 @@ import {View} from 'react-native';
 import {combinedShapeBackground, Gradient} from '../../assets';
 import MaterialIcons from 'react-native-vector-icons/SimpleLineIcons';
 import {SvgXml} from 'react-native-svg';
-import {Card, ScrollView, Text} from '../../atoms';
+import {Card, ScrollView, Text} from 'application-design-system';
 import {styles} from './style';
-import TitleOfferCard from './ExplosiveOfferCard/ExplosiveOfferCard';
+import TitleOfferCard from './ExplosiveOfferCard';
 import {useState} from 'react';
 import {IOfferCard} from './type';
 

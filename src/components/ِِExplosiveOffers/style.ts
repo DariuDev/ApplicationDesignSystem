@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
   offerTitle: {
     flexDirection: 'row',
     position: 'absolute',
-    zIndex: 4,
+    zIndex: 2,
     bottom: 0,
     alignSelf: 'center',
     justifyContent: 'center',
