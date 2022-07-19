@@ -34,7 +34,7 @@ const ProductCard = <T extends Record<any, unknown>>({
         <Text fontSize={15} fontWeight={'bold'}>
           تومان
         </Text>
-        <Text fontSize={15} fontWeight={'bold'}>
+        <Text marginHorizontal={5} fontSize={15} fontWeight={'bold'}>
           {price}
         </Text>
       </View>
