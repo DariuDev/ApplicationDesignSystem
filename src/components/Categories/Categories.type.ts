@@ -1,3 +1,4 @@
 export interface ICategories{
-    data:object[]
+    data:object[];
+    onPressItem:()=>void
 }

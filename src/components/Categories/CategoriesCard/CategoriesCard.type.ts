@@ -3,5 +3,6 @@ export interface ICategoriesCard {
         _id:string,
         title:string,
         img:string
-    }
+    };
+    onPressItem?: () => void;
 }

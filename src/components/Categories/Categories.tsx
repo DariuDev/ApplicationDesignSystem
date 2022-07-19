@@ -5,14 +5,14 @@ import CategoriesCard from './CategoriesCard/CategoriesCard';
 import { ICategories } from './Categories.type';
 
 
-const Categories = ({data}: ICategories) => {
+const Categories = ({data,onPressItem}: ICategories) => {
     return (
         <View style={{ marginTop: 20,backgroundColor:'#fff' }}>
             <Text fontWeight={'bold'} fontSize={20} color={'#172b4d'} alignSelf={'center'}
                 marginBottom={20} paddingRight={13} >
                 دسته بندیها
             </Text>
-            <Layout column={3} data={data} colorBorder={'#edf0f5'} widthBorder={1}
+            <Layout onPressItem={onPressItem} column={3} data={data} colorBorder={'#edf0f5'} widthBorder={1}
                 ItemNode={CategoriesCard} />
         </View>
 

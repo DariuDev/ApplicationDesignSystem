@@ -1,9 +1,6 @@
-interface TypeCategories{
-    item: {
-      _id:string,
-      title:string,
-      img:string
-    }
+type TypeCategories={
+    item: object;
+    onPressItem?:()=>void
   }
 
 export interface  ILayot{
@@ -13,6 +10,6 @@ export interface  ILayot{
     styleLayout?:object;
     colorBorder?:string;
     widthBorder?:number;
-    ItemNode:({item}:TypeCategories)=> JSX.Element;
-    onPressItem?:()=>void;
+    ItemNode:({item,onPressItem}:TypeCategories)=> JSX.Element;
+   onPressItem?:()=>void;
 }
