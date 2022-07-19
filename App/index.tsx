@@ -64,7 +64,27 @@ const App = () => {
     { _id: '118', title: 'خانه و باغچه',img:'hjkhkjhh' },
     { _id: '119', title: 'اسباب بازی' ,img:'hjkhkjhh'},
 ];
-
+const data1 = [
+  {
+    image: '',
+    title: 'mens dust protection sport hoodie tops',
+    price: '4,200,000',
+    off: '15',
+    mainPrice: '22,000,000'
+  },{
+    image: '',
+    title: 'mens dust protection sport hoodie tops',
+    price: '4,200,000',
+   // off: '15',
+    mainPrice: '22,000,000'
+  },{
+    image: '',
+    title: 'mens dust protection sport hoodie tops',
+    price: '4,200,000',
+    off: '15',
+    mainPrice: '22,000,000'
+  },
+];
   return (
     <QueryClientProvider client={queryClient}>
       <View style={{ alignItems: 'center', flex: 1,backgroundColor:'#fff' }}>
@@ -88,7 +108,7 @@ const App = () => {
           />
 
           <ImmediateDelivery
-            data={dataSlider}
+            data={data1}
             showAll={() => console.log('show all')}
             onPressTitle={() => console.log('onpress title')}
           />

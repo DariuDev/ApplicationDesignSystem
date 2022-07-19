@@ -2,22 +2,33 @@ import React from 'react';
 import {View} from 'react-native';
 import {styles} from './style';
 import {ScrollView, Text, Card} from '../../atoms';
+import ProductCard from '../ProductCard';
 import {Gradient} from '../../assets';
 import MaterialIcon from 'react-native-vector-icons/Entypo';
 import {IDelivery} from './types';
 
-const ImmediateDelivery = ({data, showAll, onPressTitle}: IDelivery) => {
+const ImmediateDelivery = ({
+  data,
+  showAll,
+  onPressTitle,
+}: IDelivery) => {
   return (
     <Gradient colors={['#0443c0', '#00349b']} style={styles.background}>
       <ScrollView
         showsHorizontalScrollIndicator={false}
         horizontal
         style={styles.list}>
-        {data.map((item: any) => {
+        {data?.map((item: any) => {
           return (
-            <Card onPress={onPressTitle} style={styles.card}>
-              <Text>{item.title}</Text>
-            </Card>
+            <ProductCard
+              onPress={onPressTitle}
+              productImage={item.productImage}
+              title={item.title}
+              price={item.price}
+              off={item.off}
+              mainPrice={item.mainPrice}
+              style={styles.card}
+            />
           );
         })}
       </ScrollView>
