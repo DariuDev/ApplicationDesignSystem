@@ -12,39 +12,42 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
   const lenght = data.length;
   const [current, setCurrent] = useState<number>(0);
   const sliderRef = useRef<any>(null);
-    useEffect(() => {
-      let timer = setTimeout(() => {
-        if (current < lenght - 2) {
-          setCurrent(prev => prev + 1);
-        } else {
-          setCurrent(0);
-        }
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      if (current < lenght - 2) {
+        setCurrent(prev => prev + 1);
+      } else {
+        setCurrent(0);
+      }
 
-        sliderRef?.current?.scrollTo({x: SCREEN_WIDTH * current, animated: true});
-      }, 2000);
+      sliderRef?.current?.scrollTo({
+        x: ((SCREEN_WIDTH * 9) / 10) * current,
+        animated: true,
+      });
+    }, 2000);
 
-      return () => {
-        clearTimeout(timer);
-      };
-    });
+    return () => {
+      clearTimeout(timer);
+    };
+  });
   return (
     <View
       style={{
         width: SCREEN_WIDTH,
         justifyContent: 'center',
         alignItems: 'center',
+        padding: 10,
       }}>
       <ScrollView
         pagingEnabled
         horizontal={true}
         ref={sliderRef}
         showsHorizontalScrollIndicator={false}
-        //style={{marginEnd: 10, marginTop: 10}}
+        style={{marginEnd: 10, marginStart: 10, marginTop: 10}}
         contentContainerStyle={{
           alignItems: 'center',
-          flexGrow: 1,
+          alignSelf: 'center',
           justifyContent: 'center',
-          //margin: 10
         }}>
         {data.map((item: any) => {
           return (
