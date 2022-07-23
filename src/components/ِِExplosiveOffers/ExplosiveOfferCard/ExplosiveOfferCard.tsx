@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import {Card, Text} from 'application-design-system';
+import {Card, Text} from '../../../atoms';
 import {styles} from './style';
 import {ITitleOfferCard} from './types';
 
