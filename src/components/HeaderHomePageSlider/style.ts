@@ -1,14 +1,16 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
+const SCREEN_WIDTH = Dimensions.get('window').width;
+
 export const styles = StyleSheet.create({
     container: {
-        width: 350,
+        width: SCREEN_WIDTH,
         height: 260,
         flexDirection: 'row',
         alignItems: "center",
         alignSelf: 'center',
         justifyContent: 'center',
         backgroundColor: '#36c1de',
-        marginHorizontal:5,
+        //marginHorizontal:15,
         borderRadius: 8,
         shadowColor: "#9ba0aa",
         shadowOffset: {

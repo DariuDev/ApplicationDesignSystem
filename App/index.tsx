@@ -117,7 +117,7 @@ const data1 = [
         <ScrollView showsVerticalScrollIndicator={false}>
 
           <IHeaderHomePageSlider data={dataSlider} onPressTitle={() => console.log(' title')} />
-          {/* <ExplosiveOffers data={dataSlider} /> */}
+          <ExplosiveOffers data={dataSlider} />
 
           <Categories data={dataCategories} onPressItem={() => console.log(' title')} />
 
