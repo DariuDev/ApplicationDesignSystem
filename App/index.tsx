@@ -1,6 +1,6 @@
 //  export default from '../storybook';// export default from '../storybook';
 import {
-  Layout,
+  // Layout,
   //   Input,
   //   RadioButton,
   //   Button,
@@ -122,11 +122,11 @@ const data1 = [
           <Categories data={dataCategories} onPressItem={() => console.log(' title')} />
 
         
-          <AccessoriesOrnaments
+          {/* <AccessoriesOrnaments
             data={dataSlider}
             showAll={() => console.log('show all')}
             onPressItem={() => console.log('onpress item')}
-          />
+          /> */}
 
           <ImmediateDelivery
             data={data1}
@@ -134,31 +134,7 @@ const data1 = [
             onPressTitle={() => console.log('onpress title')}
           />
           <BestSellingLaptop onPressItem={()=>console.log('onpress item')} data={data1}  showAll={() => console.log('show all')}/>
-          {/* 
-             <Slider data={dataSlider}
-              contentContainerStyle={{ marginTop: 12 }}
-              renderItem={({ item }) => (
-                <CardSliderHomePage
-                  item={item} />
-              )}
-            />
-            <Slider
-            data={dataSlider} isTopChildren={true}
-            styleSlider={{ backgroundColor: '#f92a5f' }}
-            renderItem={({ item }) => (
-              <CardSliderDiscount
-                item={item} />
-            )}
-          >
-            <View style={style.sliderDiscount}>
-              <Text
-                color={'white'}
-                onPress={() => console.log('pressed')}>
-                تخفیف های انفجاری
-              </Text>
-              <MaterialIcons name={'local-fire-department'} size={24} color={'#fff'} />
-            </View>
-          </Slider> */}
+         
         </ScrollView>
       </View>
     </QueryClientProvider>
