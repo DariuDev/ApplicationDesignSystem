@@ -3,14 +3,13 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 
 export const styles = StyleSheet.create({
     container: {
-        width: SCREEN_WIDTH,
+        width: SCREEN_WIDTH * 9/10,
         height: 260,
         flexDirection: 'row',
         alignItems: "center",
         alignSelf: 'center',
         justifyContent: 'center',
         backgroundColor: '#36c1de',
-        //marginHorizontal:15,
         borderRadius: 8,
         shadowColor: "#9ba0aa",
         shadowOffset: {
