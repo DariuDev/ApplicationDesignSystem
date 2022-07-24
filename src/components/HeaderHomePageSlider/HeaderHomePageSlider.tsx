@@ -32,18 +32,13 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
   });
   return (
     <View
-      style={{
-        width: SCREEN_WIDTH,
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 10,
-      }}>
+      style={styles.main}>
       <ScrollView
         pagingEnabled
         horizontal={true}
         ref={sliderRef}
         showsHorizontalScrollIndicator={false}
-        style={{marginEnd: 10, marginStart: 10, marginTop: 10}}
+        style={{marginEnd: 10, marginStart: 10, marginTop: 10, }}
         contentContainerStyle={{
           alignItems: 'center',
           alignSelf: 'center',

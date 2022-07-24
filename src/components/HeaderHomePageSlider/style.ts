@@ -2,6 +2,12 @@ import { Dimensions, StyleSheet } from 'react-native';
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 export const styles = StyleSheet.create({
+    main: {
+        width: SCREEN_WIDTH,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+      },
     container: {
         width: SCREEN_WIDTH * 9/10,
         height: 260,
