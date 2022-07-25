@@ -15,7 +15,7 @@ import {
 } from '../src/atoms';
 import React, { useState } from 'react';
 import { View, ScrollView, Pressable } from 'react-native';
-import { ExplosiveOffers, IHeaderHomePageSlider, Header, ImmediateDelivery, AccessoriesOrnaments, BestSellingLaptop } from './../src/components';
+import { ExplosiveOffers, HeaderHomePageSlider, Header, ImmediateDelivery, AccessoriesOrnaments, BestSellingLaptop } from './../src/components';
 import styles from '../src/atoms/RadioButton/style';
 import { MaterialIcons } from '../src/atoms/Icon/type'
 // import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -24,8 +24,8 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import Categories from '../src/components/Categories/Categories';
 import CheckBox from './../src/atoms/Checkbox/index';
 import CarouselCards from '../src/components/Slider/Slider';
-import dataCrouser from '../src/components/Slider/data';
-import CarouselCardItem from './../src/components/Slider/SliderCardItem';
+// import dataCrouser from '../src/components/Slider/data';
+// import CarouselCardItem from './../src/components/Slider/SliderCardItem';
 
 
 
@@ -117,12 +117,15 @@ const App = () => {
 
 
         <ScrollView showsVerticalScrollIndicator={false}>
-
-        <CarouselCards
+        <HeaderHomePageSlider
+          dataCrouser={dataSlider}
+          onPress={() => console.log(' title')}
+        />
+        {/* <CarouselCards
            data={dataCrouser} 
-           renderItem={({ item, index }) => (<CarouselCardItem item={item} index={index} />)} 
+           renderItem={({ item, index }) => (<CarouselCardItem onPress={()=>console.log(index)} item={item} index={index} />)} 
            
-           />
+           /> */}
           {/* <IHeaderHomePageSlider data={dataSlider} onPressTitle={() => console.log(' title')} /> */}
           <ExplosiveOffers data={dataSlider} />
 
