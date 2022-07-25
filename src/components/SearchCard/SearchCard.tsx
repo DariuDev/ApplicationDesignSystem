@@ -9,8 +9,9 @@ import {malltinaSvg} from '../../assets';
 
 const SearchCard = ({iconName, placeholder, onPress}: ISearchCard) => {
   return (
-    <View style={styles.search}>
+    <View testID="searchCard-id" style={styles.search}>
       <Pressable
+        testID="searchOnPress-id"
         style={({pressed}) => [
           styles.iconsearch,
           {backgroundColor: pressed ? '#e4e4e4' : '#fff'},
@@ -20,7 +21,9 @@ const SearchCard = ({iconName, placeholder, onPress}: ISearchCard) => {
       </Pressable>
       <View style={styles.placeholder}>
         <SvgXml style={styles.img} xml={malltinaSvg} />
-        <Text fontWeight={'bold'}>{placeholder}</Text>
+        <Text testID="searchPlaceHolder-id" fontWeight={'bold'}>
+          {placeholder}
+        </Text>
       </View>
     </View>
   );

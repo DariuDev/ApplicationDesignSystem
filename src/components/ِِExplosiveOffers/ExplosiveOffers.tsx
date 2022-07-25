@@ -25,13 +25,15 @@ export const ExplosiveOffers = ({data}: IOfferCard) => {
           // off=""
         />
         <ScrollView
+          testID="scrollView-id"
           showsHorizontalScrollIndicator={false}
           horizontal={true}
           style={styles.list}>
-          {data.map((item: any) => {
+          {data.map((item: any, index) => {
             return (
               <Card
                 onPress={() => setTitle(item.title)}
+                testID={`ExplosiveOffer-${index}`}
                 style={styles.cardList}>
                 <Text>{item.title}</Text>
               </Card>
@@ -42,10 +44,9 @@ export const ExplosiveOffers = ({data}: IOfferCard) => {
 
       <Gradient style={styles.gradient} colors={['#f8616e', '#f92a5f']} />
       <View style={styles.offerTitle}>
-        <Text fontWeight={'bold'} fontSize={30} color={'#fff'}>
-          انفجاری
-        </Text>
-        <Text fontWeight={'bold'} fontSize={20} color={'#fff'}>
+        <Text testID='explosiveText-id' fontWeight={'bold'} fontSize={30} color={'#fff'}>
+          انفجاری</Text>
+        <Text testID='offText-id' fontWeight={'bold'} fontSize={20} color={'#fff'}>
           تخفیف های
         </Text>
         <MaterialIcons name={'fire'} size={44} color={'#fff'} />
