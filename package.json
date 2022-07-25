@@ -13,6 +13,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@types/react-native-snap-carousel": "^3.8.5",
     "@types/react-native-vector-icons": "^6.4.11",
     "application-design-system": "file:.yalc/application-design-system",
     "axios": "^0.27.2",
@@ -20,6 +21,7 @@
     "react-native": "^0.68.2",
     "react-native-linear-gradient": "^2.6.2",
     "react-native-paper": "^4.12.2",
+    "react-native-snap-carousel": "^3.9.1",
     "react-native-svg": "^12.3.0",
     "react-native-vector-icons": "^9.2.0",
     "react-query": "^3.39.1"

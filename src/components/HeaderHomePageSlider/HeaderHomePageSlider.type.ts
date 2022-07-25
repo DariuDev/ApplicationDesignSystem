@@ -1,4 +1,4 @@
 export interface IHeaderHomePageSlider {
-    data: object[];
-    onPressTitle: () => void;
+  dataCrouser: object[];
+  onPress?:()=>void;
 }

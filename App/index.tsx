@@ -15,19 +15,19 @@ import {
 } from '../src/atoms';
 import React, { useState } from 'react';
 import { View, ScrollView, Pressable } from 'react-native';
-import { ExplosiveOffers, IHeaderHomePageSlider, Header, ImmediateDelivery,AccessoriesOrnaments, BestSellingLaptop } from './../src/components';
+import { ExplosiveOffers, HeaderHomePageSlider, Header, ImmediateDelivery, AccessoriesOrnaments, BestSellingLaptop } from './../src/components';
 import styles from '../src/atoms/RadioButton/style';
-import { Slider } from './../src/components';
-import {
-  // CardSliderHomePage,
-  // CardSliderDiscount,
-} from './../src/components/Slider/CardSlider';
 import { MaterialIcons } from '../src/atoms/Icon/type'
 // import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Categories from '../src/components/Categories/Categories';
 import CheckBox from './../src/atoms/Checkbox/index';
+import CarouselCards from '../src/components/Slider/Slider';
+// import dataCrouser from '../src/components/Slider/data';
+// import CarouselCardItem from './../src/components/Slider/SliderCardItem';
+
+
 
 const queryClient = new QueryClient();
 const App = () => {
@@ -54,74 +54,83 @@ const App = () => {
     { _id: '5', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
   ];
   const dataCategories = [
-    { _id: '114', title: 'لوازم خودرو',img:'hjkhkjhh' },
-    { _id: '115', title: 'لوازم التحریر',img:'hjkhkjhh' },
-    { _id: '116', title: 'ورزش وسفر',img:'hjkhkjhh' },
-    { _id: '117', title: 'تندرستی',img:'hjkhkjhh' },
-    { _id: '118', title: 'خانه و باغچه',img:'hjkhkjhh' },
-    { _id: '119', title: 'اسباب بازی',img:'hjkhkjhh'},
-    { _id: '117', title: 'تندرستی' ,img:'hjkhkjhh'},
-    { _id: '118', title: 'خانه و باغچه',img:'hjkhkjhh' },
-    { _id: '119', title: 'اسباب بازی' ,img:'hjkhkjhh'},
-];
+    { _id: '114', title: 'لوازم خودرو', img: 'hjkhkjhh' },
+    { _id: '115', title: 'لوازم التحریر', img: 'hjkhkjhh' },
+    { _id: '116', title: 'ورزش وسفر', img: 'hjkhkjhh' },
+    { _id: '117', title: 'تندرستی', img: 'hjkhkjhh' },
+    { _id: '118', title: 'خانه و باغچه', img: 'hjkhkjhh' },
+    { _id: '119', title: 'اسباب بازی', img: 'hjkhkjhh' },
+    { _id: '117', title: 'تندرستی', img: 'hjkhkjhh' },
+    { _id: '118', title: 'خانه و باغچه', img: 'hjkhkjhh' },
+    { _id: '119', title: 'اسباب بازی', img: 'hjkhkjhh' },
+  ];
 
-const dataBestSelling = [
-  { _id: '114', title: 'لوازم خودرو',img:'hjkhkjhh' },
-  { _id: '115', title: 'لوازم التحریر',img:'hjkhkjhh' },
-  { _id: '116', title: 'ورزش وسفر',img:'hjkhkjhh' },
-  { _id: '117', title: 'تندرستی',img:'hjkhkjhh' },
-  // { _id: '118', title: 'خانه و باغچه',img:'hjkhkjhh' },
-  // { _id: '119', title: 'اسباب بازی',img:'hjkhkjhh'},
-  // { _id: '117', title: 'تندرستی' ,img:'hjkhkjhh'},
-  // { _id: '118', title: 'خانه و باغچه',img:'hjkhkjhh' },
-  // { _id: '119', title: 'اسباب بازی' ,img:'hjkhkjhh'},
-];
-const data1 = [
-  {
-    image: '',
-    title: 'mens dust protection sport hoodie tops',
-    price: '4,200,000',
-    off: '15',
-    mainPrice: '22,000,000',
-  },
-  {
-    image: '',
-    title: 'mens dust protection sport hoodie tops',
-    price: '4,200,000',
-    mainPrice: '22,000,000',
-  },
-  {
-    image: '',
-    title: 'mens dust protection sport hoodie tops',
-    price: '4,200,000',
-    off: '15',
-    mainPrice: '22,000,000',
-  },
-  {
-    image: '',
-    title: 'mens dust protection sport hoodie tops',
-    price: '4,200,000',
-    off: '15',
-    mainPrice: '22,000,000',
-  },
-];
+  const dataBestSelling = [
+    { _id: '114', title: 'لوازم خودرو', img: 'hjkhkjhh' },
+    { _id: '115', title: 'لوازم التحریر', img: 'hjkhkjhh' },
+    { _id: '116', title: 'ورزش وسفر', img: 'hjkhkjhh' },
+    { _id: '117', title: 'تندرستی', img: 'hjkhkjhh' },
+    // { _id: '118', title: 'خانه و باغچه',img:'hjkhkjhh' },
+    // { _id: '119', title: 'اسباب بازی',img:'hjkhkjhh'},
+    // { _id: '117', title: 'تندرستی' ,img:'hjkhkjhh'},
+    // { _id: '118', title: 'خانه و باغچه',img:'hjkhkjhh' },
+    // { _id: '119', title: 'اسباب بازی' ,img:'hjkhkjhh'},
+  ];
+  const data1 = [
+    {
+      image: '',
+      title: 'mens dust protection sport hoodie tops',
+      price: '4,200,000',
+      off: '15',
+      mainPrice: '22,000,000',
+    },
+    {
+      image: '',
+      title: 'mens dust protection sport hoodie tops',
+      price: '4,200,000',
+      mainPrice: '22,000,000',
+    },
+    {
+      image: '',
+      title: 'mens dust protection sport hoodie tops',
+      price: '4,200,000',
+      off: '15',
+      mainPrice: '22,000,000',
+    },
+    {
+      image: '',
+      title: 'mens dust protection sport hoodie tops',
+      price: '4,200,000',
+      off: '15',
+      mainPrice: '22,000,000',
+    },
+  ];
 
   return (
     <QueryClientProvider client={queryClient}>
-      <View style={{ alignItems: 'center', flex: 1,backgroundColor:'#fff' }}>
+      <View style={{ alignItems: 'center', flex: 1, backgroundColor: '#fff' }}>
         <Header
           onPress={() => console.log('pressed')}
           height={85}
           backgroundColor="#061d72"
         />
-        <ScrollView showsVerticalScrollIndicator={false}>
 
-          <IHeaderHomePageSlider data={dataSlider} onPressTitle={() => console.log(' title')} />
+
+        <ScrollView showsVerticalScrollIndicator={false}>
+        <HeaderHomePageSlider
+          dataCrouser={dataSlider}
+          onPress={() => console.log(' title')}
+        />
+        {/* <CarouselCards
+           data={dataCrouser} 
+           renderItem={({ item, index }) => (<CarouselCardItem onPress={()=>console.log(index)} item={item} index={index} />)} 
+           
+           /> */}
+          {/* <IHeaderHomePageSlider data={dataSlider} onPressTitle={() => console.log(' title')} /> */}
           <ExplosiveOffers data={dataSlider} />
 
           <Categories data={dataCategories} onPressItem={() => console.log(' title')} />
-
-        
+       
           {/* <AccessoriesOrnaments
             data={dataSlider}
             showAll={() => console.log('show all')}
@@ -133,8 +142,8 @@ const data1 = [
             showAll={() => console.log('show all')}
             onPressTitle={() => console.log('onpress title')}
           />
-          <BestSellingLaptop onPressItem={()=>console.log('onpress item')} data={data1}  showAll={() => console.log('show all')}/>
-         
+          <BestSellingLaptop onPressItem={() => console.log('onpress item')} data={data1} showAll={() => console.log('show all')} />
+
         </ScrollView>
       </View>
     </QueryClientProvider>
