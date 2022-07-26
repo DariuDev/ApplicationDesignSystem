@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Dimensions } from "react-native";
 import Carousel from 'react-native-snap-carousel';
-import type { Islider } from './';
+import type { ICarouselSlider } from '.';
 
 const SLIDER_WIDTH = Dimensions.get('window').width;
 const ITEM_WIDTH = SLIDER_WIDTH * 0.9;
 
-const Slider = <T extends Record<any, any>>({ itemWideth = ITEM_WIDTH, data,renderItem, otherProps }: Islider & T) => {
+const CarouselSlider = <T extends Record<any, any>>({ itemWideth = ITEM_WIDTH, data,renderItem, otherProps }: ICarouselSlider & T) => {
     const isCarousel = React.useRef(null);
     // const [index, setIndex] = React.useState(0)
     return (
@@ -35,4 +35,4 @@ const Slider = <T extends Record<any, any>>({ itemWideth = ITEM_WIDTH, data,rend
 }
 
 
-export default Slider;
+export default CarouselSlider;

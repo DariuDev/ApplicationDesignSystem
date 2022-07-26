@@ -23,7 +23,7 @@ import style from './style';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Categories from '../src/components/Categories/Categories';
 import CheckBox from './../src/atoms/Checkbox/index';
-import CarouselCards from '../src/components/Slider/Slider';
+import CarouselCards from '../src/components/CarouselSlider/CarouselSlider';
 // import dataCrouser from '../src/components/Slider/data';
 // import CarouselCardItem from './../src/components/Slider/SliderCardItem';
 

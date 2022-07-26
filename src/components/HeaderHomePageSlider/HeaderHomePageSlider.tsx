@@ -4,7 +4,7 @@ import { Card, Button, Icon } from '../../atoms';
 import { MaterialIcons } from '../../atoms/Icon/type';
 import { styles } from './style';
 import type { IHeaderHomePageSlider } from './HeaderHomePageSlider.type';
-import  Slider  from '../Slider';
+import  Slider  from '../CarouselSlider';
 
 
 const HeaderHomePageSlider = ({ dataCrouser, onPress }: IHeaderHomePageSlider) => {
