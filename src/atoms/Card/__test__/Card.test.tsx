@@ -7,7 +7,7 @@ describe('components > Card', () => {
 
   it('test card', () => {
     const screen = render(
-      <Card marginTop={10} justifyContent={'center'}><Text>Dariush</Text></Card>
+      <Card testID='card-id' style={{justifyContent: 'center'}}><Text>Dariush</Text></Card>
     );
     const card = screen.getByTestId('card-id');
     expect(card).toHaveProp('testID', 'card-id');

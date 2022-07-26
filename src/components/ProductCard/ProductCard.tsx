@@ -2,8 +2,8 @@ import React from 'react';
 import {View} from 'react-native';
 import {styles} from './style';
 import {IProductCard} from './type';
-import {Card} from '../../atoms';
-import {Text} from 'application-design-system';
+import {Card,Text} from '../../atoms';
+import theme from '../../constants';
 
 const ProductCard = <T extends Record<any, unknown>>({
   onPressTitle,
@@ -14,20 +14,20 @@ const ProductCard = <T extends Record<any, unknown>>({
   mainPrice,
   ...otherProps
 }: IProductCard & T) => (
-  <Card {...otherProps}>
+  <Card testID='productCard-id' {...otherProps}>
     <View style={styles.card}>
       <View style={styles.image}>
-        <Text>{productImage}</Text>
+        <Text testID='productImage-id'>{productImage}</Text>
       </View>
       <View style={styles.title}>
-        <Text color={'black'}>{title}</Text>
+        <Text testID='productTitle-id' color={'black'}>{title}</Text>
       </View>
       {off ? 
       <View style={styles.off}>
-        <Text fontSize={12} color={'#fff'}>
+        <Text testID='productOff-id' fontSize={12} color={theme.COLORS.WHITE}>
           {off}
         </Text>
-        <Text fontSize={12} color={'#fff'}>
+        <Text fontSize={12} color={theme.COLORS.WHITE}>
           %off
         </Text> 
       </View> : null }
@@ -35,12 +35,12 @@ const ProductCard = <T extends Record<any, unknown>>({
         <Text fontSize={15} fontWeight={'bold'}>
           تومان
         </Text>
-        <Text fontSize={15} fontWeight={'bold'}>
+        <Text testID='productPrice-id' fontSize={15} fontWeight={'bold'}>
           {price}
         </Text>
       </View>
       <View style={styles.mainPrice}>
-        <Text color={'gray'} fontSize={12}>
+        <Text testID='productMainPrice-id' color={'gray'} fontSize={12}>
           {mainPrice}
         </Text>
       </View>

@@ -3,24 +3,22 @@ import {View} from 'react-native';
 import {styles} from './style';
 import {ScrollView, Text, Card} from '../../atoms';
 import ProductCard from '../ProductCard';
-import {Gradient} from '../../assets';
+//import {Gradient} from '../../assets';
 import MaterialIcon from 'react-native-vector-icons/Entypo';
 import {IDelivery} from './types';
 
-const ImmediateDelivery = ({
-  data,
-  showAll,
-  onPressTitle,
-}: IDelivery) => {
+const ImmediateDelivery = ({data, showAll, onPressTitle}: IDelivery) => {
   return (
-    <Gradient colors={['#0443c0', '#00349b']} style={styles.background}>
+    // <Gradient colors={['#0443c0', '#00349b']} style={styles.background}>
+    <View>
       <ScrollView
         showsHorizontalScrollIndicator={false}
         horizontal
         style={styles.list}>
-        {data?.map((item: any) => {
+        {data?.map((item: any, index) => {
           return (
             <ProductCard
+              testID={`productCard-${index}`}
               onPress={onPressTitle}
               productImage={item.productImage}
               title={item.title}
@@ -42,11 +40,13 @@ const ImmediateDelivery = ({
       </View>
       <View style={styles.showAll}>
         <MaterialIcon size={20} name={'chevron-left'} color={'yellow'} />
-        <Text onPress={showAll} fontWeight={'bold'} color={'#fff'}>
+        <Text testID='showAllText-id' onPress={showAll} fontWeight={'bold'} color={'#fff'}>
           نمایش همه
         </Text>
       </View>
-    </Gradient>
+      </View>
+ 
+
   );
 };
 export default ImmediateDelivery;
