@@ -15,15 +15,15 @@ import {
 } from '../src/atoms';
 import React, { useState } from 'react';
 import { View, ScrollView, Pressable } from 'react-native';
-import { ExplosiveOffers, HeaderHomePageSlider, Header, ImmediateDelivery, AccessoriesOrnaments, BestSellingLaptop } from './../src/components';
+import { ExplosiveOffers, Header, ImmediateDelivery, AccessoriesOrnaments, Categories, BestSellingLaptop } from '../src/components';
 import styles from '../src/atoms/RadioButton/style';
 import { MaterialIcons } from '../src/atoms/Icon/type'
 // import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import Categories from '../src/components/Categories/Categories';
+
 import CheckBox from './../src/atoms/Checkbox/index';
-import CarouselCards from '../src/components/CarouselSlider/CarouselSlider';
+import CarouselCards from '../src/componentsOld/CarouselSlider/CarouselSlider';
 // import dataCrouser from '../src/components/Slider/data';
 // import CarouselCardItem from './../src/components/Slider/SliderCardItem';
 
@@ -117,10 +117,10 @@ const App = () => {
 
 
         <ScrollView showsVerticalScrollIndicator={false}>
-        <HeaderHomePageSlider
+        {/* <HeaderHomePageSlider
           dataCrouser={dataSlider}
           onPress={() => console.log(' title')}
-        />
+        /> */}
         {/* <CarouselCards
            data={dataCrouser} 
            renderItem={({ item, index }) => (<CarouselCardItem onPress={()=>console.log(index)} item={item} index={index} />)} 
@@ -131,11 +131,11 @@ const App = () => {
 
           <Categories data={dataCategories} onPressItem={() => console.log(' title')} />
        
-          {/* <AccessoriesOrnaments
+          <AccessoriesOrnaments
             data={dataSlider}
             showAll={() => console.log('show all')}
             onPressItem={() => console.log('onpress item')}
-          /> */}
+          />
 
           <ImmediateDelivery
             data={data1}

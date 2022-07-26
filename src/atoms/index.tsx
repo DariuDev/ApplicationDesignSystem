@@ -12,3 +12,4 @@ export {default as ScrollView} from './ScrollView';
 export {default as layout} from './Layout';
 export {default as Icon} from './Icon';
 export {default as ProductCard} from './ProductCard';
+export {default as OfferCard} from './OfferCard';

@@ -1,9 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
 import Layout from '../Layout';
-import { Text,Dimensions } from 'react-native';
+import { Text, Dimensions } from 'react-native';
 const { width } = Dimensions.get('screen');
-
 
 describe('components >> Layout ', () => {
   const data = [
@@ -22,11 +21,12 @@ describe('components >> Layout ', () => {
       styleLayout={{ backgroundColor: 'black' }}
     />
     );
+    
     expect(screen.getByTestId('layout-test')).toHaveProp('testID', 'layout-test');
     expect(screen.getByText('Hi emel1 !')).toBeDefined();
     expect(screen.getByTestId('text_categories_test11')).toHaveTextContent('Hi emel1 !');
     expect(screen.getByTestId('layout-test').children.length).toBe(4);
-    expect(screen.getByTestId('layout-test')).toHaveStyle({ backgroundColor: 'black'});
-    expect(screen.getByTestId('layout-row-test11')).toHaveStyle({width: width / (2 / 10 + 2) });
+    expect(screen.getByTestId('layout-test')).toHaveStyle({ backgroundColor: 'black' });
+    expect(screen.getByTestId('layout-row-test11')).toHaveStyle({ width: width / (2 / 10 + 2) });
   });
 });

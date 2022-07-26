@@ -1,5 +1,2 @@
-import { Gradient } from "./Gradient";
-import { malltinaSvg } from "./malltina";
-import { combinedShapeBackground } from "./combinedShapeBackground";
-
-export {Gradient, malltinaSvg, combinedShapeBackground}
+export * from './svg/malltinaTitle';
+export * from './svg/ExplosiveOffer';
