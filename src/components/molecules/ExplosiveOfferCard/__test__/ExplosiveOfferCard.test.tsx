@@ -2,8 +2,8 @@ import React from 'react';
 import {render} from '@testing-library/react-native';
 import ExplosiveOfferCard from '../ExplosiveOfferCard';
 
-describe('components > Card', () => {
-  it('test card', () => {
+describe('molecules > ExplosiveOfferCard', () => {
+  it('test ExplosiveOfferCard', () => {
     const screen = render(
       <ExplosiveOfferCard
         titleImage="titleImage"
@@ -19,6 +19,6 @@ describe('components > Card', () => {
     expect(screen.getByTestId('price-id')).toHaveTextContent('price');
     expect(screen.getByTestId('timer-id')).toHaveTextContent('timer');
     expect(screen.getByTestId('titleImage-id')).toHaveTextContent('titleImage');
-    expect(screen.getByTestId('off-id')).toHaveTextContent('offc');
+    expect(screen.getByTestId('off-id')).toHaveTextContent('off');
   });
 });

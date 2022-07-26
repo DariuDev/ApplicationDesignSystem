@@ -7,7 +7,7 @@ import theme from '../../../constants';
 
 const HistoryVisit = ({showAll, onPressItem, data}: IHistoryVisit) => (
   <View style={styles.main}>
-    <Text fontWeight={'bold'} fontSize={20}>
+    <Text testID='historyText-id' fontWeight={'bold'} fontSize={20}>
       تاریخچه بازدیدهای اخیر شما
     </Text>
     <ScrollView
