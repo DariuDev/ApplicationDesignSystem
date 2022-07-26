@@ -21,7 +21,7 @@ const OfferCard = <T extends Record<any, unknown>>({
         <Text testID='OfferImage-id'>{OfferImage}</Text>
       </View>
       <View style={styles.title}>
-        <Text color={'black'}>{title}</Text>
+        <Text testID='OfferTitle-id' color={'black'}>{title}</Text>
       </View>
       {off ? <View style={styles.off}>
         <Text testID='OfferOff-id' fontSize={12} color={theme.COLORS.WHITE}>
