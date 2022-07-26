@@ -14,10 +14,11 @@ const AccessoriesOrnaments = ({data, showAll, onPressItem}: IAccessories) => {
         </Text>
       </View>
       <ScrollView showsHorizontalScrollIndicator={false} horizontal>
-        {data.map((item: any) => {
+        {data.map((item: any,index) => {
           return (
             <OfferCard
               onPress={onPressItem}
+              testID={`offerCardAccessories${index}`}
               productImage={item.productImage}
               title={item.title}
               price={item.price}
@@ -29,7 +30,7 @@ const AccessoriesOrnaments = ({data, showAll, onPressItem}: IAccessories) => {
         })}
       </ScrollView>
       <View style={styles.showAll}>
-        <Text onPress={showAll} fontWeight={'bold'} color={'#0068c5'}>
+        <Text testID="showAllTextAccessories-id" onPress={showAll} fontWeight={'bold'} color={'#0068c5'}>
           نمایش همه
         </Text>
       </View>
