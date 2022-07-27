@@ -15,7 +15,7 @@ const CapHats = ({ data, showAll, onPressItem }: ICapHats) => {
                 </Text>
             </View>
             <Layout styleRow={{ height: 250, }} styleItemModule={layoutBorder} onPressItem={onPressItem} column={2} data={data} colorBorder={'#edf0f5'} widthBorder={1}
-                ItemNode={({ item, onPressItem }: ICapHatsCard) =>
+                ItemNode={({ item, onPressItem,index }: ICapHatsCard) =>
                 (<OfferCard
                     onPress={onPressItem}
                     productImage={item.OfferImage}

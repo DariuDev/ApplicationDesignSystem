@@ -8,4 +8,5 @@ export interface ICapHatsCard {
         mainPrice?: string;
     };
     onPressItem?: () => void;
+    index?:number;
 }

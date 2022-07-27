@@ -6,6 +6,7 @@ import type {IBestSellingMalltina, IBestSellingMalltinaCard} from './';
 import {layoutBorder} from '../../../module';
 import {OfferCard} from '../../molecules';
 
+
 const BestSellingMalltina = ({
   data,
   showAll,
@@ -30,7 +31,7 @@ const BestSellingMalltina = ({
         data={data}
         colorBorder={'#edf0f5'}
         widthBorder={1}
-        ItemNode={({item, onPressItem}: IBestSellingMalltinaCard) => (
+        ItemNode={({item, onPressItem,index}: IBestSellingMalltinaCard) => (
           <OfferCard
             testID="offerCard-id"
             onPress={onPressItem}
@@ -54,5 +55,6 @@ const BestSellingMalltina = ({
       </View>
     </View>
   );
+
 };
 export default BestSellingMalltina;
