@@ -1,6 +1,6 @@
 import { ILayotBorder } from './layoutBorder.type';
 
-const layout = ({
+const layoutBorder = ({
   column,
   data,
   colorBorder = '#edf0f5',
@@ -82,4 +82,4 @@ const layout = ({
   }
 };
 
-export default layout;
+export default layoutBorder;

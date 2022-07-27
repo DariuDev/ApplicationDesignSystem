@@ -4,6 +4,7 @@
   height?: number | string;
   borderRadius?: number;
   borderWidth?: number;
-  children?: JSX.Element
+  children?: JSX.Element;
+  testID?:string;
 }
 export default ICard;

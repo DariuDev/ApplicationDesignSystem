@@ -12,9 +12,8 @@ const HeaderHomePageSlider = ({ dataCrouser, onPress }: IHeaderHomePageSlider) =
     <SliderCarousel
       data={dataCrouser}
       renderItem={({ item, index }: any) => (
-        <Card
-          onPress={onPress}
-          key={index}>
+        <Card testID={`cardHeaderHomeSlider-${index}`}
+          onPress={onPress}>
           <View style={styles.container} >
             <View style={styles.description}>
               <Text style={styles.txtTop}>{item.description}</Text>

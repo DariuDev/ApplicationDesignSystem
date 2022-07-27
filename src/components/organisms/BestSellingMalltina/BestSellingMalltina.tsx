@@ -1,10 +1,10 @@
 import React from 'react';
-import {View} from 'react-native';
-import {styles} from './style';
-import {Text, Layout} from '../../atoms';
-import type {IBestSellingMalltina, IBestSellingMalltinaCard} from './';
-import {layoutBorder} from '../../../module';
-import {OfferCard} from '../../molecules';
+import { View } from 'react-native';
+import { styles } from './style';
+import { Text, Layout } from '../../atoms';
+import type { IBestSellingMalltina, IBestSellingMalltinaCard } from './';
+import { layoutBorder } from '../../../module';
+import { OfferCard } from '../../molecules';
 
 
 const BestSellingMalltina = ({
@@ -16,7 +16,7 @@ const BestSellingMalltina = ({
     <View>
       <View style={styles.titleAccessories}>
         <Text
-          testID="bestSellingText-id"
+          testID="bestMalltinaText-id"
           color={'#172b4d'}
           fontSize={20}
           fontWeight={'500'}>
@@ -24,16 +24,16 @@ const BestSellingMalltina = ({
         </Text>
       </View>
       <Layout
-        styleRow={{height: 250}}
+        styleRow={{ height: 250 }}
         styleItemModule={layoutBorder}
         onPressItem={onPressItem}
         column={2}
         data={data}
         colorBorder={'#edf0f5'}
         widthBorder={1}
-        ItemNode={({item, onPressItem,index}: IBestSellingMalltinaCard) => (
+        ItemNode={({ item, onPressItem, index }: IBestSellingMalltinaCard) => (
           <OfferCard
-            testID="offerCard-id"
+            testID={`offerCardBestMalltina-${index}`}
             onPress={onPressItem}
             OfferImage={item.OfferImage}
             title={item.title}
@@ -46,7 +46,7 @@ const BestSellingMalltina = ({
       />
       <View style={styles.showAll}>
         <Text
-          testID="showAllText-id"
+          testID="showAllMalltinaText-id"
           onPress={showAll}
           fontWeight={'bold'}
           color={'#0068c5'}>

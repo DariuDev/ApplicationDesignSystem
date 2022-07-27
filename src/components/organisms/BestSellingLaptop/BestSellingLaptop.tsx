@@ -22,12 +22,12 @@ const BestSellingLaptop = ({
         testID="layoutBestLaptop-id"
         styleItemModule={layoutBorder}
         styleRow={{height: 250}}
-        //onPressItem={onPressItem}
+        onPressItem={onPressItem}
         column={2}
         data={data}
         colorBorder={'#edf0f5'}
         widthBorder={1}
-        ItemNode={({item, index}: IBestSellingLaptopCard) => (
+        ItemNode={({item, index,onPressItem}: IBestSellingLaptopCard) => (
           <OfferCard
             testID={`offerCardBestLaptop-${index}`}
             onPressTitle={onPressItem}

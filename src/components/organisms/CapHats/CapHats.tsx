@@ -10,13 +10,14 @@ const CapHats = ({ data, showAll, onPressItem }: ICapHats) => {
     return (
         <View >
             <View style={styles.titleAccessories}>
-                <Text color={'#172b4d'} fontSize={20} fontWeight={'500'} >
+                <Text  testID="HatsText-id" color={'#172b4d'} fontSize={20} fontWeight={'500'} >
                     کلاه های کپ
                 </Text>
             </View>
             <Layout styleRow={{ height: 250, }} styleItemModule={layoutBorder} onPressItem={onPressItem} column={2} data={data} colorBorder={'#edf0f5'} widthBorder={1}
                 ItemNode={({ item, onPressItem,index }: ICapHatsCard) =>
                 (<OfferCard
+                    testID={`offerCardHats-${index}`}
                     onPress={onPressItem}
                     productImage={item.OfferImage}
                     title={item.title}
@@ -28,7 +29,7 @@ const CapHats = ({ data, showAll, onPressItem }: ICapHats) => {
                 }
             />
             <View style={styles.showAll}>
-                <Text onPress={showAll} fontWeight={'bold'} color={'#0068c5'}>
+                <Text testID="showAllHatsText-id" onPress={showAll} fontWeight={'bold'} color={'#0068c5'}>
                     نمایش همه
                 </Text>
             </View>
