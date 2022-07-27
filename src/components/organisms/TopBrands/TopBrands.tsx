@@ -1,9 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
 import { styles } from './style';
-import { Text } from '../../atoms';
-import type{ ITopBrands } from './TopBrands.type';
-import TopBrandCard from './TopBrandCard';
+import { Card, ScrollView, Text } from '../../atoms';
+import type { ITopBrands } from './TopBrands.type';
+// import TopBrandCard from '../../molecules/BrandCard';
 
 const TopBrands = ({ data1, data2, data3, onPressItem1, onPressItem2, onPressItem3 }: ITopBrands) => {
     return (
@@ -13,11 +13,36 @@ const TopBrands = ({ data1, data2, data3, onPressItem1, onPressItem2, onPressIte
                     برندهای برتر
                 </Text>
             </View>
-            
-            <TopBrandCard data={data1} onPressItem={onPressItem1} />
-            <TopBrandCard data={data2} onPressItem={onPressItem2} />
-            <TopBrandCard data={data3} onPressItem={onPressItem3} />
+            <ScrollView showsHorizontalScrollIndicator={false} horizontal>
+                {data1.map((item: any) => {
+                    return (
+                        <Card testID={'cardBrand-id-0'} style={styles.card} onPress={onPressItem1}>
+                            <Text>{item.imageBrand}</Text>
+                        </Card>
+                    );
+                })}
+            </ScrollView>
+
+            <ScrollView showsHorizontalScrollIndicator={false} horizontal>
+                {data2.map((item: any) => {
+                    return (
+                        <Card testID={'cardBrand-id-1'} style={styles.card} onPress={onPressItem2}>
+                            <Text>{item.imageBrand}</Text>
+                        </Card>
+                    );
+                })}
+            </ScrollView>
+            <ScrollView showsHorizontalScrollIndicator={false} horizontal>
+                {data3.map((item: any) => {
+                    return (
+                        <Card testID={'cardBrand-id-2'} style={styles.card} onPress={onPressItem3}>
+                            <Text>{item.imageBrand}</Text>
+                        </Card>
+                    );
+                })}
+            </ScrollView>
         </View>
+
 
     );
 };

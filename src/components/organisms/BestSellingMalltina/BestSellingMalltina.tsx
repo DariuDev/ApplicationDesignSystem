@@ -15,7 +15,7 @@ const BestSellingMalltina = ({ data, showAll,onPressItem }: IBestSellingMalltina
                 </Text>
             </View>
             <Layout styleRow={{ height: 250,}} styleItemModule={layoutBorder} onPressItem={onPressItem} column={2} data={data} colorBorder={'#edf0f5'} widthBorder={1}
-               ItemNode={({ item, onPressItem }: IBestSellingMalltinaCard) =>
+               ItemNode={({ item, onPressItem,index}: IBestSellingMalltinaCard) =>
                (<OfferCard
                    onPress={onPressItem}
                    OfferImage={item.OfferImage}

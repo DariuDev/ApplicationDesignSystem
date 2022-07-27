@@ -15,7 +15,7 @@ import {
 } from '../src/atoms';
 import React, { useState } from 'react';
 import { View, ScrollView, Pressable } from 'react-native';
-import { ExplosiveOffers, Header, ImmediateDelivery, AccessoriesOrnaments, Categories, BestSellingLaptop } from '../src/components';
+import { ExplosiveOffers, Header, ImmediateDelivery, AccessoriesOrnaments, Categories, BestSellingLaptop, TopBrands } from '../src/components';
 import styles from '../src/atoms/RadioButton/style';
 import { MaterialIcons } from '../src/atoms/Icon/type'
 // import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -105,6 +105,20 @@ const App = () => {
       mainPrice: '22,000,000',
     },
   ];
+  const dataBrand = [
+    {
+      image: 'hggf',
+    },
+    {
+      image: 'yyyyyy',
+    },
+    {
+      image: 'kkkk',
+    },
+    {
+      image: 'ttttt',
+    },
+  ];
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -117,11 +131,11 @@ const App = () => {
 
 
         <ScrollView showsVerticalScrollIndicator={false}>
-        {/* <HeaderHomePageSlider
+          {/* <HeaderHomePageSlider
           dataCrouser={dataSlider}
           onPress={() => console.log(' title')}
         /> */}
-        {/* <CarouselCards
+          {/* <CarouselCards
            data={dataCrouser} 
            renderItem={({ item, index }) => (<CarouselCardItem onPress={()=>console.log(index)} item={item} index={index} />)} 
            
@@ -130,20 +144,20 @@ const App = () => {
           <ExplosiveOffers data={dataSlider} />
 
           <Categories data={dataCategories} onPressItem={() => console.log(' title')} />
-       
+
           <AccessoriesOrnaments
             data={dataSlider}
             showAll={() => console.log('show all')}
             onPressItem={() => console.log('onpress item')}
           />
-{/* 
+          {/* 
           <ImmediateDelivery
             data={data1}
             showAll={() => console.log('show all')}
             onPressTitle={() => console.log('onpress title')}
           /> */}
           <BestSellingLaptop onPressItem={() => console.log('onpress item')} data={data1} showAll={() => console.log('show all')} />
-
+          <TopBrands data1={dataBrand} data2={dataBrand} data3={dataBrand} />
         </ScrollView>
       </View>
     </QueryClientProvider>
