@@ -5,4 +5,5 @@ export interface ICategoriesCard {
         img: string
     };
     onPressItem?: () => void;
+    index?:number;
 }
