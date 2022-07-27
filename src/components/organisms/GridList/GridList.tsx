@@ -7,7 +7,7 @@ import { Layout } from '../../atoms';
 const GridList = ({ data, onPressItem }: IGridList) => {
   return (
     <View>
-      <Layout styleLayout={styles.layout}
+      <Layout testID='layout-id' styleLayout={styles.layout}
         styleRow={styles.itemLayout}
         onPressItem={onPressItem}
         column={2} data={data}
