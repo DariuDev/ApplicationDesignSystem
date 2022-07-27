@@ -1,6 +1,7 @@
-type TypeCategories = {
+type TypeItem = {
   item: any;
-  onPressItem?:()=>void
+  onPressItem?:()=>void;
+  index?:number;
 }
 type TypeStyleCustomItem = {
   index: number;
@@ -15,7 +16,8 @@ export interface ILayout {
   styleLayout?: object;
   colorBorder?: string;
   widthBorder?: number;
-  ItemNode: ({ item,onPressItem }: TypeCategories) => JSX.Element;
+  ItemNode: ({ item,onPressItem, index }: TypeItem) => JSX.Element;
   onPressItem?:()=>void;
   styleItemModule?: ({ index, column, data }: TypeStyleCustomItem) => object | undefined;
+  testID?:string;
 }

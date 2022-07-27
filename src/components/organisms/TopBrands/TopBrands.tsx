@@ -7,12 +7,13 @@ import TopBrandCard from './TopBrandCard';
 
 const TopBrands = ({ data1, data2, data3, onPressItem1, onPressItem2, onPressItem3 }: ITopBrands) => {
     return (
-        <View >
+        <View testID='topBrand-id'>
             <View style={styles.titleBrand}>
                 <Text color={'#172b4d'} fontSize={20} fontWeight={'500'} >
                     برندهای برتر
                 </Text>
             </View>
+            
             <TopBrandCard data={data1} onPressItem={onPressItem1} />
             <TopBrandCard data={data2} onPressItem={onPressItem2} />
             <TopBrandCard data={data3} onPressItem={onPressItem3} />

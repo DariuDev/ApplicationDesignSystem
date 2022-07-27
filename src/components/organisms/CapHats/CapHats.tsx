@@ -18,7 +18,7 @@ const CapHats = ({ data, showAll, onPressItem }: ICapHats) => {
                 ItemNode={({ item, onPressItem }: ICapHatsCard) =>
                 (<OfferCard
                     onPress={onPressItem}
-                    productImage={item.productImage}
+                    productImage={item.OfferImage}
                     title={item.title}
                     price={item.price}
                     off={item.off}

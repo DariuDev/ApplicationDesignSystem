@@ -5,4 +5,5 @@ export interface IOfferCard {
   off?: string;
   price?: string;
   mainPrice?: string;
+  testID?:string;
 }

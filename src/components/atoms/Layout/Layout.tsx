@@ -11,12 +11,14 @@ const Layout = ({
     styleLayout,
     ItemNode,
     onPressItem,
-    styleItemModule, }: ILayout) => {
+    styleItemModule,
+    testID='layout-test'
+ }: ILayout) => {
 
     let lenghtData = data.length;
     if (lenghtData % column === 0) {
         return (
-            <View style={[styles.layout, { ...styleLayout }]} testID='layout-test'>
+            <View style={[styles.layout, { ...styleLayout }]} testID={testID}>
                 {data.map((item: any, index) => {
                     return <View testID={`layout-row-test${item._id}`}
                         style={[
@@ -27,7 +29,7 @@ const Layout = ({
                                 ...styleRow
                             }]}
                         key={item._id}>
-                        <ItemNode item={item} onPressItem={onPressItem} />
+                        <ItemNode item={item} index={index} onPressItem={onPressItem} />
                     </View>
                 }
                 )}
