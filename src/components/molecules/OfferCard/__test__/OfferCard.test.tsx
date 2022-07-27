@@ -13,7 +13,7 @@ describe('moldecules >> OfferCard', () => {
   it('test OfferCard', () => {
     const screen = render(
       <OfferCard
-        onPress={onPressMock}
+        onPressTitle={onPressMock}
         OfferImage={'image'}
         title={'Dariush'}
         price={'22,000'}
@@ -26,13 +26,15 @@ describe('moldecules >> OfferCard', () => {
       'testID',
       'OfferCard-id',
     );
-    expect(screen.getByTestId('OfferCard-id')).toHaveStyle({alignItems: 'center'});
+    expect(screen.getByTestId('OfferCard-id')).toHaveStyle({
+      alignItems: 'center',
+    });
     expect(screen.getByTestId('OfferImage-id')).toHaveTextContent('image');
     expect(screen.getByTestId('OfferTitle-id')).toHaveTextContent('Dariush');
     expect(screen.getByTestId('OfferOff-id')).toHaveTextContent('15,000');
     expect(screen.getByTestId('OfferPrice-id')).toHaveTextContent('22,000');
     expect(screen.getByTestId('OfferMainPrice-id')).toHaveTextContent('30,000');
-   
+
     fireEvent.press(screen.getByTestId('OfferCard-id'), eventData);
     expect(onPressMock).toHaveBeenCalledWith(eventData);
   });

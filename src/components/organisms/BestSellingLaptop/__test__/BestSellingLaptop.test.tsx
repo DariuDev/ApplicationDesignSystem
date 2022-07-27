@@ -25,7 +25,12 @@ const data1 = [
 ];
 describe('organisms => BestSellingLaptop', () => {
   const onPressMock = jest.fn();
-  const eventData = ()=>console.log('emel');
+  const eventData = {
+    nativeEvent: {
+      pageX: 20,
+      pageY: 30,
+    },
+  };
   it('test BestSellingLaptop', () => {
     const screen = render(
       <BestSellingLaptop
@@ -39,11 +44,14 @@ describe('organisms => BestSellingLaptop', () => {
 
     fireEvent.press(screen.getByTestId('offerCardBestLaptop-0'), eventData);
     expect(onPressMock).toHaveBeenCalledWith(eventData);
-
-    
-    // expect(screen.getByTestId('layoutBestLaptop-id').children.length).toBe(3);
-
-    fireEvent.press(screen.getByTestId('showAllBestLaptop-id'), eventData);
+    fireEvent.press(screen.getByTestId('offerCardBestLaptop-1'), eventData);
     expect(onPressMock).toHaveBeenCalledWith(eventData);
+
+    expect(screen.getByTestId('bestSellingText-id')).toHaveTextContent('ترین لپ تاب های آمازو')
+    expect(screen.getByTestId('showAllBestLaptopText-id')).toHaveTextContent('مایش ه');
+
+    fireEvent.press(screen.getByTestId('showAllBestLaptopText-id'), eventData);
+    expect(onPressMock).toHaveBeenCalledWith(eventData);
+    
   });
 });
