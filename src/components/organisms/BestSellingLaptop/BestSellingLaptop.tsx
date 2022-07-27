@@ -14,12 +14,13 @@ const BestSellingLaptop = ({ data, showAll, onPressItem }: IBestSellingLaptop) =
                     پرفروش ترین لپ تاب های آمازون
                 </Text>
             </View>
-            <Layout styleItemModule={layoutBorder} styleRow={{ height: 250, }}
+            <Layout testID='layoutBestLaptop-id' styleItemModule={layoutBorder} styleRow={{ height: 250, }}
                 onPressItem={onPressItem} column={2} data={data} colorBorder={'#edf0f5'} widthBorder={1}
-                ItemNode={({ item, onPressItem }: IBestSellingLaptopCard) =>
+                ItemNode={({ item, onPressItem,index}: IBestSellingLaptopCard) =>
                 (<OfferCard
-                    onPress={onPressItem}
-                    productImage={item.productImage}
+                    testID={`offerCardBestLaptop-${index}`}
+                    onPress={()=>console.log(index)}
+                    OfferImage={item.OfferImage}
                     title={item.title}
                     price={item.price}
                     off={item.off}
@@ -28,7 +29,7 @@ const BestSellingLaptop = ({ data, showAll, onPressItem }: IBestSellingLaptop) =
                 />)
                 } />
             <View style={styles.showAll}>
-                <Text onPress={showAll} fontWeight={'bold'} color={'#0068c5'}>
+                <Text testID="showAllBestLaptop-id" onPress={showAll} fontWeight={'bold'} color={'#0068c5'}>
                     نمایش همه
                 </Text>
             </View>

@@ -18,7 +18,7 @@ const BestSellingMalltina = ({ data, showAll,onPressItem }: IBestSellingMalltina
                ItemNode={({ item, onPressItem }: IBestSellingMalltinaCard) =>
                (<OfferCard
                    onPress={onPressItem}
-                   productImage={item.productImage}
+                   OfferImage={item.OfferImage}
                    title={item.title}
                    price={item.price}
                    off={item.off}

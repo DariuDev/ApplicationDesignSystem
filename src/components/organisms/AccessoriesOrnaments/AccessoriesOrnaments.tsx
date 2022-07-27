@@ -1,11 +1,11 @@
 import React from 'react';
-import {View} from 'react-native';
-import {styles} from './style';
-import type{IAccessories} from './AccessoriesOrnaments.types';
-import { ScrollView, Text} from '../../atoms';
-import {OfferCard} from '../../molecules';
+import { View } from 'react-native';
+import { styles } from './style';
+import type { IAccessories } from './AccessoriesOrnaments.types';
+import { ScrollView, Text } from '../../atoms';
+import { OfferCard } from '../../molecules';
 
-const AccessoriesOrnaments = ({data, showAll, onPressItem}: IAccessories) => {
+const AccessoriesOrnaments = ({ data, showAll, onPressItem }: IAccessories) => {
   return (
     <View>
       <View style={styles.titleAccessories}>
@@ -14,12 +14,12 @@ const AccessoriesOrnaments = ({data, showAll, onPressItem}: IAccessories) => {
         </Text>
       </View>
       <ScrollView showsHorizontalScrollIndicator={false} horizontal>
-        {data.map((item: any,index) => {
+        {data.map(( item: any, index ) => {
           return (
             <OfferCard
+              testID={`offerCardAccessories-${index}`}
               onPress={onPressItem}
-              testID={`offerCardAccessories${index}`}
-              productImage={item.productImage}
+              OfferImage={item.OfferImage}
               title={item.title}
               price={item.price}
               off={item.off}

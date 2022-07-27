@@ -17,12 +17,12 @@ const ImmediateDelivery = ({data, showAll, onPressTitle}: IDelivery) => {
         showsHorizontalScrollIndicator={false}
         horizontal
         style={styles.list}>
-        {data.map((item: any, index) => {
+        {data.map(({item, index}:any) => {
           return (
             <OfferCard
               testID={`offerCard-${index}`}
               onPress={onPressTitle}
-              productImage={item.productImage}
+              OfferImage={item.OfferImage}
               title={item.title}
               price={item.price}
               off={item.off}

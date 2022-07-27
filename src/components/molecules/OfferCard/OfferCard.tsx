@@ -12,10 +12,10 @@ const OfferCard = <T extends Record<any, unknown>>({
   off,
   price,
   mainPrice,
-  testID,
+  testID='OfferCard-id',
   ...otherProps
 }: IOfferCard & T) => (
-  <Card testID='OfferCard-id' {...otherProps}>
+  <Card testID={testID} {...otherProps}>
     <View style={styles.card}>
       <View style={styles.image}>
         <Text testID='OfferImage-id'>{OfferImage}</Text>

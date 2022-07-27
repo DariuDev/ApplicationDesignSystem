@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import AccessoriesOrnaments from '..';
+import BestSellingLaptop from '..';
 
 const data1 = [
   {
@@ -19,31 +19,31 @@ const data1 = [
   {
     price: '4,200,000',
   },
+  {
+    price: '4,200,000',
+  },
 ];
-describe('organisms => AccessoriesOrnaments', () => {
+describe('organisms => BestSellingLaptop', () => {
   const onPressMock = jest.fn();
-  const eventData = {
-    nativeEvent: {
-      pageX: 20,
-      pageY: 30,
-    },
-  };
-  it('test AccessoriesOrnaments', () => {
+  const eventData = ()=>console.log('emel');
+  it('test BestSellingLaptop', () => {
     const screen = render(
-      <AccessoriesOrnaments
+      <BestSellingLaptop
         data={data1}
         showAll={onPressMock}
         onPressItem={onPressMock}
       />
     );
-    expect(screen.getByTestId('offerCardAccessories-0')).toHaveTextContent('4,200,000');
-    expect(screen.getByTestId('offerCardAccessories-1')).toHaveTextContent('4,200,000');
-    expect(screen.getByTestId('offerCardAccessories-2')).toHaveTextContent('4,200,000');
+    expect(screen.getByTestId('offerCardBestLaptop-0')).toHaveTextContent('4,200,000');
+    expect(screen.getByTestId('offerCardBestLaptop-1')).toHaveTextContent('4,200,000');
 
-    fireEvent.press(screen.getByTestId('offerCardAccessories-0'), eventData);
+    fireEvent.press(screen.getByTestId('offerCardBestLaptop-0'), eventData);
     expect(onPressMock).toHaveBeenCalledWith(eventData);
 
-    fireEvent.press(screen.getByTestId('showAllTextAccessories-id'), eventData);
+    
+    // expect(screen.getByTestId('layoutBestLaptop-id').children.length).toBe(3);
+
+    fireEvent.press(screen.getByTestId('showAllBestLaptop-id'), eventData);
     expect(onPressMock).toHaveBeenCalledWith(eventData);
   });
 });

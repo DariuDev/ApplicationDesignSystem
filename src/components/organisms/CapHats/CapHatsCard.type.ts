@@ -1,7 +1,7 @@
 export interface ICapHatsCard {
     item: {
         _id:string,
-        productImage?: string;
+        OfferImage?: string;
         title?: string;
         off?: string;
         price?: string;
