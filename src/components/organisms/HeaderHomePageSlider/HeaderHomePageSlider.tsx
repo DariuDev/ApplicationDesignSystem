@@ -1,44 +1,35 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-import { Card, Button, Icon } from '../../atoms';
+import { Card, Button, Icon, ScrollView } from '../../atoms';
 import { MaterialIcons } from '../../atoms/Icon/Icon.type';
 import { styles } from './style';
 import type { IHeaderHomePageSlider } from './HeaderHomePageSlider.type';
 import { SliderCarousel } from '../../molecules';
 
 
+
 const HeaderHomePageSlider = ({ dataCrouser, onPress }: IHeaderHomePageSlider) => {
   return (
-    <SliderCarousel
-      data={dataCrouser}
-      renderItem={({ item, index }: any) => (
-        <Card testID={`cardHeaderHomeSlider-${index}`}
-          onPress={onPress}>
-          <View style={styles.container} >
-            <View style={styles.description}>
-              <Text style={styles.txtTop}>{item.description}</Text>
-              <Text style={styles.txtBottom}>{item.title}</Text>
-              <Button
-                title={'کلیک کن'}
-                styleButton={styles.button}
-                styleText={styles.txtButton}>
-                <Icon
-                  type={MaterialIcons}
-                  name={'arrow-back-ios'}
-                  size={14}
-                  color={'#fff'}
-                />
-              </Button>
-            </View>
+    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+      {dataCrouser.map((item: any, index) => {
+        return (
+          <Card onPress={onPress}
+            testID={`cardHeaderHomeSlider-${index}`}
+            style={styles.cardImage}>
             <Image
+              testID={`cardHeaderHomeSlider-image-${index}`}
               style={styles.image}
-              source={require('../../../assets/image/imageSlider.png')}
+              source={require('../../../assets/image/homePageSlider.png')}
             />
-          </View>
-        </Card>
-      )}
+          </Card>
+        )
+      })}
 
-    />
+
+    </ScrollView>
+
+
+
   );
 };
 export default HeaderHomePageSlider;

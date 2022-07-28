@@ -22,7 +22,8 @@
     "react-native-paper": "^4.12.2",
     "react-native-svg": "^12.3.0",
     "react-native-vector-icons": "^9.2.0",
-    "react-query": "^3.39.1"
+    "react-query": "^3.39.1",
+    "ts-jest": "^28.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",

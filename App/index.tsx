@@ -26,6 +26,7 @@ import {
   BestSellingMalltina,
   TopBrands,
   GridList,
+  HeaderHomePageSlider,
 } from '../src/components';
 
 import styles from '../src/atoms/RadioButton/style';
@@ -154,16 +155,8 @@ const App = () => {
         />
 
         <ScrollView showsVerticalScrollIndicator={false}>
-          {/* <HeaderHomePageSlider
-          dataCrouser={dataSlider}
-          onPress={() => console.log(' title')}
-        /> */}
-          {/* <CarouselCards
-           data={dataCrouser} 
-           renderItem={({ item, index }) => (<CarouselCardItem onPress={()=>console.log(index)} item={item} index={index} />)} 
-           
-           /> */}
-          {/* <IHeaderHomePageSlider data={dataSlider} onPressTitle={() => console.log(' title')} /> */}
+        
+          <HeaderHomePageSlider dataCrouser={dataSlider} onPress={() => console.log(' title')} />
           <ExplosiveOffers data={dataSlider} />
 
           <Categories data={dataCategories} onPressItem={() => console.log(' title')} />

@@ -1,6 +1,6 @@
 export {default as ExplosiveOffers} from './ِِExplosiveOffers';
 export {default as Header} from './Header';
-// export {default as HeaderHomePageSlider} from './HeaderHomePageSlider';
+export {default as HeaderHomePageSlider} from './HeaderHomePageSlider';
 export {default as ImmediateDelivery} from './ImmediateDelivery';
 export {default as HistoryVisit} from './HistoryVisit';
 export {default as AccessoriesOrnaments} from './AccessoriesOrnaments';
