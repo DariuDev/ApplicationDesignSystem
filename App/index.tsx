@@ -63,15 +63,15 @@ const App = () => {
     {_id: '5', description: 'تابستون امسال با بهترین های', title: 'عینک طبی'},
   ];
   const dataCategories = [
-    {_id: '114', title: 'لوازم خودرو', img: 'hjkhkjhh'},
-    {_id: '115', title: 'لوازم التحریر', img: 'hjkhkjhh'},
-    {_id: '116', title: 'ورزش وسفر', img: 'hjkhkjhh'},
-    {_id: '117', title: 'تندرستی', img: 'hjkhkjhh'},
-    {_id: '118', title: 'خانه و باغچه', img: 'hjkhkjhh'},
-    {_id: '119', title: 'اسباب بازی', img: 'hjkhkjhh'},
-    {_id: '117', title: 'تندرستی', img: 'hjkhkjhh'},
-    {_id: '118', title: 'خانه و باغچه', img: 'hjkhkjhh'},
-    {_id: '119', title: 'اسباب بازی', img: 'hjkhkjhh'},
+    {_id: '114', title: 'لوازم خودرو', image: ''},
+    {_id: '115', title: 'لوازم التحریر', image: ''},
+    {_id: '116', title: 'ورزش وسفر', image: ''},
+    {_id: '117', title: 'تندرستی', image: ''},
+    {_id: '118', title: 'خانه و باغچه', image: ''},
+    {_id: '119', title: 'اسباب بازی', image: ''},
+    {_id: '117', title: 'تندرستی', image: ''},
+    {_id: '118', title: 'خانه و باغچه', image: ''},
+    {_id: '119', title: 'اسباب بازی', image: ''},
   ];
 
   const dataBestSelling = [

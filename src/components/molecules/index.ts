@@ -7,3 +7,4 @@ export {default as SingleCard} from './SingleCards';
 export {default as LoginCard} from './LoginCard'
 export {default as ExplosiveOfferCard} from './ExplosiveOfferCard';
 export {default as SliderCarousel} from './SliderCarousel';
+export {default as CategoriesCard} from './CategoriesCard';

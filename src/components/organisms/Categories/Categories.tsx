@@ -1,9 +1,9 @@
 import React from 'react';
 import { View } from 'react-native'
-import type { ICategories, ICategoriesCard } from '.';
-import { Card, Layout, Text } from '../../atoms';
+import type { ICategories } from '.';
+import { Layout, Text } from '../../atoms';
 import { layoutBorder } from '../../../module';
-import { styles } from './style';
+import { CategoriesCard } from '../../molecules';
 
 const Categories = ({ data, onPressItem }: ICategories) => {
     return (
@@ -14,14 +14,13 @@ const Categories = ({ data, onPressItem }: ICategories) => {
             </Text>
             <Layout testID='layoutCategories-id' onPressItem={onPressItem}
                 styleItemModule={layoutBorder} column={3} data={data} colorBorder={'#edf0f5'} widthBorder={1}
-                ItemNode={({ item, onPressItem, index }: ICategoriesCard) =>
-                (<Card testID={`cardCategories-${index}`}
-                    style={styles.cardItem} onPress={onPressItem}>
-                    <View>
-                        <View style={styles.viewImage} />
-                        <Text>{item.title}</Text>
-                    </View>
-                </Card>
+                ItemNode={({ item, onPressItem, index }: any) =>
+                (<CategoriesCard
+                    testID={`cardCategories-${index}`}
+                    title={item.title}
+                    onPress={onPressItem}
+                    image={item.image}
+                />
                 )} />
         </View>
     )
