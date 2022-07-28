@@ -1,17 +1,27 @@
 import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   layout: {
-    marginHorizontal: 0,
+    marginLeft: 18,
     marginVertical: 10,
-    justifyContent: 'center',
+    // justifyContent: 'center',
+    // height: 200,
   },
-  itemLayout: {
-    height: 150,
-    margin: 5,
+
+  cardList: {
+    //  flex:1,
+    // alignItems: 'center',
+    // borderRadius: 15,
+    // borderColor: '#000',
+    // borderWidth: 1,
+    alignSelf:'center',
+     marginVertical:10,
     alignItems: 'center',
     borderRadius: 15,
     borderColor: '#000',
     borderWidth: 1,
+    height: 150,
+    width:160,
+    // backgroundColor:'red'
   },
 });
 export {styles};
