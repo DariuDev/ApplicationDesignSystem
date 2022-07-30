@@ -7,7 +7,7 @@ import { BrandCard, SliderCarousel } from '../../molecules';
 
 const TopBrands = ({ data1, data2, data3, onPressItem1, onPressItem2, onPressItem3 }: ITopBrands) => {
     return (
-        <View testID='topBrand-id'>
+        <View testID='topBrandText-id'>
             <View style={styles.titleBrand}>
                 <Text color={'#172b4d'} fontSize={20} fontWeight={'500'} >
                     برندهای برتر
@@ -18,7 +18,7 @@ const TopBrands = ({ data1, data2, data3, onPressItem1, onPressItem2, onPressIte
                 itemWideth={100}
                 renderItem={({ item, index }: any) => (
                     <BrandCard
-                        testID={`cardBrand1-id-${index}`}
+                        testID={`cardBrand1-id${index}`}
                         image={item.image}
                         onpress={onPressItem1}
                     />
@@ -30,7 +30,7 @@ const TopBrands = ({ data1, data2, data3, onPressItem1, onPressItem2, onPressIte
                 itemWideth={100}
                 renderItem={({ item, index }: any) => (
                     <BrandCard
-                        testID={`cardBrand2-id-${index}`}
+                        testID={`cardBrand2-id${index}`}
                         image={item.image}
                         onpress={onPressItem2}
                     />)
@@ -41,7 +41,7 @@ const TopBrands = ({ data1, data2, data3, onPressItem1, onPressItem2, onPressIte
                 itemWideth={100}
                 renderItem={({ item, index }: any) => (
                     <BrandCard
-                        testID={`cardBrand3-id-${index}`}
+                        testID={`cardBrand3-id${index}`}
                         image={item.image}
                         onpress={onPressItem3}
                     />)

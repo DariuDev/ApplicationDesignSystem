@@ -1,4 +1,4 @@
-// import type { ListRenderItem } from "react-native";
+import type { ListRenderItem } from "react-native";
 export interface ISliderCarousel {
   IsPagination?: boolean;
   dotStylePagination?: {};
