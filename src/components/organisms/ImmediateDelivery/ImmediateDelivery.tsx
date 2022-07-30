@@ -17,7 +17,7 @@ const ImmediateDelivery = ({data, showAll, onPressTitle}: IDelivery) => {
         showsHorizontalScrollIndicator={false}
         horizontal
         style={styles.list}>
-        {data.map(({item, index}:any) => {
+        {data.map((item: any, index) => {
           return (
             <OfferCard
               testID={`offerCard-${index}`}

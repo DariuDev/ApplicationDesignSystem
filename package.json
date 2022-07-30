@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@types/react-native-vector-icons": "^6.4.11",
-    "application-design-system": "file:.yalc/application-design-system",
     "axios": "^0.27.2",
     "react": "17.0.2",
     "react-native": "^0.68.2",
@@ -55,7 +54,7 @@
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": [
-      "node_modules/(?!(@react-native|react-native|react-native-vector-icons)/)"
+      "node_modules/(?!(@react-native|react-native|react-native-vector-icons|react-navigation-tabs)/|react-native-splash-screen|react-native-screens|react-native-linear-gradient)"
     ],
     "setupFilesAfterEnv": [
       "@testing-library/jest-native/extend-expect"

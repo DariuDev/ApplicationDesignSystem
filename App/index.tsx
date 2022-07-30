@@ -169,12 +169,12 @@ const App = () => {
             showAll={() => console.log('show all')}
             onPressItem={() => console.log('onpress item')}
           />
-          {/* 
+          
           <ImmediateDelivery
             data={data1}
             showAll={() => console.log('show all')}
             onPressTitle={() => console.log('onpress title')}
-          /> */}
+          />
         
           <TopBrands data1={dataBrand} data2={dataBrand} data3={dataBrand} />
 
