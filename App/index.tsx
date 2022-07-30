@@ -26,9 +26,9 @@ import {
   BestSellingMalltina,
   TopBrands,
   GridList,
-  HeaderHomePageSlider,
+  //HeaderHomePageSlider,
 } from '../src/components';
-
+import HeaderHomePageSlider from '../src/componentsOld/HeaderHomePageSlider2/HeaderHomePageSlider';
 import styles from '../src/atoms/RadioButton/style';
 import {MaterialIcons} from '../src/atoms/Icon/type';
 // import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -156,7 +156,7 @@ const App = () => {
 
         <ScrollView showsVerticalScrollIndicator={false}>
         
-          <HeaderHomePageSlider dataCrouser={dataSlider} onPress={() => console.log(' title')} />
+          <HeaderHomePageSlider data={dataSlider} onPressTitle={() => console.log(' title')} />
           <ExplosiveOffers data={dataSlider} />
 
           <Categories data={dataCategories} onPressItem={() => console.log(' title')} />

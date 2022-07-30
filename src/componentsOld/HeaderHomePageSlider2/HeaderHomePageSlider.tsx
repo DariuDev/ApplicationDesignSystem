@@ -13,28 +13,21 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
   const [current, setCurrent] = useState<number>(0);
   const sliderRef = useRef<any>(null);
   useEffect(() => {
-    let timer = setTimeout(() => {
-      if (current < lenght - 2) {
-        setCurrent(prev => prev + 1);
-      } else {
-        setCurrent(0);
-      }
-
-      sliderRef?.current?.scrollTo({
-        x: ((SCREEN_WIDTH * 9) / 10) * current,
-        animated: true,
-      });
+     setTimeout(() => {
+      sliderRef?.current?.scrollToEnd({
+        //x: ((SCREEN_WIDTH * 9) / 10) * current,
+        //animated: true,
+        x: SCREEN_WIDTH, y: 0, animated: false 
+       }, 1);
     }, 2000);
 
-    return () => {
-      clearTimeout(timer);
-    };
   });
   return (
     <View
       style={styles.main}>
       <ScrollView
         pagingEnabled
+        //onContentSizeChange={() => sliderRef.current.scrollToEnd()}
         horizontal={true}
         ref={sliderRef}
         showsHorizontalScrollIndicator={false}
@@ -63,10 +56,10 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
                     />
                   </Button>
                 </View>
-                <Image
+                {/* <Image
                   style={styles.image}
                   source={require('../../assets/imageSlider.png')}
-                />
+                /> */}
               </View>
             </Card>
           );
