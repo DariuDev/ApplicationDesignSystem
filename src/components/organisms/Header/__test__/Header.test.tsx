@@ -12,7 +12,7 @@ describe('organisms => Header', () => {
   };
     const screen = render(
       <Header
-        onPress={() => console.log('pressed')}
+        onPress={onPressMock}
         height={85}
         backgroundColor="#061d72"
       />,
