@@ -4,17 +4,16 @@ import HeaderHomePageSlider from '..';
 
 const data1 = [
   {
-    title: 'Hats',
-    description:''
+    image: 'Hats',
   },
   {
-    title: 'book',
+    image: 'book',
   },
   {
-    title: 'Tshirt',
-    description:''
+    image: 'Tshirt',
+
   },
-  
+
 ];
 describe('organisms => HeaderHomePageSlider', () => {
   const onPressMock = jest.fn();
@@ -32,15 +31,14 @@ describe('organisms => HeaderHomePageSlider', () => {
       />
     );
 
-    expect(screen.getByTestId('cardHeaderHomeSlider-0')).toHaveTextContent('Hats');
-    expect(screen.getByTestId('cardHeaderHomeSlider-1')).toHaveTextContent('book');
+    expect(screen.getByTestId('cardHeaderHomeSlider-0')).toHaveProp('style');
+    expect(screen.getByTestId('cardHeaderHomeSlider-1')).toHaveProp('style');
 
     fireEvent.press(screen.getByTestId('cardHeaderHomeSlider-0'), eventData);
     expect(onPressMock).toHaveBeenCalledWith(eventData);
     fireEvent.press(screen.getByTestId('cardHeaderHomeSlider-1'), eventData);
     expect(onPressMock).toHaveBeenCalledWith(eventData);
 
-    
-    
+
   });
 });

@@ -12,7 +12,7 @@ const Categories = ({ data, onPressItem }: ICategories) => {
                 marginBottom={20} paddingRight={13} >
                 دسته بندیها
             </Text>
-            <Layout testID='layoutCategories-id' onPressItem={onPressItem}
+            <Layout styleLayout={{ marginLeft: 18}} styleRow={{height: 175}} testID='layoutCategories-id' onPressItem={onPressItem}
                 styleItemModule={layoutBorder} column={3} data={data} colorBorder={'#edf0f5'} widthBorder={1}
                 ItemNode={({ item, onPressItem, index }: any) =>
                 (<CategoriesCard

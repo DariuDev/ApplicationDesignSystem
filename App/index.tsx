@@ -25,6 +25,8 @@ import {
   BestSellingLaptop,
   BestSellingMalltina,
   TopBrands,
+  GridList,
+  HeaderHomePageSlider,
 } from '../src/components';
 
 import styles from '../src/atoms/RadioButton/style';
@@ -85,6 +87,20 @@ const App = () => {
     // { _id: '118', title: 'خانه و باغچه',img:'hjkhkjhh' },
     // { _id: '119', title: 'اسباب بازی' ,img:'hjkhkjhh'},
   ];
+  const dataImage = [
+    {
+      image: '',
+    },
+    {
+      image: '',
+    },
+    {
+      image: '',
+    },
+    {
+      image: '',
+    },
+  ];
   const data1 = [
     {
       image: '',
@@ -139,20 +155,15 @@ const App = () => {
         />
 
         <ScrollView showsVerticalScrollIndicator={false}>
-          {/* <HeaderHomePageSlider
-          dataCrouser={dataSlider}
-          onPress={() => console.log(' title')}
-        /> */}
-          {/* <CarouselCards
-           data={dataCrouser} 
-           renderItem={({ item, index }) => (<CarouselCardItem onPress={()=>console.log(index)} item={item} index={index} />)} 
-           
-           /> */}
-          {/* <IHeaderHomePageSlider data={dataSlider} onPressTitle={() => console.log(' title')} /> */}
+        
+          <HeaderHomePageSlider dataCrouser={dataSlider} onPress={() => console.log(' title')} />
           <ExplosiveOffers data={dataSlider} />
 
           <Categories data={dataCategories} onPressItem={() => console.log(' title')} />
-
+          <GridList
+          data={dataImage}
+          onPressItem={() => console.log('onpress item')}
+        />
           <AccessoriesOrnaments
             data={dataSlider}
             showAll={() => console.log('show all')}
