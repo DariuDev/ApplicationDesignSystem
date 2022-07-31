@@ -23,8 +23,8 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
 
   const moveValue = () => {
     Animated.timing(leftValue, {
-      toValue: 1000,
-      duration: 10000,
+      toValue: 15000,
+      duration: 50000,
       useNativeDriver: false,
     }).start();
   };
@@ -39,11 +39,11 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
             //flex: 1,
             flexDirection: 'row',
             marginRight: leftValue,
+            width: '100%'
             //backgroundColor: 'red',
           },
-        ]}
-      >
-        {data.map((item: any,i) => {
+        ]}>
+        {data.map((item: any, i) => {
           return (
             <Card onPress={onPressTitle}>
               <View style={styles.container} key={i}>
@@ -70,8 +70,7 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
             </Card>
           );
         })}
-     </Animated.View>
-     
+      </Animated.View>
     </View>
   );
 };
