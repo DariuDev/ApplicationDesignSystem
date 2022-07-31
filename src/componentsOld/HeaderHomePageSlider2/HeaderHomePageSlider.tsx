@@ -1,5 +1,12 @@
 import React, {useRef, useState, useEffect} from 'react';
-import {View, Text, Image, ScrollView, Dimensions} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  Dimensions,
+  Animated,
+} from 'react-native';
 import {Card, Button, Icon} from '../../atoms';
 import {MaterialIcons} from '../../atoms/Icon/type';
 import {styles} from './style';
@@ -12,35 +19,34 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
   const lenght = data.length;
   const [current, setCurrent] = useState<number>(0);
   const sliderRef = useRef<any>(null);
-  useEffect(() => {
-     setTimeout(() => {
-      sliderRef?.current?.scrollToEnd({
-        //x: ((SCREEN_WIDTH * 9) / 10) * current,
-        //animated: true,
-        x: SCREEN_WIDTH, y: 0, animated: false 
-       }, 1);
-    }, 2000);
+  const leftValue = useState(new Animated.Value(0))[0];
 
+  const moveValue = () => {
+    Animated.timing(leftValue, {
+      toValue: 1000,
+      duration: 10000,
+      useNativeDriver: false,
+    }).start();
+  };
+  useEffect(() => {
+    moveValue();
   });
   return (
-    <View
-      style={styles.main}>
-      <ScrollView
-        pagingEnabled
-        //onContentSizeChange={() => sliderRef.current.scrollToEnd()}
-        horizontal={true}
-        ref={sliderRef}
-        showsHorizontalScrollIndicator={false}
-        style={{marginEnd: 10, marginStart: 10, marginTop: 10, }}
-        contentContainerStyle={{
-          alignItems: 'center',
-          alignSelf: 'center',
-          justifyContent: 'center',
-        }}>
-        {data.map((item: any) => {
+    <View style={styles.main}>
+      <Animated.View
+        style={[
+          {
+            //flex: 1,
+            flexDirection: 'row',
+            marginRight: leftValue,
+            //backgroundColor: 'red',
+          },
+        ]}
+      >
+        {data.map((item: any,i) => {
           return (
             <Card onPress={onPressTitle}>
-              <View style={styles.container} key={item._id}>
+              <View style={styles.container} key={i}>
                 <View style={styles.description}>
                   <Text style={styles.txtTop}>{item.description}</Text>
                   <Text style={styles.txtBottom}>{item.title}</Text>
@@ -64,7 +70,8 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
             </Card>
           );
         })}
-      </ScrollView>
+     </Animated.View>
+     
     </View>
   );
 };

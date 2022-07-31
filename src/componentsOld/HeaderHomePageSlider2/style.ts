@@ -3,6 +3,7 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 
 export const styles = StyleSheet.create({
     main: {
+        flex: 1,
         width: SCREEN_WIDTH,
         justifyContent: 'center',
         alignItems: 'center',
@@ -11,7 +12,8 @@ export const styles = StyleSheet.create({
     container: {
         width: SCREEN_WIDTH * 9/10,
         height: 260,
-        flexDirection: 'row',
+        marginHorizontal: 10,
+       // flexDirection: 'row',
         alignItems: "center",
         alignSelf: 'center',
         justifyContent: 'center',
