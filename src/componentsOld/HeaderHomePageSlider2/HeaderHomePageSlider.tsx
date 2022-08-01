@@ -30,48 +30,55 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
   };
   useEffect(() => {
     moveValue();
-  });
-  return (
+    const cycleLoop = () => {
+      console.log('start');
+      //mapData();
+      setTimeout(cycleLoop, 1000);
+      console.log('end');
+    };
+    cycleLoop();
+  }, []);
+  return(
     <View style={styles.main}>
-      <Animated.View
-        style={[
-          {
-            //flex: 1,
-            flexDirection: 'row',
-            marginRight: leftValue,
-            width: '100%'
-            //backgroundColor: 'red',
-          },
-        ]}>
-        {data.map((item: any, i) => {
-          return (
-            <Card onPress={onPressTitle}>
-              <View style={styles.container} key={i}>
-                <View style={styles.description}>
-                  <Text style={styles.txtTop}>{item.description}</Text>
-                  <Text style={styles.txtBottom}>{item.title}</Text>
-                  <Button
-                    title={'کلیک کن'}
-                    styleButton={styles.button}
-                    styleText={styles.txtButton}>
-                    <Icon
-                      type={MaterialIcons}
-                      name={'arrow-back-ios'}
-                      size={14}
-                      color={'#fff'}
-                    />
-                  </Button>
-                </View>
-                {/* <Image
-                  style={styles.image}
-                  source={require('../../assets/imageSlider.png')}
-                /> */}
+    <Animated.View
+      style={[
+        {
+          //flex: 1,
+          flexDirection: 'row',
+          marginRight: leftValue,
+          width: '100%',
+          //backgroundColor: 'red',
+        },
+      ]}>
+      {data.map((item: any, i) => {
+        return (
+          <Card onPress={onPressTitle}>
+            <View style={styles.container} key={i}>
+              <View style={styles.description}>
+                <Text style={styles.txtTop}>{item.description}</Text>
+                <Text style={styles.txtBottom}>{item.title}</Text>
+                <Button
+                  title={'کلیک کن'}
+                  styleButton={styles.button}
+                  styleText={styles.txtButton}>
+                  <Icon
+                    type={MaterialIcons}
+                    name={'arrow-back-ios'}
+                    size={14}
+                    color={'#fff'}
+                  />
+                </Button>
               </View>
-            </Card>
-          );
-        })}
-      </Animated.View>
-    </View>
-  );
+              {/* <Image
+                style={styles.image}
+                source={require('../../assets/imageSlider.png')}
+              /> */}
+            </View>
+          </Card>
+        );
+      })}
+    </Animated.View>
+  </View>
+  )
 };
 export default HeaderHomePageSlider;
