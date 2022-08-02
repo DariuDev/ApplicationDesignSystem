@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useCallback } from 'react';
+import React, {useRef, useState, useEffect, useCallback} from 'react';
 import {
   View,
   Text,
@@ -7,15 +7,15 @@ import {
   Dimensions,
   Animated,
 } from 'react-native';
-import { Card, Button, Icon } from '../../atoms';
-import { MaterialIcons } from '../../atoms/Icon/type';
-import { styles } from './style';
-import { IHeaderHomePageSlider } from './HeaderHomePageSlider.type';
+import {Card, Button, Icon} from '../../atoms';
+import {MaterialIcons} from '../../atoms/Icon/type';
+import {styles} from './style';
+import {IHeaderHomePageSlider} from './HeaderHomePageSlider.type';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 const delay = 5;
-const HeaderHomePageSlider = ({ data, onPressTitle }: IHeaderHomePageSlider) => {
+const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
   // const lenght = data.length;
   let counter = 0;
   // const [flag, setFlag] = useState<boolean>(false);
@@ -24,77 +24,36 @@ const HeaderHomePageSlider = ({ data, onPressTitle }: IHeaderHomePageSlider) => 
   // const [isMounted, setIsMounted] = useState(false);
   const leftValue = useState(new Animated.Value(0))[0];
 
-  const [showdata, setShowData] = useState([])
+  const [array, setArray] = useState(data);
 
+  const addDataArray = () => {
+    setArray((old: any) => [...old, array]);
+  };
   const moveValue = () => {
-    //   Animated.loop(
-    //   Animated.sequence(leftValue, {
-    //     toValue: 15000,
-    //     duration: 50000,
-    //     useNativeDriver: false,
-    //   }).start();
-    //   ).start();
-    // };
-
-
-    //problem is for 5 items and card in size should is custom forxample formole :)
+    console.log('start');
     Animated.loop(
       Animated.sequence([
         Animated.timing(leftValue, {
-          toValue: 3000,
-          duration: 5000,
+          toValue: 5000,
+          duration: 10000,
           useNativeDriver: false,
         }),
-
-        // Animated.timing(leftValue, {
-        //   toValue: 1,
-        //   duration: 5000,
-        //   useNativeDriver: false,
-        // })
-      ])
+      ]),
     ).start();
-  }
+    // setTimeout(cycleLoop, 10000);
+    console.log('end');
+    //problem is for 5 items and card in size should is custom forxample formole :)
+  };
   useEffect(() => {
-    // if (!isMounted) return;
     moveValue();
-    // if (n === lenght - 1) {
-    //   console.log('fiiiiiinsh')
-    // }
-    // addEventListener("resize", moveValue);
-    // return () => {
-    //   removeEventListener("resize", moveValue);
-    // };
-
+    const cycleLoop = () => {
+      console.log('start');
+      addDataArray();
+      setTimeout(cycleLoop, 1000);
+      console.log('end');
+    };
+    cycleLoop();
   }, []);
-  // useEffect(() => {
-  //   setIsMounted(true);
-  // }, []);
-  // useEffect(() => {
-  //   console.log(flag);
-  // }, [flag])
-
-
-
-  // const [counter1, setCounter1] = useState(1);
-  // useEffect(() => {
-  //   var da: any = [];
-  //   data.forEach(element => {
-  //     da.push(element);
-  //   });
-  //   setShowData(da);
-  //   const interval = setInterval(
-  //     () => setCounter1(counter + 1),
-  //     2000
-  //   );
-  //   return () => {
-  //     clearInterval(interval);
-  //   }
-  // }, [])
-
-
-
-
-
 
   // const setShowDataFn = () => {
 
@@ -111,7 +70,6 @@ const HeaderHomePageSlider = ({ data, onPressTitle }: IHeaderHomePageSlider) => 
   //     setShowData(da);
   //   }
   // }
-
   return (
     <View style={styles.main}>
       <Animated.View
@@ -124,12 +82,10 @@ const HeaderHomePageSlider = ({ data, onPressTitle }: IHeaderHomePageSlider) => 
             //backgroundColor: 'red',
           },
         ]}>
-
-        {data.map((item: any, i, array) => {
-
+        {array.map((item: any, i) => {
           return (
             <Card onPress={onPressTitle} key={i}>
-              <View style={styles.container} >
+              <View style={styles.container}>
                 <View style={styles.description}>
                   <Text style={styles.txtTop}>{item.description + i}</Text>
                   <Text style={styles.txtBottom}>{item.title}</Text>
@@ -146,15 +102,15 @@ const HeaderHomePageSlider = ({ data, onPressTitle }: IHeaderHomePageSlider) => 
                   </Button>
                 </View>
                 {/* <Image
-                style={styles.image}
-                source={require('../../assets/imageSlider.png')}
-              /> */}
+      style={styles.image}
+      source={require('../../assets/imageSlider.png')}
+    /> */}
               </View>
             </Card>
           );
         })}
       </Animated.View>
     </View>
-  )
+  );
 };
 export default HeaderHomePageSlider;
