@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
         padding: 10,
       },
     container: {
-        width: SCREEN_WIDTH * 9/10,
+        width: SCREEN_WIDTH * 5/10,
         height: 260,
         marginHorizontal: 10,
        // flexDirection: 'row',
