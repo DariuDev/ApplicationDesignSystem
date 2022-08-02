@@ -1,4 +1,4 @@
-import React, {useRef, useState, useEffect, useCallback} from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import {
   View,
   Text,
@@ -7,15 +7,16 @@ import {
   Dimensions,
   Animated,
 } from 'react-native';
-import {Card, Button, Icon} from '../../atoms';
-import {MaterialIcons} from '../../atoms/Icon/type';
-import {styles} from './style';
-import {IHeaderHomePageSlider} from './HeaderHomePageSlider.type';
+import { Card, Button, Icon } from '../../atoms';
+import { MaterialIcons } from '../../atoms/Icon/type';
+import { styles } from './style';
+import { IHeaderHomePageSlider } from './HeaderHomePageSlider.type';
+import { BrandCard } from '../../components/molecules';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 const delay = 5;
-const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
+const HeaderHomePageSlider = ({ data, onPressTitle }: IHeaderHomePageSlider) => {
   // const lenght = data.length;
   let counter = 0;
   // const [flag, setFlag] = useState<boolean>(false);
@@ -27,7 +28,7 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
   const [array, setArray] = useState(data);
 
   const addDataArray = () => {
-    setArray((old: any) => [...old, array]);
+    setArray((old: any) => [...old, ...array]);
   };
   const moveValue = () => {
     console.log('start');
@@ -35,7 +36,7 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
       Animated.sequence([
         Animated.timing(leftValue, {
           toValue: 5000,
-          duration: 10000,
+          duration: 100000,
           useNativeDriver: false,
         }),
       ]),
@@ -49,7 +50,8 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
     const cycleLoop = () => {
       console.log('start');
       addDataArray();
-      setTimeout(cycleLoop, 1000);
+      // setArray((old: any) => [...old, ...array]);
+      setTimeout(cycleLoop, 10000);
       console.log('end');
     };
     cycleLoop();
@@ -75,38 +77,40 @@ const HeaderHomePageSlider = ({data, onPressTitle}: IHeaderHomePageSlider) => {
       <Animated.View
         style={[
           {
-            //flex: 1,
+            flex: 1,
             flexDirection: 'row',
             marginRight: leftValue,
             width: '100%',
-            //backgroundColor: 'red',
+            backgroundColor: 'red',
           },
         ]}>
-        {array.map((item: any, i) => {
+        {array.map((item: any, i, array) => {
+          // if (i == array.length - 1) setArray((old: any) => [...old, ...array]);
           return (
-            <Card onPress={onPressTitle} key={i}>
-              <View style={styles.container}>
-                <View style={styles.description}>
-                  <Text style={styles.txtTop}>{item.description + i}</Text>
-                  <Text style={styles.txtBottom}>{item.title}</Text>
-                  <Button
-                    title={'کلیک کن'}
-                    styleButton={styles.button}
-                    styleText={styles.txtButton}>
-                    <Icon
-                      type={MaterialIcons}
-                      name={'arrow-back-ios'}
-                      size={14}
-                      color={'#fff'}
-                    />
-                  </Button>
-                </View>
-                {/* <Image
-      style={styles.image}
-      source={require('../../assets/imageSlider.png')}
-    /> */}
-              </View>
-            </Card>
+            <BrandCard image={item.title + i} />
+            //         <Card onPress={onPressTitle} key={i}>
+            //           <View style={styles.container}>
+            //             <View style={styles.description}>
+            //               <Text style={styles.txtTop}>{item.description + i}</Text>
+            //               <Text style={styles.txtBottom}>{item.title}</Text>
+            //               <Button
+            //                 title={'کلیک کن'}
+            //                 styleButton={styles.button}
+            //                 styleText={styles.txtButton}>
+            //                 <Icon
+            //                   type={MaterialIcons}
+            //                   name={'arrow-back-ios'}
+            //                   size={14}
+            //                   color={'#fff'}
+            //                 />
+            //               </Button>
+            //             </View>
+            //             {/* <Image
+            //   style={styles.image}
+            //   source={require('../../assets/imageSlider.png')}
+            // /> */}
+            //           </View>
+            //         </Card>
           );
         })}
       </Animated.View>

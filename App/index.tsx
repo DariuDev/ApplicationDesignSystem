@@ -156,8 +156,8 @@ const App = () => {
         />
 
         <ScrollView showsVerticalScrollIndicator={false}>
-          <TestScrollInfnit />
-          {/* <HeaderHomePageSlider data={dataSlider} onPressTitle={() => console.log(' title')} /> */}
+          {/* <TestScrollInfnit /> */}
+          <HeaderHomePageSlider data={dataSlider} onPressTitle={() => console.log(' title')} />
           <ExplosiveOffers data={dataSlider} />
 
           <Categories data={dataCategories} onPressItem={() => console.log(' title')} />
