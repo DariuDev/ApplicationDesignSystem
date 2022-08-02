@@ -19,7 +19,7 @@ const HeaderHomePageSlider = ({ data, onPressTitle }: IHeaderHomePageSlider) => 
   // const lenght = data.length;
   let counter = 0;
   // const [flag, setFlag] = useState<boolean>(false);
-  // const [currentIndex, setCurrentIndex] = useState<object[]>(data);
+  const [currentIndex, setCurrentIndex] = useState<object[]>(data);
   // const sliderRef = useRef<any>(null);
   // const [isMounted, setIsMounted] = useState(false);
   const leftValue = useState(new Animated.Value(0))[0];
