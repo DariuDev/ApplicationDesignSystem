@@ -14,8 +14,8 @@ import {
   ScrollView as FakeScrollView,
 } from '../src/atoms';
 
-import React, {useState} from 'react';
-import {View, ScrollView, Pressable} from 'react-native';
+import React, { useState } from 'react';
+import { View, ScrollView, Pressable } from 'react-native';
 import {
   ExplosiveOffers,
   Header,
@@ -30,57 +30,58 @@ import {
 } from '../src/components';
 import HeaderHomePageSlider from '../src/componentsOld/HeaderHomePageSlider2/HeaderHomePageSlider';
 import styles from '../src/atoms/RadioButton/style';
-import {MaterialIcons} from '../src/atoms/Icon/type';
+import { MaterialIcons } from '../src/atoms/Icon/type';
 // import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import style from './style';
-import {QueryClient, QueryClientProvider} from 'react-query';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 import CheckBox from './../src/atoms/Checkbox/index';
 import CarouselCards from '../src/componentsOld/CarouselSlider/CarouselSlider';
 // import dataCrouser from '../src/components/Slider/data';
 // import CarouselCardItem from './../src/components/Slider/SliderCardItem';
+import TestScrollInfnit from './../src/componentsOld/TestScrollInfnit/TestScrollInfnit';
 
 const queryClient = new QueryClient();
 const App = () => {
   const [user, setUser] = useState('');
 
   const data = [
-    {value: '1', title: 'data 1'},
-    {value: '2', title: 'data 2'},
+    { value: '1', title: 'data 1' },
+    { value: '2', title: 'data 2' },
   ];
 
   const dataSlider = [
-    {_id: '1', description: 'تابستون امسال با بهترین های', title: 'عینک طبی'},
+    { _id: '1', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
     {
       _id: '2',
       description: 'تابستون امسال با بهترین های',
       title: 'عینک آفتابی',
     },
-    {_id: '3', description: 'تابستون امسال با بهترین های', title: 'عینک طبی'},
+    { _id: '3', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
     {
       _id: '4',
       description: 'تابستون امسال با بهترین های',
       title: 'عینک آفتابی',
     },
-    {_id: '5', description: 'تابستون امسال با بهترین های', title: 'عینک طبی'},
+    { _id: '5', description: 'تابستون امسال با بهترین های', title: 'عینک طبی' },
   ];
   const dataCategories = [
-    {_id: '114', title: 'لوازم خودرو', image: ''},
-    {_id: '115', title: 'لوازم التحریر', image: ''},
-    {_id: '116', title: 'ورزش وسفر', image: ''},
-    {_id: '117', title: 'تندرستی', image: ''},
-    {_id: '118', title: 'خانه و باغچه', image: ''},
-    {_id: '119', title: 'اسباب بازی', image: ''},
-    {_id: '117', title: 'تندرستی', image: ''},
-    {_id: '118', title: 'خانه و باغچه', image: ''},
-    {_id: '119', title: 'اسباب بازی', image: ''},
+    { _id: '114', title: 'لوازم خودرو', image: '' },
+    { _id: '115', title: 'لوازم التحریر', image: '' },
+    { _id: '116', title: 'ورزش وسفر', image: '' },
+    { _id: '117', title: 'تندرستی', image: '' },
+    { _id: '118', title: 'خانه و باغچه', image: '' },
+    { _id: '119', title: 'اسباب بازی', image: '' },
+    { _id: '117', title: 'تندرستی', image: '' },
+    { _id: '118', title: 'خانه و باغچه', image: '' },
+    { _id: '119', title: 'اسباب بازی', image: '' },
   ];
 
   const dataBestSelling = [
-    {_id: '114', title: 'لوازم خودرو', img: 'hjkhkjhh'},
-    {_id: '115', title: 'لوازم التحریر', img: 'hjkhkjhh'},
-    {_id: '116', title: 'ورزش وسفر', img: 'hjkhkjhh'},
-    {_id: '117', title: 'تندرستی', img: 'hjkhkjhh'},
+    { _id: '114', title: 'لوازم خودرو', img: 'hjkhkjhh' },
+    { _id: '115', title: 'لوازم التحریر', img: 'hjkhkjhh' },
+    { _id: '116', title: 'ورزش وسفر', img: 'hjkhkjhh' },
+    { _id: '117', title: 'تندرستی', img: 'hjkhkjhh' },
     // { _id: '118', title: 'خانه و باغچه',img:'hjkhkjhh' },
     // { _id: '119', title: 'اسباب بازی',img:'hjkhkjhh'},
     // { _id: '117', title: 'تندرستی' ,img:'hjkhkjhh'},
@@ -147,7 +148,7 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <View style={{alignItems: 'center', flex: 1, backgroundColor: '#fff'}}>
+      <View style={{ alignItems: 'center', flex: 1, backgroundColor: '#fff' }}>
         <Header
           onPress={() => console.log('pressed')}
           height={85}
@@ -155,27 +156,27 @@ const App = () => {
         />
 
         <ScrollView showsVerticalScrollIndicator={false}>
-        
-          <HeaderHomePageSlider data={dataSlider} onPressTitle={() => console.log(' title')} />
+          <TestScrollInfnit />
+          {/* <HeaderHomePageSlider data={dataSlider} onPressTitle={() => console.log(' title')} /> */}
           <ExplosiveOffers data={dataSlider} />
 
           <Categories data={dataCategories} onPressItem={() => console.log(' title')} />
           <GridList
-          data={dataImage}
-          onPressItem={() => console.log('onpress item')}
-        />
+            data={dataImage}
+            onPressItem={() => console.log('onpress item')}
+          />
           <AccessoriesOrnaments
             data={dataSlider}
             showAll={() => console.log('show all')}
             onPressItem={() => console.log('onpress item')}
           />
-          
+
           <ImmediateDelivery
             data={data1}
             showAll={() => console.log('show all')}
             onPressTitle={() => console.log('onpress title')}
           />
-        
+
           <TopBrands data1={dataBrand} data2={dataBrand} data3={dataBrand} />
 
           <BestSellingLaptop
