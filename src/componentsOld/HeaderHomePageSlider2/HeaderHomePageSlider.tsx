@@ -31,12 +31,13 @@ const HeaderHomePageSlider = ({ data, onPressTitle }: IHeaderHomePageSlider) => 
     setArray((old: any) => [...old, ...array]);
   };
   const moveValue = () => {
-    console.log('start');
+    //console.log('start');
     Animated.loop(
       Animated.sequence([
         Animated.timing(leftValue, {
-          toValue: 5000,
-          duration: 100000,
+
+          toValue: 50000,
+          duration: 200000,
           useNativeDriver: false,
         }),
       ]),
@@ -50,8 +51,9 @@ const HeaderHomePageSlider = ({ data, onPressTitle }: IHeaderHomePageSlider) => 
     const cycleLoop = () => {
       console.log('start');
       addDataArray();
-      // setArray((old: any) => [...old, ...array]);
-      setTimeout(cycleLoop, 10000);
+
+      setTimeout(cycleLoop, 20000);
+
       console.log('end');
     };
     cycleLoop();
